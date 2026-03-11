@@ -1,0 +1,117 @@
+import React, { createContext, useContext, useState, useEffect } from 'react';
+
+export interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+  category?: string;
+  prescriptionRequired?: boolean;
+  doctorRecommended?: boolean;
+  aiRecommended?: boolean;
+}
+
+interface CartContextType {
+  items: CartItem[];
+  addToCart: (item: CartItem) => void;
+  removeFromCart: (id: string) => void;
+  updateQuantity: (id: string, quantity: number) => void;
+  clearCart: () => void;
+  getCartTotal: () => number;
+  getCartCount: () => number;
+  // Future integration hooks
+  applyAIRecommendations?: (recommendations: string[]) => void;
+  applyDoctorPrescription?: (prescriptionId: string) => void;
+}
+
+const CartContext = createContext<CartContextType | undefined>(undefined);
+
+export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [items, setItems] = useState<CartItem[]>(() => {
+    // Load cart from localStorage
+    const savedCart = localStorage.getItem('mediguide_cart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  // Save cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('mediguide_cart', JSON.stringify(items));
+  }, [items]);
+
+  const addToCart = (item: CartItem) => {
+    setItems((prevItems) => {
+      const existingItem = prevItems.find((i) => i.id === item.id);
+      if (existingItem) {
+        return prevItems.map((i) =>
+          i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i
+        );
+      }
+      return [...prevItems, item];
+    });
+  };
+
+  const removeFromCart = (id: string) => {
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
+  const updateQuantity = (id: string, quantity: number) => {
+    if (quantity <= 0) {
+      removeFromCart(id);
+      return;
+    }
+    setItems((prevItems) =>
+      prevItems.map((item) => (item.id === id ? { ...item, quantity } : item))
+    );
+  };
+
+  const clearCart = () => {
+    setItems([]);
+  };
+
+  const getCartTotal = () => {
+    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
+  const getCartCount = () => {
+    return items.reduce((count, item) => count + item.quantity, 0);
+  };
+
+  // Future integration: AI recommendations
+  const applyAIRecommendations = (recommendations: string[]) => {
+    // TODO: Fetch recommended products and add AI flag
+    console.log('AI Recommendations to be applied:', recommendations);
+  };
+
+  // Future integration: Doctor prescriptions
+  const applyDoctorPrescription = (prescriptionId: string) => {
+    // TODO: Fetch prescription items and add to cart
+    console.log('Doctor Prescription to be applied:', prescriptionId);
+  };
+
+  return (
+    <CartContext.Provider
+      value={{
+        items,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        getCartTotal,
+        getCartCount,
+        applyAIRecommendations,
+        applyDoctorPrescription,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
+};
+
+export const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error('useCart must be used within a CartProvider');
+  }
+  return context;
+};

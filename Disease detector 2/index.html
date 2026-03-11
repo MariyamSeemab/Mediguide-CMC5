@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="hi">हिंदी (Hindi)</option>
+                <option value="mr">मराठी (Marathi)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+                <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                <option value="te">తెలుగు (Telugu)</option>
+                <option value="ml">മലയാളം (Malayalam)</option>
+                <option value="as">অসমীয়া (Assamese)</option>
+                <option value="or">ଓଡ଼ିଆ (Odia)</option>
+                <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                <option value="gu">ગુજરાતી (Gujarati)</option>
+                <option value="bn">বাংলা (Bengali)</option>
+            </select>
+        </div>
+
+        <header>
+            <h1 data-i18n="title">🔬 Skin Disease AI Assistant</h1>
+            <p data-i18n="subtitle">Upload an image for AI-powered skin condition analysis</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p data-i18n="uploadText">Click to upload or drag and drop</p>
+                <span data-i18n="uploadHint">PNG, JPG, JPEG (Max 5MB)</span>
+                <input type="file" id="imageInput" accept="image/*" hidden>
+            </div>
+
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="imagePreview" alt="Preview">
+                <button class="btn-secondary" id="removeBtn" data-i18n="removeBtn">Remove Image</button>
+            </div>
+        </div>
+
+        <div class="text-input-section" id="textInputSection" style="display: none;">
+            <label for="userMessage" data-i18n="additionalInfoLabel">Additional Information (Optional)</label>
+            <textarea 
+                id="userMessage" 
+                rows="3" 
+                placeholder="Describe symptoms, duration, or any concerns..."
+                data-i18n-placeholder="additionalInfoPlaceholder"
+            ></textarea>
+        </div>
+
+        <button class="btn-primary" id="analyzeBtn" disabled>
+            <span id="btnText" data-i18n="analyzeBtn">Analyze Image</span>
+            <span id="btnLoader" class="loader" style="display: none;"></span>
+        </button>
+
+        <div class="chat-section" id="chatSection" style="display: none;">
+            <h2 data-i18n="conversationTitle">Conversation</h2>
+            <div class="chat-messages" id="chatMessages"></div>
+        </div>
+
+        <div class="disclaimer">
+            <strong data-i18n="disclaimerTitle">⚠️ Disclaimer:</strong> <span data-i18n="disclaimerText">This tool is for informational purposes only and should not replace professional medical advice. Always consult a healthcare provider for proper diagnosis and treatment.</span>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

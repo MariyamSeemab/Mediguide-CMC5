@@ -1,0 +1,1868 @@
+/* ===================================
+   MEDPRO STYLE - PROFESSIONAL MEDICAL
+   White-dominant, Corporate Aesthetic
+   =================================== */
+
+:root {
+  --medpro-blue: #1977cc;
+  --medpro-blue-dark: #145a9e;
+  --medpro-blue-light: #e8f4fc;
+  --medpro-red: #dc3545;
+  --medpro-green: #28a745;
+  --medpro-gray: #6c757d;
+  --medpro-gray-light: #f8f9fa;
+  --medpro-gray-border: #dee2e6;
+  --medpro-text: #2c3e50;
+  --medpro-text-light: #6c757d;
+}
+
+/* Reset and Base */
+.medpro-style {
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #ffffff;
+  color: var(--medpro-text);
+}
+
+/* Top Bar */
+.top-bar {
+  background: var(--medpro-gray-light);
+  border-bottom: 1px solid var(--medpro-gray-border);
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+}
+
+.top-bar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-left {
+  display: flex;
+  gap: 2rem;
+}
+
+.top-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--medpro-text-light);
+}
+
+.top-bar-item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--medpro-blue);
+}
+
+.language-selector-top {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--medpro-gray-border);
+  border-radius: 4px;
+  background: white;
+  font-size: 0.875rem;
+  color: var(--medpro-text);
+  cursor: pointer;
+}
+
+/* Main Header */
+.header-medpro {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content-medpro {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-medpro {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--medpro-blue);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.logo-medpro svg {
+  width: 32px;
+  height: 32px;
+  color: var(--medpro-blue);
+}
+
+.nav-medpro {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  color: var(--medpro-text);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--medpro-blue);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--medpro-blue);
+  border-radius: 3px 3px 0 0;
+}
+
+.header-actions-medpro {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.btn-login-medpro {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  border: 2px solid var(--medpro-blue);
+  color: var(--medpro-blue);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.btn-login-medpro:hover {
+  background: var(--medpro-blue);
+  color: white;
+}
+
+.btn-appointment {
+  padding: 0.5rem 1.25rem;
+  background: var(--medpro-blue);
+  border: 2px solid var(--medpro-blue);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(25, 119, 204, 0.2);
+  white-space: nowrap;
+}
+
+.btn-appointment:hover {
+  background: var(--medpro-blue-dark);
+  border-color: var(--medpro-blue-dark);
+  box-shadow: 0 6px 16px rgba(25, 119, 204, 0.3);
+  transform: translateY(-1px);
+}
+
+.user-menu-medpro {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name-medpro {
+  font-weight: 600;
+  color: var(--medpro-text);
+}
+
+.btn-logout-medpro {
+  padding: 0.5rem 1rem;
+  background: var(--medpro-gray-light);
+  border: 1px solid var(--medpro-gray-border);
+  color: var(--medpro-text);
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout-medpro:hover {
+  background: var(--medpro-gray-border);
+}
+
+/* Emergency Banner */
+.emergency-banner-medpro {
+  background: var(--medpro-red);
+  color: white;
+  padding: 0.75rem 0;
+}
+
+.emergency-content-medpro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.emergency-content-medpro svg {
+  width: 20px;
+  height: 20px;
+}
+
+.emergency-content-medpro strong {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Hero Section - Medpro Style */
+.hero-medpro {
+  background: #ffffff;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-medpro::before {
+  display: none;
+}
+
+.hero-container-medpro {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-left {
+  padding: 2rem 0;
+}
+
+.hero-badge-medpro {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--medpro-blue-light);
+  border: 1px solid rgba(25, 119, 204, 0.2);
+  border-radius: 50px;
+  color: var(--medpro-blue);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge-medpro svg {
+  width: 16px;
+  height: 16px;
+}
+
+.hero-title-medpro {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--medpro-text);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle-medpro {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--medpro-text-light);
+  margin-bottom: 2rem;
+  max-width: 540px;
+}
+
+.hero-cta-medpro {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn-primary-medpro {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
+  background: var(--medpro-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 16px rgba(25, 119, 204, 0.25);
+}
+
+.btn-primary-medpro:hover {
+  background: var(--medpro-blue-dark);
+  box-shadow: 0 6px 20px rgba(25, 119, 204, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-primary-medpro svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-outline-medpro {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--medpro-blue);
+  border: 2px solid var(--medpro-blue);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-outline-medpro:hover {
+  background: var(--medpro-blue-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline-medpro svg {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-stats-medpro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+.stat-item-medpro {
+  text-align: center;
+}
+
+.stat-number-medpro {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--medpro-blue);
+  margin-bottom: 0.25rem;
+}
+
+.stat-label-medpro {
+  font-size: 0.875rem;
+  color: var(--medpro-text-light);
+  font-weight: 500;
+}
+
+.stat-divider-medpro {
+  width: 1px;
+  height: 40px;
+  background: var(--medpro-gray-border);
+}
+
+/* Hero Right - Image */
+.hero-right {
+  position: relative;
+  height: 500px;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image-container {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.hero-image-container::before {
+  display: none;
+}
+
+.hero-image-container::after {
+  display: none;
+}
+
+.bot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  position: relative;
+  z-index: 1;
+  filter: none;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+.hero-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-placeholder svg {
+  width: 100%;
+  height: 100%;
+}
+
+.image-overlay-text {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, rgba(25, 119, 204, 0.95) 0%, rgba(20, 90, 158, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  box-shadow: 0 8px 24px rgba(25, 119, 204, 0.3);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.image-overlay-text svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+/* Floating Cards */
+.floating-card {
+  position: absolute;
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  animation: float 3s ease-in-out infinite;
+  border: 1px solid rgba(25, 119, 204, 0.1);
+  z-index: 3;
+}
+
+.floating-card svg {
+  width: 36px;
+  height: 36px;
+  color: var(--medpro-blue);
+  flex-shrink: 0;
+  padding: 0.5rem;
+  background: var(--medpro-blue-light);
+  border-radius: 10px;
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--medpro-text);
+  font-size: 0.9375rem;
+  margin-bottom: 0.125rem;
+}
+
+.card-subtitle {
+  font-size: 0.8125rem;
+  color: var(--medpro-text-light);
+}
+
+.card-1 {
+  top: 12%;
+  right: -12%;
+  animation-delay: 0s;
+}
+
+.card-2 {
+  bottom: 18%;
+  right: -10%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+  }
+}
+
+/* Quick Actions */
+.quick-actions-medpro {
+  margin-top: -4rem;
+  padding: 0 2rem 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.quick-actions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.action-card-medpro {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.action-card-medpro:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  border-color: var(--medpro-blue);
+}
+
+.action-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.action-icon.emergency {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.action-icon.doctor {
+  background: linear-gradient(135deg, #1977cc 0%, #145a9e 100%);
+}
+
+.action-icon.appointment {
+  background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+}
+
+.action-icon.lab {
+  background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+}
+
+.action-icon svg {
+  width: 36px;
+  height: 36px;
+  color: white;
+}
+
+.action-card-medpro:hover .action-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.action-card-medpro h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--medpro-text);
+  margin-bottom: 0.5rem;
+}
+
+.action-card-medpro p {
+  font-size: 0.875rem;
+  color: var(--medpro-text-light);
+  margin-bottom: 1rem;
+}
+
+.action-link {
+  color: var(--medpro-blue);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: gap 0.3s;
+  display: inline-block;
+}
+
+.action-card-medpro:hover .action-link {
+  text-decoration: underline;
+}
+
+/* Impact Section */
+.impact-section-medpro {
+  background: var(--medpro-gray-light);
+  padding: 5rem 2rem;
+}
+
+.impact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header-medpro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header-medpro h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--medpro-text);
+  margin-bottom: 1rem;
+}
+
+.section-header-medpro p {
+  font-size: 1.125rem;
+  color: var(--medpro-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.impact-stat {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.impact-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--medpro-blue);
+}
+
+.impact-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  background: var(--medpro-blue-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.impact-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--medpro-blue);
+}
+
+.impact-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--medpro-blue);
+  margin-bottom: 0.5rem;
+}
+
+.impact-label {
+  font-size: 1rem;
+  color: var(--medpro-text-light);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .header-content-medpro {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-medpro {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.8125rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .btn-login-medpro,
+  .btn-appointment {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-container-medpro {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-right {
+    height: 400px;
+  }
+
+  .quick-actions-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar-left {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header-content-medpro {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-medpro {
+    display: none;
+  }
+
+  .hero-title-medpro {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle-medpro {
+    font-size: 1rem;
+  }
+
+  .hero-cta-medpro {
+    flex-direction: column;
+  }
+
+  .btn-primary-medpro,
+  .btn-outline-medpro {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats-medpro {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-divider-medpro {
+    display: none;
+  }
+
+  .quick-actions-container {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .card-1,
+  .card-2 {
+    display: none;
+  }
+}
+
+/* Accessibility */
+.btn-primary-medpro:focus-visible,
+.btn-outline-medpro:focus-visible,
+.btn-appointment:focus-visible,
+.btn-login-medpro:focus-visible {
+  outline: 3px solid var(--medpro-blue);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Hide mobile menu toggle on desktop */
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  
+  /* Top Bar */
+  .top-bar {
+    padding: 8px 0;
+  }
+  
+  .top-bar-content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px;
+  }
+  
+  .top-bar-left {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .top-bar-item {
+    font-size: 12px;
+    justify-content: center;
+  }
+  
+  .top-bar-item svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .top-bar-right {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .language-selector-top {
+    width: 100%;
+    max-width: 200px;
+    font-size: 13px;
+    padding: 8px;
+  }
+  
+  /* Header */
+  .header-medpro {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-content-medpro {
+    padding: 12px 15px;
+    position: relative;
+  }
+  
+  .logo-medpro {
+    font-size: 20px;
+  }
+  
+  .logo-medpro svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Mobile Menu Toggle Button */
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--primary-blue);
+    padding: 5px;
+    z-index: 1001;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Hide desktop navigation */
+  .nav-medpro {
+    display: none;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+  
+  /* Show mobile menu when open */
+  .nav-medpro.mobile-open {
+    display: flex;
+  }
+  
+  .nav-medpro .nav-link {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    display: block;
+  }
+  
+  .nav-medpro .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-medpro .nav-link:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Header actions - show in mobile menu */
+  .header-actions-medpro {
+    display: none;
+  }
+  
+  /* Emergency Banner */
+  .emergency-banner-medpro {
+    padding: 12px 15px;
+  }
+  
+  .emergency-content-medpro {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .emergency-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Hero Section */
+  .hero-medpro {
+    padding: 30px 15px;
+  }
+  
+  .hero-content-medpro {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text-medpro {
+    max-width: 100%;
+  }
+  
+  .hero-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  
+  .hero-text-medpro h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  
+  .hero-text-medpro p {
+    font-size: 15px;
+  }
+  
+  .hero-buttons-medpro {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .hero-buttons-medpro .btn-primary-medpro,
+  .hero-buttons-medpro .btn-secondary-medpro {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+  
+  .hero-image-medpro {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .hero-image-medpro img {
+    max-width: 100%;
+  }
+  
+  /* Stats Section */
+  .stats-section-medpro {
+    padding: 30px 15px;
+  }
+  
+  .stats-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .stat-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  .stat-number-medpro {
+    font-size: 32px;
+  }
+  
+  .stat-label-medpro {
+    font-size: 13px;
+  }
+  
+  /* Features Section */
+  .features-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .section-header-medpro h2 {
+    font-size: 24px;
+  }
+  
+  .section-header-medpro p {
+    font-size: 14px;
+  }
+  
+  .features-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  .feature-icon-medpro {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .feature-card-medpro h3 {
+    font-size: 18px;
+  }
+  
+  /* Services Section */
+  .services-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .services-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  /* Doctors Section */
+  .doctors-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .doctors-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .doctor-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  .doctor-image-medpro {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Marketplace Section */
+  .marketplace-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .marketplace-content-medpro {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .marketplace-text-medpro {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .marketplace-text-medpro h2 {
+    font-size: 24px;
+  }
+  
+  .marketplace-text-medpro p {
+    font-size: 14px;
+  }
+  
+  .marketplace-image-medpro {
+    width: 100%;
+  }
+  
+  .marketplace-image-medpro img {
+    max-width: 100%;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .testimonials-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .testimonial-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  /* CTA Section */
+  .cta-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .cta-content-medpro h2 {
+    font-size: 24px;
+  }
+  
+  .cta-buttons-medpro {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .cta-buttons-medpro .btn-primary-medpro,
+  .cta-buttons-medpro .btn-secondary-medpro {
+    width: 100%;
+  }
+  
+  /* Footer */
+  .footer-medpro {
+    padding: 30px 15px;
+  }
+  
+  .footer-content-medpro {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .footer-section-medpro {
+    width: 100%;
+  }
+  
+  .footer-links-medpro {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .social-links-medpro {
+    justify-content: center;
+  }
+}
+
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES FOR MEDPRO THEME
+   ============================================ */
+
+/* Hide mobile menu toggle on desktop */
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  
+  /* Top Bar */
+  .top-bar {
+    padding: 8px 0;
+  }
+  
+  .top-bar-content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px;
+  }
+  
+  .top-bar-left {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .top-bar-item {
+    font-size: 12px;
+    justify-content: center;
+  }
+  
+  .top-bar-item svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .top-bar-right {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .language-selector-top {
+    width: 100%;
+    max-width: 200px;
+    font-size: 13px;
+    padding: 8px;
+  }
+  
+  /* Header */
+  .header-medpro {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-content-medpro {
+    padding: 12px 15px;
+    position: relative;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 15px !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  .logo-medpro {
+    font-size: 20px;
+    flex-shrink: 0;
+    order: 1;
+  }
+  
+  .logo-medpro svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Mobile Menu Toggle Button - MUST BE VISIBLE */
+  .mobile-menu-toggle {
+    display: block !important;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--medpro-blue);
+    padding: 5px 10px;
+    z-index: 1001;
+    line-height: 1;
+    order: 2;
+    flex-shrink: 0;
+  }
+  
+  /* Hide desktop navigation */
+  .nav-medpro {
+    display: none;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+  
+  /* Show mobile menu when open */
+  .nav-medpro.mobile-open {
+    display: flex !important;
+  }
+  
+  .nav-medpro .nav-link {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    display: block;
+  }
+  
+  .nav-medpro .nav-link::after {
+    display: none;
+  }
+  
+  .nav-medpro .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-medpro .nav-link:hover,
+  .nav-medpro .nav-link.active {
+    background: #f5f5f5;
+  }
+  
+  /* Header actions - hide on mobile */
+  .header-actions-medpro {
+    display: none !important;
+  }
+  
+  /* Emergency Banner */
+  .emergency-banner-medpro {
+    padding: 12px 15px;
+  }
+  
+  .emergency-content-medpro {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .emergency-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Hero Section */
+  .hero-medpro {
+    padding: 30px 15px;
+  }
+  
+  .hero-content-medpro {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .hero-text-medpro {
+    max-width: 100%;
+  }
+  
+  .hero-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+    margin: 0 auto;
+  }
+  
+  .hero-text-medpro h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  
+  .hero-text-medpro p {
+    font-size: 15px;
+  }
+  
+  .hero-buttons-medpro {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .hero-buttons-medpro .btn-primary-medpro,
+  .hero-buttons-medpro .btn-secondary-medpro {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+  
+  .hero-image-medpro {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .hero-image-medpro img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Stats Section */
+  .stats-section-medpro {
+    padding: 30px 15px;
+  }
+  
+  .stats-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .stat-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  .stat-number-medpro {
+    font-size: 32px;
+  }
+  
+  .stat-label-medpro {
+    font-size: 13px;
+  }
+  
+  /* Features Section */
+  .features-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .section-header-medpro h2 {
+    font-size: 24px;
+  }
+  
+  .section-header-medpro p {
+    font-size: 14px;
+  }
+  
+  .features-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  .feature-icon-medpro {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .feature-card-medpro h3 {
+    font-size: 18px;
+  }
+  
+  .feature-card-medpro p {
+    font-size: 14px;
+  }
+  
+  /* Services Section */
+  .services-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .services-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  .service-card-medpro h3 {
+    font-size: 18px;
+  }
+  
+  /* Doctors Section */
+  .doctors-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .doctors-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .doctor-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  .doctor-image-medpro {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .doctor-info-medpro h3 {
+    font-size: 18px;
+  }
+  
+  .doctor-specialty-medpro {
+    font-size: 13px;
+  }
+  
+  /* Marketplace Section */
+  .marketplace-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .marketplace-content-medpro {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .marketplace-text-medpro {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .marketplace-text-medpro h2 {
+    font-size: 24px;
+  }
+  
+  .marketplace-text-medpro p {
+    font-size: 14px;
+  }
+  
+  .marketplace-image-medpro {
+    width: 100%;
+  }
+  
+  .marketplace-image-medpro img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .testimonials-grid-medpro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .testimonial-card-medpro {
+    padding: 20px 15px;
+  }
+  
+  .testimonial-text-medpro {
+    font-size: 14px;
+  }
+  
+  /* CTA Section */
+  .cta-section-medpro {
+    padding: 40px 15px;
+  }
+  
+  .cta-content-medpro h2 {
+    font-size: 24px;
+  }
+  
+  .cta-content-medpro p {
+    font-size: 14px;
+  }
+  
+  .cta-buttons-medpro {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .cta-buttons-medpro .btn-primary-medpro,
+  .cta-buttons-medpro .btn-secondary-medpro {
+    width: 100%;
+  }
+  
+  /* Footer */
+  .footer-medpro {
+    padding: 30px 15px;
+  }
+  
+  .footer-content-medpro {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .footer-section-medpro {
+    width: 100%;
+  }
+  
+  .footer-section-medpro h4 {
+    font-size: 16px;
+  }
+  
+  .footer-links-medpro {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .footer-links-medpro a {
+    font-size: 13px;
+  }
+  
+  .social-links-medpro {
+    justify-content: center;
+  }
+  
+  .footer-bottom-medpro {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+
+/* Small phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  
+  .hero-text-medpro h1 {
+    font-size: 22px;
+  }
+  
+  .hero-text-medpro p {
+    font-size: 13px;
+  }
+  
+  .section-header-medpro h2 {
+    font-size: 20px;
+  }
+  
+  .stat-number-medpro {
+    font-size: 28px;
+  }
+  
+  .btn-primary-medpro,
+  .btn-secondary-medpro {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+  
+  .mobile-menu-toggle {
+    font-size: 24px;
+  }
+  
+  .logo-medpro {
+    font-size: 18px;
+  }
+  
+  .nav-medpro .nav-link {
+    font-size: 15px;
+    padding: 16px 20px;
+  }
+}
+
+
+/* ============================================
+   CRITICAL MOBILE FIX - MUST BE AT END
+   ============================================ */
+
+/* Force show hamburger on mobile */
+@media screen and (max-width: 768px) {
+  
+  /* Header container */
+  .header-content-medpro {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 15px !important;
+    gap: 15px !important;
+    align-items: stretch !important;
+    position: relative !important;
+  }
+  
+  /* Row 1: Logo and Hamburger container */
+  .header-content-medpro .logo-medpro {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    font-size: 20px !important;
+    height: 32px !important;
+    order: 1 !important;
+  }
+  
+  .header-content-medpro .logo-medpro svg {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .header-content-medpro .logo-medpro span {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Hamburger - Same line as logo, absolute positioned */
+  .header-content-medpro .mobile-menu-toggle {
+    position: absolute !important;
+    top: 23px !important;
+    right: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: none !important;
+    border: none !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    color: #1977cc !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 1001 !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  /* Row 2: User actions */
+  .header-content-medpro .header-actions-medpro {
+    display: flex !important;
+    width: 100% !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    order: 2 !important;
+  }
+  
+  .header-actions-medpro .user-menu-medpro {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .header-actions-medpro .user-name-medpro {
+    font-size: 14px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .header-actions-medpro .btn-login-medpro,
+  .header-actions-medpro .btn-logout-medpro {
+    flex: 1 !important;
+    min-width: 100px !important;
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+  
+  .header-actions-medpro .btn-appointment {
+    flex: 2 !important;
+    min-width: 150px !important;
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+  
+  /* Navigation menu - hidden by default */
+  .header-content-medpro .nav-medpro {
+    display: none !important;
+    position: fixed !important;
+    top: 130px !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  .header-content-medpro .nav-medpro.mobile-open {
+    display: flex !important;
+  }
+  
+  /* Remove mobile menu actions since we're showing header actions */
+  .mobile-menu-actions {
+    display: none !important;
+  }
+}
+
+
+/* Mobile menu actions styles */
+.mobile-menu-actions {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    border-top: 2px solid #eee;
+    background: #f8f9fa;
+  }
+  
+  .mobile-user-info {
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .mobile-user-name {
+    font-weight: 600;
+    color: var(--medpro-text);
+    font-size: 16px;
+  }
+  
+  .mobile-btn-login,
+  .mobile-btn-appointment,
+  .mobile-btn-logout {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+  }
+  
+  .mobile-btn-login {
+    background: transparent;
+    border: 2px solid var(--medpro-blue);
+    color: var(--medpro-blue);
+  }
+  
+  .mobile-btn-login:hover {
+    background: var(--medpro-blue);
+    color: white;
+  }
+  
+  .mobile-btn-appointment {
+    background: var(--medpro-blue);
+    color: white;
+    box-shadow: 0 4px 12px rgba(25, 119, 204, 0.2);
+  }
+  
+  .mobile-btn-appointment:hover {
+    background: var(--medpro-blue-dark);
+  }
+  
+  .mobile-btn-logout {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .mobile-btn-logout:hover {
+    background: #c82333;
+  }
+}

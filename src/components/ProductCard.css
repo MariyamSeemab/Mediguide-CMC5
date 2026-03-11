@@ -1,0 +1,282 @@
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+}
+
+/* CRITICAL: Prevent any text overlays on product cards */
+.product-card::before,
+.product-card::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+/* CRITICAL: Explicitly prevent any pseudo-elements on product image */
+.product-image::before,
+.product-image::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* CRITICAL: Prevent any child elements from showing overlays */
+.product-image * {
+  position: relative;
+}
+
+.product-image *::before,
+.product-image *::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* CRITICAL: Hide any absolute positioned text in product image */
+.product-image [style*="position: absolute"],
+.product-image [style*="position:absolute"],
+.product-image .overlay,
+.product-image .badge,
+.product-image .label,
+.product-image .price-tag,
+.product-image .price-range {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.product-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.product-description {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.rating-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.product-footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1977cc;
+  margin-bottom: 12px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-add-cart,
+.btn-view-details {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add-cart {
+  background: #1977cc;
+  color: white;
+}
+
+.btn-add-cart:hover {
+  background: #145a94;
+  transform: translateY(-2px);
+}
+
+.btn-view-details {
+  background: #f8f9fa;
+  color: #2c3e50;
+  border: 1px solid #e0e0e0;
+}
+
+.btn-view-details:hover {
+  background: #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .product-actions {
+    flex-direction: column;
+  }
+
+  .btn-add-cart,
+  .btn-view-details {
+    width: 100%;
+  }
+}
+
+
+/* CRITICAL: Prevent any text overlay on product images */
+.product-image > *:not(img) {
+  display: none !important;
+}
+
+.product-image span,
+.product-image div:not(.product-image),
+.product-image p {
+  display: none !important;
+}
+
+/* Hide any absolute positioned elements in product image */
+.product-image [style*="position: absolute"],
+.product-image [style*="position:absolute"] {
+  display: none !important;
+}
+
+/* Ensure only the image is visible */
+.product-image {
+  isolation: isolate;
+}
+
+/* ADDITIONAL FIX: Block any text content containing price range */
+.product-card *:not(.product-price):not(.product-name):not(.product-description):not(.rating-value) {
+  /* If element contains ₹ followed by numbers and dash, hide it unless it's the product price */
+  &:has-text("₹0"), &:has-text("₹5000"), &:has-text("0 –"), &:has-text("5000") {
+    display: none !important;
+  }
+}
+
+/* Prevent any overlay text on product card */
+.product-card [style*="z-index"]:not(.product-info):not(.product-footer) {
+  display: none !important;
+}
+
+/* Block any floating or positioned text */
+.product-card > div:not(.product-image):not(.product-info) {
+  display: none !important;
+}
+
+
+/* FINAL NUCLEAR OPTION: Hide any text containing price range patterns */
+.product-card *:not(.product-price) {
+  /* Block any element that might contain filter price range */
+  &:contains("₹0") {
+    display: none !important;
+  }
+  &:contains("₹5000") {
+    display: none !important;
+  }
+  &:contains("0 –") {
+    display: none !important;
+  }
+  &:contains("– 5000") {
+    display: none !important;
+  }
+}
+
+/* Ensure product image container is completely locked down */
+.product-image {
+  pointer-events: auto;
+  user-select: none;
+}
+
+.product-image * {
+  pointer-events: none;
+}
+
+.product-image img {
+  pointer-events: auto;
+}
+
+/* Block any dynamically injected content */
+.product-card [style*="content"],
+.product-card [data-content],
+.product-card [data-price-range],
+.product-card [data-filter] {
+  display: none !important;
+  visibility: hidden !important;
+}

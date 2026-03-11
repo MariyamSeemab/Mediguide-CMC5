@@ -1,0 +1,477 @@
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   Applied globally for all pages
+   ============================================ */
+
+/* Mobile devices (phones, 0-768px) */
+@media screen and (max-width: 768px) {
+  
+  /* ============================================
+     GLOBAL MOBILE STYLES
+     ============================================ */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+  
+  /* Container adjustments */
+  .container {
+    padding: 10px 15px !important;
+    max-width: 100% !important;
+  }
+  
+  /* ============================================
+     HOMEPAGE MOBILE STYLES
+     ============================================ */
+  
+  /* Hero section */
+  .hero-section {
+    padding: 40px 20px !important;
+    min-height: auto !important;
+  }
+  
+  .hero-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .hero-content p {
+    font-size: 16px !important;
+  }
+  
+  .hero-image {
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+  
+  /* Features grid */
+  .features-grid,
+  .services-grid,
+  .doctors-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  /* Stats section */
+  .stats-container {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  
+  .stat-item {
+    width: 100% !important;
+  }
+  
+  /* Buttons */
+  .btn,
+  .cta-button,
+  button {
+    width: 100% !important;
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+  }
+  
+  /* ============================================
+     NAVIGATION MOBILE STYLES
+     ============================================ */
+  
+  nav {
+    padding: 10px 15px !important;
+  }
+  
+  .nav-links {
+    flex-direction: column !important;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+  }
+  
+  .nav-links.active {
+    display: flex !important;
+  }
+  
+  .nav-links a {
+    padding: 15px 20px !important;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Hamburger menu */
+  .mobile-menu-toggle {
+    display: block !important;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* ============================================
+     APPOINTMENTS PAGE MOBILE
+     ============================================ */
+  
+  .appointments-page {
+    padding: 10px !important;
+  }
+  
+  .appointments-header h1 {
+    font-size: 24px !important;
+  }
+  
+  .appointments-filters {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  
+  .filter-btn {
+    flex: 1 1 calc(50% - 8px) !important;
+    font-size: 12px !important;
+    padding: 10px 8px !important;
+  }
+  
+  .filter-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  .appointments-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .appointment-card {
+    padding: 15px !important;
+  }
+  
+  .appointment-actions {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .appointment-actions button {
+    width: 100% !important;
+  }
+  
+  /* ============================================
+     CHATBOT MOBILE STYLES
+     ============================================ */
+  
+  .chatbot-container {
+    height: calc(100vh - 60px) !important;
+    border-radius: 0 !important;
+  }
+  
+  .chat-header {
+    padding: 15px !important;
+  }
+  
+  .chat-messages {
+    padding: 15px !important;
+  }
+  
+  .message {
+    max-width: 85% !important;
+  }
+  
+  .chat-input-container {
+    padding: 10px !important;
+  }
+  
+  .chat-input {
+    font-size: 14px !important;
+  }
+  
+  /* ============================================
+     DOCTOR DASHBOARD MOBILE
+     ============================================ */
+  
+  .dashboard-container {
+    padding: 10px !important;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 22px !important;
+  }
+  
+  .dashboard-stats {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .appointments-list {
+    padding: 10px !important;
+  }
+  
+  /* ============================================
+     MARKETPLACE MOBILE
+     ============================================ */
+  
+  .marketplace-hero {
+    padding: 30px 20px !important;
+  }
+  
+  .marketplace-hero h1 {
+    font-size: 28px !important;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .product-card {
+    padding: 15px !important;
+  }
+  
+  /* ============================================
+     EMERGENCY PAGE MOBILE
+     ============================================ */
+  
+  .emergency-container {
+    padding: 10px !important;
+  }
+  
+  .emergency-header h1 {
+    font-size: 24px !important;
+  }
+  
+  .location-section {
+    padding: 15px !important;
+  }
+  
+  .map-container {
+    height: 300px !important;
+  }
+  
+  /* ============================================
+     FORMS MOBILE STYLES
+     ============================================ */
+  
+  .form-container {
+    padding: 20px 15px !important;
+    margin: 10px !important;
+  }
+  
+  .form-group {
+    margin-bottom: 15px !important;
+  }
+  
+  input,
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 12px !important;
+  }
+  
+  /* ============================================
+     MODALS MOBILE
+     ============================================ */
+  
+  .modal-overlay {
+    padding: 10px !important;
+  }
+  
+  .modal,
+  .details-modal {
+    width: 95% !important;
+    max-width: 95% !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+  
+  .modal-header h2 {
+    font-size: 20px !important;
+  }
+  
+  .modal-content {
+    padding: 15px !important;
+  }
+  
+  /* ============================================
+     CARDS MOBILE
+     ============================================ */
+  
+  .card {
+    padding: 15px !important;
+    margin: 10px 0 !important;
+  }
+  
+  .card h3 {
+    font-size: 18px !important;
+  }
+  
+  /* ============================================
+     TABLES MOBILE
+     ============================================ */
+  
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+  
+  thead {
+    display: none !important;
+  }
+  
+  tbody,
+  tr,
+  td {
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  tr {
+    margin-bottom: 15px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    padding: 10px !important;
+  }
+  
+  td {
+    text-align: left !important;
+    padding: 8px !important;
+    position: relative !important;
+    padding-left: 50% !important;
+  }
+  
+  td:before {
+    content: attr(data-label) !important;
+    position: absolute !important;
+    left: 10px !important;
+    font-weight: bold !important;
+  }
+  
+  /* ============================================
+     IMAGES MOBILE
+     ============================================ */
+  
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  .doctor-avatar,
+  .product-image {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  /* ============================================
+     TEXT MOBILE
+     ============================================ */
+  
+  h1 {
+    font-size: 26px !important;
+  }
+  
+  h2 {
+    font-size: 22px !important;
+  }
+  
+  h3 {
+    font-size: 18px !important;
+  }
+  
+  p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* ============================================
+     SPACING MOBILE
+     ============================================ */
+  
+  section {
+    padding: 30px 15px !important;
+  }
+  
+  .section-title {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  /* ============================================
+     UTILITY CLASSES
+     ============================================ */
+  
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  .show-mobile {
+    display: block !important;
+  }
+  
+  /* ============================================
+     FOOTER MOBILE
+     ============================================ */
+  
+  footer {
+    padding: 30px 15px !important;
+  }
+  
+  .footer-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .footer-links {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+}
+
+/* Tablet devices (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+  .features-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .doctors-grid,
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .appointments-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px !important;
+  }
+}
+
+/* Small phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  
+  body {
+    font-size: 13px;
+  }
+  
+  .hero-content h1 {
+    font-size: 24px !important;
+  }
+  
+  .filter-btn {
+    flex: 1 1 100% !important;
+  }
+  
+  .btn,
+  button {
+    font-size: 13px !important;
+    padding: 10px 15px !important;
+  }
+}

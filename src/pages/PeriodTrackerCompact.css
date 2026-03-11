@@ -1,0 +1,319 @@
+/* Compact AI Companion Styles */
+.symptom-selector-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.symptom-btn-compact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem !important;
+  padding: 1.25rem 1.5rem !important;
+  border: 2px solid #fce7f3 !important;
+  background: white !important;
+  border-radius: 12px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700 !important;
+  color: #475569 !important;
+  font-size: 1rem !important;
+  text-align: left;
+}
+
+.symptom-btn-compact:hover {
+  background: #fdf2f8 !important;
+  border-color: #ec4899 !important;
+  color: #ec4899 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15) !important;
+}
+
+.symptom-btn-compact.selected {
+  background: #ec4899 !important;
+  color: white !important;
+  border-color: #ec4899 !important;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25) !important;
+}
+
+.symptom-icon-compact {
+  font-size: 1.75rem !important;
+  flex-shrink: 0;
+}
+
+/* Relief Suggestions */
+.relief-suggestions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.relief-suggestion-card {
+  background: white !important;
+  padding: 1.75rem !important;
+  border-radius: 16px !important;
+  border: 2px solid #fce7f3 !important;
+}
+
+.relief-suggestion-card h3 {
+  color: #db2777 !important;
+  margin-bottom: 1rem;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+}
+
+.suggestion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.suggestion-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fff5f7;
+  border-radius: 10px;
+}
+
+.suggestion-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.suggestion-item h4 {
+  color: #c44569;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.suggestion-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestion-item li {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+.warning-compact {
+  padding: 0.75rem;
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  color: #856404;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Nutrition Guidance Compact */
+.nutrition-guidance-card h2 {
+  color: #c44569;
+  margin-bottom: 0.5rem;
+}
+
+.nutrition-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.nutrition-item-compact {
+  text-align: center;
+  padding: 1.75rem !important;
+  background: #fdf2f8 !important;
+  border-radius: 16px !important;
+  border: 2px solid #fce7f3 !important;
+  transition: all 0.3s ease;
+}
+
+.nutrition-item-compact:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.15) !important;
+  border-color: #fbcfe8 !important;
+}
+
+.nutrition-icon-large {
+  font-size: 2.5rem !important;
+  display: block;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.nutrition-item-compact h4 {
+  color: #db2777 !important;
+  margin: 0.5rem 0;
+  font-size: 1.125rem !important;
+  font-weight: 800 !important;
+}
+
+.nutrition-item-compact p {
+  color: #64748b !important;
+  font-size: 0.9375rem !important;
+  margin: 0.5rem 0;
+  font-weight: 500 !important;
+}
+
+.nutrition-item-compact ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  text-align: left;
+}
+
+.nutrition-item-compact li {
+  padding: 0.625rem !important;
+  margin: 0.5rem 0 !important;
+  background: white !important;
+  border-radius: 8px !important;
+  font-size: 0.9375rem !important;
+  color: #475569 !important;
+  font-weight: 500 !important;
+  border: 1px solid #fce7f3 !important;
+}
+
+/* Self-Care Guidance Compact */
+.selfcare-guidance-card h2 {
+  color: #c44569;
+  margin-bottom: 0.5rem;
+}
+
+.selfcare-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.selfcare-item-compact {
+  padding: 1.75rem !important;
+  background: #fdf2f8 !important;
+  border-radius: 16px !important;
+  border: 2px solid #fce7f3 !important;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.selfcare-item-compact:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.15) !important;
+  border-color: #fbcfe8 !important;
+}
+
+.selfcare-icon-large {
+  font-size: 2.5rem !important;
+  display: block;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.selfcare-item-compact h4 {
+  color: #db2777 !important;
+  margin: 0.5rem 0;
+  font-size: 1.125rem !important;
+  font-weight: 800 !important;
+}
+
+.selfcare-item-compact p {
+  color: #64748b !important;
+  font-size: 0.9375rem !important;
+  margin: 0.75rem 0;
+  line-height: 1.5;
+  font-weight: 500 !important;
+}
+
+.try-btn {
+  margin-top: 1rem;
+  padding: 0.875rem 1.75rem !important;
+  background: #ec4899 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 0.9375rem !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25) !important;
+}
+
+.try-btn:hover {
+  background: #db2777 !important;
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.35) !important;
+}
+
+/* Tracker Header */
+.tracker-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tracker-header h2 {
+  color: #c44569;
+  margin-bottom: 0.5rem;
+}
+
+.tracker-header p {
+  color: #666;
+}
+
+.water-goal {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Analytics Compact */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.phase-lifestyle-tips {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #fff5f7;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.lifestyle-tip p {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.lifestyle-tip p:first-child {
+  font-weight: 700;
+  color: #c44569;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .symptom-selector-compact {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .suggestion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-grid-compact,
+  .selfcare-grid-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

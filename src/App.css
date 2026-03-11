@@ -1,0 +1,107 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* ============================================
+   GLOBAL MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+  
+  /* Global container */
+  #root {
+    overflow-x: hidden;
+  }
+  
+  /* Navigation */
+  nav {
+    padding: 12px 15px;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  /* Mobile menu toggle */
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-blue);
+  }
+  
+  /* Buttons */
+  .btn,
+  button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 15px;
+    margin: 10px 0;
+  }
+  
+  /* Grids */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Flex containers */
+  .flex-row {
+    flex-direction: column;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Modals */
+  .modal {
+    width: 95%;
+    max-width: 95%;
+    padding: 20px 15px;
+  }
+  
+  /* Forms */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Tablet landscape */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  
+  body {
+    font-size: 13px;
+  }
+  
+  h1 {
+    font-size: 22px;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+}

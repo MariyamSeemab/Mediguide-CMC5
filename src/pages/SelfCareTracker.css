@@ -1,0 +1,771 @@
+.selfcare-tracker-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.selfcare-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.selfcare-header .back-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.selfcare-header .back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-3px);
+}
+
+.selfcare-header .back-button svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.selfcare-header .header-content {
+  flex: 1;
+}
+
+.selfcare-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.selfcare-header p {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.9;
+}
+
+.selfcare-header .language-selector {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.selfcare-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+.selfcare-tabs button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.selfcare-tabs button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.selfcare-tabs button.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.selfcare-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.glass-card h2, .glass-card h3 {
+  margin-top: 0;
+  color: #667eea;
+}
+
+/* Date Card */
+.date-card h2 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Mood Card */
+.mood-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mood-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.mood-btn:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.mood-btn.selected {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.mood-emoji {
+  font-size: 2rem;
+}
+
+/* Water Card */
+.water-card .goal-text {
+  text-align: center;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.water-visual {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.water-drop {
+  font-size: 2rem;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.water-drop.filled {
+  opacity: 1;
+  animation: dropFill 0.3s ease;
+}
+
+@keyframes dropFill {
+  0% { transform: scale(0.5); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.water-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.water-controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.water-controls button:hover {
+  transform: scale(1.1);
+}
+
+.water-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+/* Steps Card */
+.steps-input input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  text-align: center;
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Sleep Card */
+.sleep-slider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sleep-slider input[type="range"] {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  outline: none;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.sleep-slider input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+}
+
+.sleep-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Health Checks */
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.check-item:hover {
+  background: #e8e8e8;
+}
+
+.check-item input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* Eye Timer */
+.timer-rule {
+  text-align: center;
+  color: #666;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.timer-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.timer-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.timer-label {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.timer-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.timer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.timer-btn.active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Notes */
+.notes-card textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* Save Button */
+.save-btn {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+/* Tips Section */
+.tip-of-day {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border: none;
+}
+
+.tip-content {
+  margin-top: 1rem;
+}
+
+.tip-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-card {
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+  cursor: default;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tip-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* First Aid Section */
+.emergency-header {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+  text-align: center;
+}
+
+.emergency-header h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.emergency-number {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.firstaid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.firstaid-card {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.firstaid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.firstaid-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  color: #667eea;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Remedies Section */
+.remedies-header {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.remedies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.remedy-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.remedy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.remedy-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.remedy-preview {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Exercises Section */
+.exercises-header {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.exercise-card {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.exercise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.exercise-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.try-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.try-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #667eea;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+/* Breathing Modal */
+.breathing-guide {
+  text-align: center;
+}
+
+.breathing-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 2rem auto;
+  animation: breathe 8s infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.breathing-steps {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.breathing-steps p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Yoga Modal */
+.yoga-poses {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.yoga-pose {
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+}
+
+.yoga-pose h4 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+/* First Aid Modal */
+.firstaid-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.firstaid-step {
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.warning-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fff3cd;
+  border-radius: 12px;
+  border-left: 4px solid #ffc107;
+}
+
+/* Remedy Modal */
+.remedy-details h4 {
+  color: #667eea;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.caution-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #ffe0e0;
+  border-radius: 12px;
+  border-left: 4px solid #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .selfcare-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .selfcare-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .selfcare-tabs {
+    justify-content: center;
+  }
+  
+  .mood-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tips-grid,
+  .firstaid-grid,
+  .remedies-grid,
+  .exercises-grid {
+    grid-template-columns: 1fr;
+  }
+}

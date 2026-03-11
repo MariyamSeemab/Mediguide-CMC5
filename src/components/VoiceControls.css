@@ -1,0 +1,125 @@
+/* Voice Controls Styling - Matches existing chatbot theme */
+
+.voice-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.voice-controls:hover {
+  opacity: 1;
+}
+
+.voice-control-btn {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--primary-blue, #005EB8);
+}
+
+.voice-control-btn:hover {
+  background: rgba(0, 94, 184, 0.1);
+  transform: scale(1.1);
+}
+
+.voice-control-btn:active {
+  transform: scale(0.95);
+}
+
+.voice-control-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.voice-control-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+/* Play button */
+.play-btn svg {
+  fill: var(--primary-blue, #005EB8);
+  stroke: none;
+}
+
+/* Pause button */
+.pause-btn {
+  color: var(--accent-orange, #FF6B35);
+}
+
+.pause-btn svg {
+  fill: var(--accent-orange, #FF6B35);
+  stroke: none;
+}
+
+/* Stop button */
+.stop-btn {
+  color: var(--error-red, #D32F2F);
+}
+
+.stop-btn svg {
+  fill: var(--error-red, #D32F2F);
+  stroke: none;
+}
+
+/* Replay button */
+.replay-btn {
+  color: var(--text-gray, #666);
+}
+
+/* Animation for playing state */
+.voice-control-btn.pause-btn {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .voice-control-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .voice-control-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .voice-control-btn {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .voice-control-btn {
+    transition: none;
+  }
+
+  .voice-control-btn.pause-btn {
+    animation: none;
+  }
+}

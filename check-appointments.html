@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Appointments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 { color: #2c3e50; }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .appointment {
+            background: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #3498db;
+        }
+        .status-pending { border-left-color: #f39c12; }
+        .status-approved { border-left-color: #27ae60; }
+        .status-rejected { border-left-color: #e74c3c; }
+        .status-completed { border-left-color: #9b59b6; }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #2980b9; }
+        .info { color: #7f8c8d; font-size: 14px; }
+        .count { font-weight: bold; color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Appointment Checker</h1>
+    
+    <div class="section">
+        <h2>Current User</h2>
+        <div id="currentUser"></div>
+    </div>
+
+    <div class="section">
+        <h2>All Appointments in Storage</h2>
+        <div id="allAppointments"></div>
+    </div>
+
+    <div class="section">
+        <h2>Scheduled Appointments (Approved & Upcoming)</h2>
+        <div id="scheduledAppointments"></div>
+    </div>
+
+    <div class="section">
+        <h2>Actions</h2>
+        <button onclick="createTestAppointment()">Create Test Appointment</button>
+        <button onclick="approveFirstPending()">Approve First Pending</button>
+        <button onclick="clearAllAppointments()">Clear All Appointments</button>
+        <button onclick="location.reload()">Refresh</button>
+    </div>
+
+    <script>
+        function getCurrentUser() {
+            const userStr = localStorage.getItem('mediguide_current_user');
+            return userStr ? JSON.parse(userStr) : null;
+        }
+
+        function getAllAppointments() {
+            const user = getCurrentUser();
+            if (!user) return [];
+            
+            const key = `mediguide_appointments_${user.email}`;
+            const stored = localStorage.getItem(key);
+            return stored ? JSON.parse(stored) : [];
+        }
+
+        function displayCurrentUser() {
+            const user = getCurrentUser();
+            const div = document.getElementById('currentUser');
+            
+            if (user) {
+                div.innerHTML = `
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Name:</strong> ${user.name}</p>
+                    <p><strong>Role:</strong> ${user.role}</p>
+                `;
+            } else {
+                div.innerHTML = '<p class="info">❌ No user logged in. Please log in first.</p>';
+            }
+        }
+
+        function displayAllAppointments() {
+            const appointments = getAllAppointments();
+            const div = document.getElementById('allAppointments');
+            
+            if (appointments.length === 0) {
+                div.innerHTML = '<p class="info">No appointments found.</p>';
+                return;
+            }
+
+            const statusCounts = {
+                pending: 0,
+                approved: 0,
+                rejected: 0,
+                completed: 0,
+                cancelled: 0
+            };
+
+            appointments.forEach(apt => {
+                statusCounts[apt.status] = (statusCounts[apt.status] || 0) + 1;
+            });
+
+            let html = `<p class="count">Total: ${appointments.length} appointments</p>`;
+            html += `<p class="info">
+                Pending: ${statusCounts.pending} | 
+                Approved: ${statusCounts.approved} | 
+                Completed: ${statusCounts.completed} | 
+                Rejected: ${statusCounts.rejected} | 
+                Cancelled: ${statusCounts.cancelled}
+            </p>`;
+
+            appointments.forEach(apt => {
+                const date = new Date(apt.appointmentDate);
+                const isUpcoming = date >= new Date();
+                html += `
+                    <div class="appointment status-${apt.status}">
+                        <p><strong>ID:</strong> ${apt.id}</p>
+                        <p><strong>Doctor:</strong> ${apt.doctor.name} (${apt.doctor.specialty})</p>
+                        <p><strong>Date:</strong> ${apt.appointmentDate} at ${apt.appointmentTime} ${isUpcoming ? '🔜' : '⏰ Past'}</p>
+                        <p><strong>Status:</strong> ${apt.status.toUpperCase()}</p>
+                        <p><strong>Mode:</strong> ${apt.consultationMode}</p>
+                        <p><strong>Reason:</strong> ${apt.reason || 'N/A'}</p>
+                    </div>
+                `;
+            });
+
+            div.innerHTML = html;
+        }
+
+        function displayScheduledAppointments() {
+            const appointments = getAllAppointments();
+            const div = document.getElementById('scheduledAppointments');
+            
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            const scheduled = appointments.filter(apt => {
+                const aptDate = new Date(apt.appointmentDate);
+                return apt.status === 'approved' && aptDate >= today;
+            });
+
+            if (scheduled.length === 0) {
+                div.innerHTML = `
+                    <p class="info">❌ No scheduled appointments found.</p>
+                    <p class="info">Scheduled appointments must be:</p>
+                    <ul class="info">
+                        <li>Status = 'approved' (confirmed by doctor)</li>
+                        <li>Date is today or in the future</li>
+                    </ul>
+                `;
+                return;
+            }
+
+            let html = `<p class="count">✅ Found ${scheduled.length} scheduled appointment(s)</p>`;
+            scheduled.forEach(apt => {
+                html += `
+                    <div class="appointment status-approved">
+                        <p><strong>ID:</strong> ${apt.id}</p>
+                        <p><strong>Doctor:</strong> ${apt.doctor.name}</p>
+                        <p><strong>Date:</strong> ${apt.appointmentDate} at ${apt.appointmentTime}</p>
+                        <p><strong>Mode:</strong> ${apt.consultationMode}</p>
+                    </div>
+                `;
+            });
+
+            div.innerHTML = html;
+        }
+
+        function createTestAppointment() {
+            const user = getCurrentUser();
+            if (!user) {
+                alert('Please log in first!');
+                return;
+            }
+
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const dateStr = tomorrow.toISOString().split('T')[0];
+
+            const newAppointment = {
+                id: `APT-${Date.now()}-TEST`,
+                userId: user.email,
+                patientName: user.name,
+                patientPhone: '+91 98765 43210',
+                doctor: {
+                    id: 1,
+                    name: 'Dr. Rajesh Kumar',
+                    specialty: 'General Physician',
+                    image: 'https://via.placeholder.com/150',
+                    consultationFee: '₹500',
+                    location: 'Mumbai'
+                },
+                appointmentDate: dateStr,
+                appointmentTime: '10:00 AM',
+                reason: 'Test appointment',
+                consultationMode: 'online',
+                status: 'approved',
+                bookedAt: new Date().toISOString(),
+                meetingId: `MEET-${Date.now()}`
+            };
+
+            const appointments = getAllAppointments();
+            appointments.unshift(newAppointment);
+            
+            const key = `mediguide_appointments_${user.email}`;
+            localStorage.setItem(key, JSON.stringify(appointments));
+            
+            alert('✅ Test appointment created and approved!');
+            location.reload();
+        }
+
+        function approveFirstPending() {
+            const user = getCurrentUser();
+            if (!user) {
+                alert('Please log in first!');
+                return;
+            }
+
+            const appointments = getAllAppointments();
+            const pending = appointments.find(apt => apt.status === 'pending');
+            
+            if (!pending) {
+                alert('No pending appointments to approve.');
+                return;
+            }
+
+            pending.status = 'approved';
+            pending.meetingId = `MEET-${Date.now()}`;
+            
+            const key = `mediguide_appointments_${user.email}`;
+            localStorage.setItem(key, JSON.stringify(appointments));
+            
+            alert(`✅ Approved appointment ${pending.id}`);
+            location.reload();
+        }
+
+        function clearAllAppointments() {
+            if (!confirm('Are you sure you want to delete ALL appointments?')) {
+                return;
+            }
+
+            const user = getCurrentUser();
+            if (!user) {
+                alert('Please log in first!');
+                return;
+            }
+
+            const key = `mediguide_appointments_${user.email}`;
+            localStorage.removeItem(key);
+            localStorage.removeItem('mediguide_appointments');
+            
+            alert('✅ All appointments cleared!');
+            location.reload();
+        }
+
+        // Initialize
+        displayCurrentUser();
+        displayAllAppointments();
+        displayScheduledAppointments();
+    </script>
+</body>
+</html>

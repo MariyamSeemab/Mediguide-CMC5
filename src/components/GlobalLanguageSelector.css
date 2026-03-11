@@ -1,0 +1,60 @@
+/* Global Language Selector - Static positioning within page */
+
+.global-language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  pointer-events: auto;
+}
+
+/* Exact same styling as homepage language selector */
+.global-language-selector .language-selector-top {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.875rem;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.global-language-selector .language-selector-top:hover {
+  border-color: #1977cc;
+  box-shadow: 0 2px 8px rgba(25, 119, 204, 0.2);
+}
+
+.global-language-selector .language-selector-top:focus {
+  outline: none;
+  border-color: #1977cc;
+  box-shadow: 0 0 0 3px rgba(25, 119, 204, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .global-language-selector {
+    top: 10px;
+    right: 10px;
+  }
+
+  .global-language-selector .language-selector-top {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 130px;
+  }
+}
+
+/* Ensure it doesn't interfere with page content */
+.global-language-selector {
+  user-select: none;
+}
+
+/* Print styles - hide when printing */
+@media print {
+  .global-language-selector {
+    display: none;
+  }
+}

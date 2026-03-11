@@ -1,0 +1,618 @@
+import React, { useState, useRef } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { useAuth } from '../contexts/AuthContext';
+import { patientDataService } from '../services/patientDataService';
+import { localizePercentage } from '../utils/numberLocalization';
+import './SymptomChecker.css';
+
+interface SpeechRecognitionEvent {
+  results: {
+    [key: number]: {
+      [key: number]: {
+        transcript: string;
+      };
+    };
+  };
+}
+
+interface SpeechRecognitionErrorEvent {
+  error: string;
+}
+
+interface AnalysisResult {
+  symptoms: string[];
+  confidence: number;
+  recommendations: string[];
+}
+
+const SymptomChecker: React.FC = () => {
+  const { t, currentLanguage } = useLanguage();
+  const { user } = useAuth();
+  const [isListening, setIsListening] = useState(false);
+  const [textInput, setTextInput] = useState('');
+  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
+  const [textAnalysisResult, setTextAnalysisResult] = useState<AnalysisResult | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const analyzeTextSymptoms = (text: string) => {
+    setIsAnalyzing(true);
+    setTextAnalysisResult(null);
+    
+    // Simulate AI analysis with a delay
+    setTimeout(() => {
+      // Mock AI analysis results based on text symptoms
+      const lowerText = text.toLowerCase();
+      let mockResult: AnalysisResult;
+      
+      // Analyze based on keywords in the text
+      if (lowerText.includes('fever') || lowerText.includes('temperature') || lowerText.includes('hot') ||
+          lowerText.includes('बुखार') || lowerText.includes('காய்ச்சல்') || lowerText.includes('జ్వరం') ||
+          lowerText.includes('জ্বর') || lowerText.includes('તાવ') || lowerText.includes('ಜ್ವರ')) {
+        mockResult = {
+          symptoms: [
+            t('symptomChecker.analysis.fever.symptom1'),
+            t('symptomChecker.analysis.fever.symptom2'),
+            t('symptomChecker.analysis.fever.symptom3')
+          ],
+          confidence: 0.82,
+          recommendations: [
+            t('symptomChecker.analysis.fever.rec1'),
+            t('symptomChecker.analysis.fever.rec2'),
+            t('symptomChecker.analysis.fever.rec3'),
+            t('symptomChecker.analysis.fever.rec4'),
+            t('symptomChecker.analysis.fever.rec5')
+          ]
+        };
+      } else if (lowerText.includes('headache') || lowerText.includes('head pain') || lowerText.includes('migraine') ||
+                 lowerText.includes('सिरदर्द') || lowerText.includes('தலைவலி') || lowerText.includes('తలనొప్పి') ||
+                 lowerText.includes('মাথাব্যথা') || lowerText.includes('માથાનો દુખાવો') || lowerText.includes('ತಲೆನೋವು')) {
+        mockResult = {
+          symptoms: [
+            t('symptomChecker.analysis.headache.symptom1'),
+            t('symptomChecker.analysis.headache.symptom2'),
+            t('symptomChecker.analysis.headache.symptom3')
+          ],
+          confidence: 0.85,
+          recommendations: [
+            t('symptomChecker.analysis.headache.rec1'),
+            t('symptomChecker.analysis.headache.rec2'),
+            t('symptomChecker.analysis.headache.rec3'),
+            t('symptomChecker.analysis.headache.rec4'),
+            t('symptomChecker.analysis.headache.rec5'),
+            t('symptomChecker.analysis.headache.rec6')
+          ]
+        };
+      } else if (lowerText.includes('cough') || lowerText.includes('throat') || lowerText.includes('cold') ||
+                 lowerText.includes('खांसी') || lowerText.includes('இருமல்') || lowerText.includes('దగ్గు') ||
+                 lowerText.includes('কাশি') || lowerText.includes('ઉધરસ') || lowerText.includes('ಕೆಮ್ಮು')) {
+        mockResult = {
+          symptoms: [
+            t('symptomChecker.analysis.cough.symptom1'),
+            t('symptomChecker.analysis.cough.symptom2'),
+            t('symptomChecker.analysis.cough.symptom3')
+          ],
+          confidence: 0.80,
+          recommendations: [
+            t('symptomChecker.analysis.cough.rec1'),
+            t('symptomChecker.analysis.cough.rec2'),
+            t('symptomChecker.analysis.cough.rec3'),
+            t('symptomChecker.analysis.cough.rec4'),
+            t('symptomChecker.analysis.cough.rec5'),
+            t('symptomChecker.analysis.cough.rec6')
+          ]
+        };
+      } else if (lowerText.includes('stomach') || lowerText.includes('nausea') || lowerText.includes('vomit') || lowerText.includes('diarrhea') ||
+                 lowerText.includes('पेट') || lowerText.includes('வயிறு') || lowerText.includes('కడుపు') ||
+                 lowerText.includes('পেট') || lowerText.includes('પેટ') || lowerText.includes('ಹೊಟ್ಟೆ')) {
+        mockResult = {
+          symptoms: [
+            t('symptomChecker.analysis.stomach.symptom1'),
+            t('symptomChecker.analysis.stomach.symptom2'),
+            t('symptomChecker.analysis.stomach.symptom3')
+          ],
+          confidence: 0.78,
+          recommendations: [
+            t('symptomChecker.analysis.stomach.rec1'),
+            t('symptomChecker.analysis.stomach.rec2'),
+            t('symptomChecker.analysis.stomach.rec3'),
+            t('symptomChecker.analysis.stomach.rec4'),
+            t('symptomChecker.analysis.stomach.rec5'),
+            t('symptomChecker.analysis.stomach.rec6')
+          ]
+        };
+      } else {
+        // Generic response for unrecognized symptoms
+        mockResult = {
+          symptoms: [
+            t('symptomChecker.analysis.general.symptom1'),
+            t('symptomChecker.analysis.general.symptom2')
+          ],
+          confidence: 0.70,
+          recommendations: [
+            t('symptomChecker.analysis.general.rec1'),
+            t('symptomChecker.analysis.general.rec2'),
+            t('symptomChecker.analysis.general.rec3'),
+            t('symptomChecker.analysis.general.rec4'),
+            t('symptomChecker.analysis.general.rec5'),
+            t('symptomChecker.analysis.general.rec6')
+          ]
+        };
+      }
+      
+      setTextAnalysisResult(mockResult);
+      setIsAnalyzing(false);
+    }, 1500);
+  };
+
+  const handleSubmitSymptoms = () => {
+    console.log('Submit button clicked!');
+    console.log('Text input:', textInput);
+    console.log('User:', user);
+    
+    if (!textInput.trim()) {
+      alert('Please enter your symptoms first.');
+      return;
+    }
+
+    // Analyze the symptoms
+    analyzeTextSymptoms(textInput);
+
+    // Save text input if user is logged in
+    if (user) {
+      console.log('Saving to patient data service...');
+      patientDataService.addSymptomCheckerEntry(user.id, {
+        source: 'symptom-checker',
+        timestamp: new Date(),
+        data: {
+          text: textInput.trim(),
+          symptoms: textInput.split(',').map(s => s.trim()).filter(s => s)
+        }
+      });
+      
+      // Automatically generate report
+      patientDataService.autoGenerateReport(user.id, user.name);
+    }
+    
+    console.log('Symptoms recorded:', textInput);
+    
+    // Don't clear input immediately - let user see the analysis
+    // setTextInput('');
+  };
+
+  const handleVoiceInput = () => {
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const windowWithSpeech = window as any;
+      const SpeechRecognitionConstructor = windowWithSpeech.webkitSpeechRecognition || windowWithSpeech.SpeechRecognition;
+      if (SpeechRecognitionConstructor) {
+        const recognition = new SpeechRecognitionConstructor();
+        
+        // Map language codes to speech recognition locale codes
+        const langMap: { [key: string]: string } = {
+          'en': 'en-US',
+          'hi': 'hi-IN',
+          'ta': 'ta-IN',
+          'te': 'te-IN',
+          'bn': 'bn-IN',
+          'mr': 'mr-IN',
+          'gu': 'gu-IN',
+          'kn': 'kn-IN',
+          'ml': 'ml-IN',
+          'pa': 'pa-IN',
+          'or': 'or-IN',
+          'as': 'as-IN',
+          'ur': 'ur-IN'
+        };
+        
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = langMap[currentLanguage] || 'en-US';
+
+        recognition.onstart = () => {
+          setIsListening(true);
+        };
+
+        recognition.onresult = (event: any) => {
+          const transcript = event.results[0][0].transcript;
+          setTextInput(transcript);
+          setIsListening(false);
+          
+          // Save voice input to patient data service
+          if (user) {
+            patientDataService.addSymptomCheckerEntry(user.id, {
+              source: 'symptom-checker',
+              timestamp: new Date(),
+              data: {
+                text: transcript
+              }
+            });
+            
+            // Automatically generate report
+            patientDataService.autoGenerateReport(user.id, user.name);
+          }
+        };
+
+        recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
+          console.error('Speech recognition error:', event.error);
+          setIsListening(false);
+        };
+
+        recognition.onend = () => {
+          setIsListening(false);
+        };
+
+        if (isListening) {
+          recognition.stop();
+        } else {
+          recognition.start();
+        }
+      }
+    } else {
+      alert('Speech recognition is not supported in your browser. Please use Chrome or Edge.');
+    }
+  };
+
+  const handleImageUpload = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const result = e.target?.result as string;
+          setUploadedImage(result);
+          analyzeImage(result);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert('Please select a valid image file.');
+      }
+    }
+  };
+
+  const analyzeImage = async (_imageData: string) => {
+    setIsAnalyzing(true);
+    setAnalysisResult(null);
+    
+    // Simulate AI analysis with a delay
+    setTimeout(() => {
+      // Mock AI analysis results - using translation keys for dynamic language support
+      const mockResults: AnalysisResult[] = [
+        {
+          symptoms: [
+            t('symptomChecker.imageAnalysis.skinRash.symptom1'),
+            t('symptomChecker.imageAnalysis.skinRash.symptom2'),
+            t('symptomChecker.imageAnalysis.skinRash.symptom3')
+          ],
+          confidence: 0.85,
+          recommendations: [
+            t('symptomChecker.imageAnalysis.skinRash.rec1'),
+            t('symptomChecker.imageAnalysis.skinRash.rec2'),
+            t('symptomChecker.imageAnalysis.skinRash.rec3'),
+            t('symptomChecker.imageAnalysis.skinRash.rec4')
+          ]
+        },
+        {
+          symptoms: [
+            t('symptomChecker.imageAnalysis.swelling.symptom1'),
+            t('symptomChecker.imageAnalysis.swelling.symptom2'),
+            t('symptomChecker.imageAnalysis.swelling.symptom3')
+          ],
+          confidence: 0.78,
+          recommendations: [
+            t('symptomChecker.imageAnalysis.swelling.rec1'),
+            t('symptomChecker.imageAnalysis.swelling.rec2'),
+            t('symptomChecker.imageAnalysis.swelling.rec3'),
+            t('symptomChecker.imageAnalysis.swelling.rec4')
+          ]
+        },
+        {
+          symptoms: [
+            t('symptomChecker.imageAnalysis.discoloration.symptom1'),
+            t('symptomChecker.imageAnalysis.discoloration.symptom2')
+          ],
+          confidence: 0.72,
+          recommendations: [
+            t('symptomChecker.imageAnalysis.discoloration.rec1'),
+            t('symptomChecker.imageAnalysis.discoloration.rec2'),
+            t('symptomChecker.imageAnalysis.discoloration.rec3'),
+            t('symptomChecker.imageAnalysis.discoloration.rec4')
+          ]
+        }
+      ];
+      
+      // Randomly select one of the mock results
+      const randomResult = mockResults[Math.floor(Math.random() * mockResults.length)];
+      setAnalysisResult(randomResult);
+      setIsAnalyzing(false);
+      
+      // Save image analysis to patient data service
+      if (user) {
+        patientDataService.addSymptomCheckerEntry(user.id, {
+          source: 'symptom-checker',
+          timestamp: new Date(),
+          data: {
+            imageAnalysis: randomResult
+          }
+        });
+        
+        // Automatically generate report
+        patientDataService.autoGenerateReport(user.id, user.name);
+      }
+    }, 2000);
+  };
+
+  const clearImage = () => {
+    setUploadedImage(null);
+    setAnalysisResult(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
+  return (
+    <div className="symptom-checker">
+      <div className="symptom-checker-header">
+        <h1>{t('symptomChecker.title')}</h1>
+        <p>{t('symptomChecker.subtitle')}</p>
+      </div>
+
+      <div className="bento-grid">
+        {/* Voice Input Tile */}
+        <div className="bento-tile voice-tile" onClick={handleVoiceInput}>
+          <div className="tile-content">
+            <div className={`microphone-icon ${isListening ? 'pulsing' : ''}`}>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 15C13.6569 15 15 13.6569 15 12V6C15 4.34315 13.6569 3 12 3C10.3431 3 9 4.34315 9 6V12C9 13.6569 10.3431 15 12 15Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M19 10V12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12V10"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 19V22M12 22H9M12 22H15"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>{t('symptomChecker.voiceInput.title')}</h3>
+            <p>{isListening ? t('symptomChecker.voiceInput.listening') : t('symptomChecker.voiceInput.description')}</p>
+          </div>
+        </div>
+
+        {/* Text Input Tile */}
+        <div className="bento-tile text-tile">
+          <div className="tile-content">
+            <div className="text-input-wrapper">
+              <textarea
+                className="symptom-input"
+                placeholder={t('symptomChecker.textInput.placeholder')}
+                value={textInput}
+                onChange={(e) => setTextInput(e.target.value)}
+                onKeyDown={(e) => {
+                  // Handle Enter key press
+                  if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault(); // Prevent new line
+                    console.log('Enter key pressed!');
+                    handleSubmitSymptoms();
+                  }
+                }}
+                rows={4}
+              />
+              <button 
+                className="send-button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  console.log('Send button clicked!');
+                  handleSubmitSymptoms();
+                }}
+                disabled={!textInput.trim()}
+                type="button"
+              >
+                Send
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <h3>{t('symptomChecker.textInput.title')}</h3>
+            <p>{t('symptomChecker.textInput.description')}</p>
+          </div>
+        </div>
+
+        {/* Image Analysis Tile */}
+        <div className="bento-tile scan-tile" onClick={handleImageUpload}>
+          <div className="tile-content">
+            <div className={`scan-icon ${isAnalyzing ? 'analyzing' : ''}`}>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3 9V6C3 4.89543 3.89543 4 5 4H9"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M15 4H19C20.1046 4 21 4.89543 21 6V9"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M21 15V18C21 19.1046 20.1046 20 19 20H15"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M9 20H5C3.89543 20 3 19.1046 3 18V15"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 8V16M8 12H16"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>{t('symptomChecker.imageInput.title')}</h3>
+            <p>{isAnalyzing ? t('symptomChecker.imageInput.analyzing') : t('symptomChecker.imageInput.description')}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Hidden file input */}
+      <input
+        type="file"
+        ref={fileInputRef}
+        onChange={handleFileChange}
+        accept="image/*"
+        style={{ display: 'none' }}
+      />
+
+      {/* Text Analysis Results */}
+      {(isAnalyzing || textAnalysisResult) && !uploadedImage && (
+        <div className="image-analysis-section">
+          {isAnalyzing && (
+            <div className="analyzing-indicator">
+              <div className="spinner"></div>
+              <p>{t('symptomChecker.analysis.analyzing')}</p>
+            </div>
+          )}
+
+          {textAnalysisResult && !isAnalyzing && (
+            <div className="analysis-results">
+              <h3>{t('symptomChecker.analysis.title')}</h3>
+              <div className="confidence-score">
+                <span>{t('symptomChecker.analysis.confidence')}: {localizePercentage(textAnalysisResult.confidence, currentLanguage)}</span>
+              </div>
+              
+              <div className="detected-symptoms">
+                <h4>{t('symptomChecker.analysis.symptoms')}</h4>
+                <ul>
+                  {textAnalysisResult.symptoms.map((symptom, index) => (
+                    <li key={index}>{symptom}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="recommendations">
+                <h4>{t('symptomChecker.analysis.recommendations')}</h4>
+                <ul>
+                  {textAnalysisResult.recommendations.map((recommendation, index) => (
+                    <li key={index}>{recommendation}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="disclaimer">
+                <p><strong>{t('symptomChecker.analysis.disclaimer').split(':')[0]}:</strong> {t('symptomChecker.analysis.disclaimer').split(':')[1]}</p>
+              </div>
+
+              <button 
+                className="new-analysis-btn"
+                onClick={() => {
+                  setTextAnalysisResult(null);
+                  setTextInput('');
+                }}
+              >
+                {t('symptomChecker.analysis.checkNew')}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Image Preview and Analysis Results */}
+      {uploadedImage && (
+        <div className="image-analysis-section">
+          <div className="image-preview-container">
+            <div className="image-preview">
+              <img src={uploadedImage} alt="Uploaded for analysis" />
+              <button className="clear-image-btn" onClick={clearImage}>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {isAnalyzing && (
+            <div className="analyzing-indicator">
+              <div className="spinner"></div>
+              <p>{t('symptomChecker.imageInput.analyzing')}</p>
+            </div>
+          )}
+
+          {analysisResult && !isAnalyzing && (
+            <div className="analysis-results">
+              <h3>{t('symptomChecker.analysis.title')}</h3>
+              <div className="confidence-score">
+                <span>{t('symptomChecker.analysis.confidence')}: {localizePercentage(analysisResult.confidence, currentLanguage)}</span>
+              </div>
+              
+              <div className="detected-symptoms">
+                <h4>{t('symptomChecker.analysis.symptoms')}</h4>
+                <ul>
+                  {analysisResult.symptoms.map((symptom, index) => (
+                    <li key={index}>{symptom}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="recommendations">
+                <h4>{t('symptomChecker.analysis.recommendations')}</h4>
+                <ul>
+                  {analysisResult.recommendations.map((recommendation, index) => (
+                    <li key={index}>{recommendation}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="disclaimer">
+                <p><strong>{t('symptomChecker.analysis.disclaimer').split(':')[0]}:</strong> {t('symptomChecker.analysis.disclaimer').split(':')[1]}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SymptomChecker;

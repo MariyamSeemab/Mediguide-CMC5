@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Groq API</title>
+</head>
+<body>
+    <h1>Test Groq API</h1>
+    <button onclick="testAPI()">Test API</button>
+    <pre id="result"></pre>
+
+    <script>
+        async function testAPI() {
+            const resultEl = document.getElementById('result');
+            resultEl.textContent = 'Testing...';
+            
+            const API_KEY = 'const apiKey = "YOUR_API_KEY";';
+            const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+            
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${API_KEY}`
+                    },
+                    body: JSON.stringify({
+                        model: 'llama-3.1-8b-instant',
+                        messages: [
+                            { role: 'user', content: 'Say hello' }
+                        ],
+                        max_tokens: 50
+                    })
+                });
+                
+                const data = await response.json();
+                resultEl.textContent = JSON.stringify(data, null, 2);
+                
+                if (!response.ok) {
+                    alert('API Error: ' + response.status + '\n' + JSON.stringify(data));
+                }
+            } catch (error) {
+                resultEl.textContent = 'Error: ' + error.message;
+                alert('Error: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

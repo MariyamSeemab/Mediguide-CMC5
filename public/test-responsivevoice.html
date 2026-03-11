@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResponsiveVoice Test</title>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=leFxmVN8"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .status {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            background: #f0f0f0;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>ResponsiveVoice Test Page</h1>
+    
+    <div id="status" class="status">
+        Checking ResponsiveVoice status...
+    </div>
+
+    <h2>Test Voices</h2>
+    <button onclick="testHindi()">Test Hindi Voice</button>
+    <button onclick="testGujarati()">Test Gujarati (Hindi Voice)</button>
+    <button onclick="testEnglish()">Test English Voice</button>
+    <button onclick="stopSpeaking()">Stop</button>
+
+    <h2>Debug Info</h2>
+    <pre id="debug"></pre>
+
+    <script>
+        // Wait for ResponsiveVoice to load
+        window.addEventListener('load', function() {
+            setTimeout(checkStatus, 1000);
+        });
+
+        function checkStatus() {
+            const statusDiv = document.getElementById('status');
+            const debugPre = document.getElementById('debug');
+            let debugInfo = '';
+
+            if (typeof responsiveVoice === 'undefined') {
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = '❌ ResponsiveVoice NOT loaded<br>Check browser console for errors';
+                debugInfo = 'ERROR: window.responsiveVoice is undefined\n';
+                debugInfo += 'Check:\n';
+                debugInfo += '1. Internet connection\n';
+                debugInfo += '2. Ad blocker disabled\n';
+                debugInfo += '3. Browser console for errors\n';
+            } else {
+                statusDiv.className = 'status success';
+                statusDiv.innerHTML = '✅ ResponsiveVoice loaded successfully!';
+                
+                debugInfo = 'ResponsiveVoice Status:\n';
+                debugInfo += '- Loaded: YES\n';
+                debugInfo += '- Voice Support: ' + responsiveVoice.voiceSupport() + '\n';
+                debugInfo += '- Available Voices: ' + responsiveVoice.getVoices().length + '\n\n';
+                
+                debugInfo += 'Available Voice Names:\n';
+                const voices = responsiveVoice.getVoices();
+                voices.forEach(v => {
+                    debugInfo += '- ' + v.name + '\n';
+                });
+            }
+
+            debugPre.textContent = debugInfo;
+        }
+
+        function testHindi() {
+            if (typeof responsiveVoice === 'undefined') {
+                alert('ResponsiveVoice not loaded!');
+                return;
+            }
+
+            const text = 'नमस्ते, मैं आपकी कैसे मदद कर सकता हूं';
+            console.log('Testing Hindi:', text);
+            
+            responsiveVoice.speak(text, 'Hindi Female', {
+                rate: 0.8,
+                pitch: 1.0,
+                volume: 0.9,
+                onstart: () => console.log('▶️ Started speaking Hindi'),
+                onend: () => console.log('✅ Finished speaking Hindi'),
+                onerror: (error) => console.error('❌ Error:', error)
+            });
+        }
+
+        function testGujarati() {
+            if (typeof responsiveVoice === 'undefined') {
+                alert('ResponsiveVoice not loaded!');
+                return;
+            }
+
+            const text = 'નમસ્તે, હું તમને કેવી રીતે મદદ કરી શકું';
+            console.log('Testing Gujarati (Hindi voice):', text);
+            
+            responsiveVoice.speak(text, 'Hindi Female', {
+                rate: 0.8,
+                pitch: 1.0,
+                volume: 0.9,
+                onstart: () => console.log('▶️ Started speaking Gujarati'),
+                onend: () => console.log('✅ Finished speaking Gujarati'),
+                onerror: (error) => console.error('❌ Error:', error)
+            });
+        }
+
+        function testEnglish() {
+            if (typeof responsiveVoice === 'undefined') {
+                alert('ResponsiveVoice not loaded!');
+                return;
+            }
+
+            const text = 'Hello, how can I help you today?';
+            console.log('Testing English:', text);
+            
+            responsiveVoice.speak(text, 'UK English Female', {
+                rate: 0.8,
+                pitch: 1.0,
+                volume: 0.9,
+                onstart: () => console.log('▶️ Started speaking English'),
+                onend: () => console.log('✅ Finished speaking English'),
+                onerror: (error) => console.error('❌ Error:', error)
+            });
+        }
+
+        function stopSpeaking() {
+            if (typeof responsiveVoice !== 'undefined') {
+                responsiveVoice.cancel();
+                console.log('⏹️ Stopped speaking');
+            }
+        }
+    </script>
+</body>
+</html>

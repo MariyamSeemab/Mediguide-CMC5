@@ -1,0 +1,118 @@
+╔══════════════════════════════════════════════════════════════╗
+║                  🔑 API KEY SETUP GUIDE                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+📍 WHERE TO ADD API KEY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Location: CMC-5-main/.env
+
+Create or edit the .env file and add:
+
+VITE_VISION_API_KEY=your_api_key_here
+
+
+🌐 WHERE TO GET API KEY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Visit: https://api.together.xyz/
+2. Sign up (free tier available)
+3. Go to: Settings → API Keys
+4. Click: Create new API key
+5. Copy the key
+
+
+🤖 MODEL INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Model Name: meta-llama/llama-4-scout-17b-16e-instruct
+Provider: Together AI
+Purpose: Medical image analysis
+Languages: All 13 supported languages
+
+
+📝 EXAMPLE .env FILE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Vision API for Image Analysis
+VITE_VISION_API_KEY=sk_together_abc123def456ghi789
+
+# Groq API for Chatbot (existing)
+const apiKey = "YOUR_API_KEY";
+
+
+🚀 AFTER ADDING KEY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Save the .env file
+2. Restart the development server:
+   npm run dev
+
+3. Test by uploading an image in Symptom Checker
+4. Open browser console (F12) to see logs
+
+
+✅ HOW TO VERIFY IT'S WORKING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open browser console (F12) and look for:
+
+✅ Vision API Service initialized
+📝 Using model: meta-llama/llama-4-scout-17b-16e-instruct
+🔑 API Key configured: Yes
+
+When you upload an image:
+🌐 Attempting online image analysis with Vision API
+✅ Online image analysis received
+
+
+❌ WITHOUT API KEY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The system still works! It will use offline mode:
+
+🔑 API Key configured: No
+📴 Using offline image analysis
+
+This is the fallback mode with pre-programmed responses.
+
+
+💡 IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ The .env file is NOT committed to git (it's in .gitignore)
+✓ Keep your API key secret
+✓ Free tier has limited requests
+✓ System automatically falls back to offline if API fails
+✓ No UI changes - same user experience
+
+
+📞 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Not seeing online mode
+Solution: 
+  1. Check .env file exists in CMC-5-main/ folder
+  2. Verify API key is correct (no extra spaces)
+  3. Restart dev server: npm run dev
+  4. Check browser console for errors
+
+Problem: API errors
+Solution:
+  1. Verify API key is valid
+  2. Check Together AI dashboard for quota
+  3. System will auto-fallback to offline mode
+
+
+🎯 QUICK TEST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Add API key to .env
+2. Run: npm run dev
+3. Go to: http://localhost:5173/symptom-checker
+4. Upload any image
+5. Open console (F12)
+6. Look for: 🌐 Attempting online image analysis
+
+
+That's it! You're all set! 🎉

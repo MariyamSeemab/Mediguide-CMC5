@@ -1,0 +1,371 @@
+.category-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.category-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.category-header {
+  margin-bottom: 32px;
+}
+
+.category-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.category-header p {
+  font-size: 1.125rem;
+  color: #7f8c8d;
+}
+
+.category-main {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  position: relative;
+}
+
+.filter-toggle-mobile {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.filter-toggle-mobile svg {
+  width: 20px;
+  height: 20px;
+}
+
+.filter-sidebar {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  overflow: visible !important;
+  min-width: 280px;
+}
+
+.filter-section {
+  margin-bottom: 32px;
+  overflow: visible !important;
+  width: 100%;
+}
+
+.filter-section:last-child {
+  margin-bottom: 0;
+}
+
+.filter-section h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  overflow: visible !important;
+}
+
+.filter-section select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+/* Price Range Labels - MUST BE VISIBLE */
+.price-range-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 0 4px;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.price-min-label,
+.price-max-label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1977cc;
+  background: #e3f2fd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: visible !important;
+  flex-shrink: 0;
+}
+
+.price-min-label {
+  margin-right: auto;
+}
+
+.price-max-label {
+  margin-left: auto;
+}
+
+/* Price Slider Container */
+.price-slider-container {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.price-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e0e0e0;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1977cc;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.price-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1977cc;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.price-slider::-webkit-slider-thumb:hover {
+  background: #145a94;
+  transform: scale(1.1);
+}
+
+.price-slider::-moz-range-thumb:hover {
+  background: #145a94;
+  transform: scale(1.1);
+}
+
+.price-slider-min {
+  z-index: 1;
+}
+
+.price-slider-max {
+  z-index: 2;
+}
+
+/* Price Input Fields */
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.price-inputs input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 0;
+}
+
+.price-inputs span {
+  color: #7f8c8d;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.rating-filters,
+.brand-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rating-option,
+.brand-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.rating-option input,
+.brand-option input {
+  cursor: pointer;
+}
+
+.products-section {
+  flex: 1;
+  position: relative;
+  z-index: 10;
+}
+
+.products-header {
+  margin-bottom: 24px;
+}
+
+.products-header p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 10;
+  isolation: isolate;
+  contain: layout style;
+}
+
+/* CRITICAL: Prevent any overlay on products grid */
+.products-grid::before,
+.products-grid::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure only product cards are rendered in grid */
+.products-grid > *:not([class*="product-card"]) {
+  display: none !important;
+}
+
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-toggle-mobile {
+    display: flex;
+  }
+
+  .category-main {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .filter-sidebar.show {
+    left: 0;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+.no-products {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.no-products p {
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  margin-bottom: 24px;
+}
+
+.no-products button {
+  padding: 12px 32px;
+  background: #1977cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.no-products button:hover {
+  background: #145a94;
+  transform: translateY(-2px);
+}
+
+
+/* ABSOLUTE FINAL FIX: Ensure price range NEVER appears on products */
+.products-section *:not(.filter-sidebar *):not(.filter-section *) {
+  /* If any element tries to render price range text, hide it */
+  &[data-price-range],
+  &[data-filter-price] {
+    display: none !important;
+  }
+}
+
+/* Lock down products grid from any external content */
+.products-grid {
+  /* Prevent any content injection */
+  content-visibility: auto;
+}
+
+/* Ensure filter sidebar content stays contained */
+.filter-sidebar {
+  contain: layout style paint;
+  will-change: auto;
+}
+
+/* Prevent filter content from leaking into products area */
+.filter-sidebar * {
+  contain: layout;
+}
+
+.products-section {
+  contain: layout style;
+}

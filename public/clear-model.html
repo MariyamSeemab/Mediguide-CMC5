@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear ML Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1977cc;
+        }
+        button {
+            background: #1977cc;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #1558a0;
+        }
+        .success {
+            color: #10b981;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .info {
+            background: #e0f2fe;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 ML Model Manager</h1>
+        
+        <div class="info">
+            <strong>Why clear the model?</strong>
+            <p>If the emotion detection isn't working well, clear the old model to retrain with improved data.</p>
+        </div>
+
+        <button onclick="clearModel()">Clear Old Model & Retrain</button>
+        <button onclick="window.location.href='/'">Go Back to App</button>
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        async function clearModel() {
+            const status = document.getElementById('status');
+            status.innerHTML = '<p>Clearing model...</p>';
+
+            try {
+                // Delete from IndexedDB
+                const deleteRequest = indexedDB.deleteDatabase('tensorflowjs');
+                
+                deleteRequest.onsuccess = function() {
+                    status.innerHTML = '<p class="success">✅ Model cleared successfully!</p><p>Go back to the app - it will retrain with improved data.</p>';
+                };
+
+                deleteRequest.onerror = function() {
+                    status.innerHTML = '<p style="color: red;">❌ Error clearing model. Try manually:</p><ol><li>Open DevTools (F12)</li><li>Go to Application tab</li><li>Click IndexedDB</li><li>Delete "tensorflowjs" database</li></ol>';
+                };
+            } catch (error) {
+                status.innerHTML = '<p style="color: red;">❌ Error: ' + error.message + '</p>';
+            }
+        }
+    </script>
+</body>
+</html>

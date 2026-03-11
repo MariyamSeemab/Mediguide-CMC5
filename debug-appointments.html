@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Sync Debugger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #1977cc;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #1977cc;
+            padding-bottom: 10px;
+        }
+        button {
+            background: #1977cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #145a9e;
+        }
+        .appointment-card {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #1977cc;
+            border-radius: 4px;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status-pending { background: #fff3cd; color: #856404; }
+        .status-confirmed { background: #d4edda; color: #155724; }
+        .status-approved { background: #d4edda; color: #155724; }
+        .status-completed { background: #cce5ff; color: #004085; }
+        .status-cancelled { background: #f8d7da; color: #721c24; }
+        .status-rejected { background: #f8d7da; color: #721c24; }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .error {
+            color: #d32f2f;
+            background: #ffebee;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .success {
+            color: #388e3c;
+            background: #e8f5e9;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Appointment Sync Debugger</h1>
+    
+    <div class="container">
+        <h2>Quick Actions</h2>
+        <button onclick="loadAllData()">🔄 Refresh All Data</button>
+        <button onclick="showCentralAppointments()">📋 Show Central Storage</button>
+        <button onclick="showPatientAppointments()">👤 Show Patient Storage</button>
+        <button onclick="testSync()">🔧 Test Sync</button>
+        <button onclick="clearConsole()">🗑️ Clear Console</button>
+    </div>
+
+    <div class="container">
+        <h2>Central Appointments (mediguide_appointments)</h2>
+        <div id="central-appointments"></div>
+    </div>
+
+    <div class="container">
+        <h2>Patient Appointments</h2>
+        <label>Patient Email: <input type="text" id="patient-email" placeholder="e.g., mariyam@email.com" style="padding: 5px; width: 300px;"></label>
+        <button onclick="loadPatientAppointments()">Load</button>
+        <div id="patient-appointments"></div>
+    </div>
+
+    <div class="container">
+        <h2>Console Output</h2>
+        <div id="console-output" style="max-height: 400px; overflow-y: auto;"></div>
+    </div>
+
+    <script>
+        function log(message, type = 'info') {
+            const output = document.getElementById('console-output');
+            const timestamp = new Date().toLocaleTimeString();
+            const color = type === 'error' ? '#d32f2f' : type === 'success' ? '#388e3c' : '#333';
+            output.innerHTML += `<div style="color: ${color}; margin: 5px 0;">[${timestamp}] ${message}</div>`;
+            output.scrollTop = output.scrollHeight;
+            console.log(message);
+        }
+
+        function clearConsole() {
+            document.getElementById('console-output').innerHTML = '';
+        }
+
+        function loadAllData() {
+            clearConsole();
+            log('🔄 Loading all appointment data...', 'info');
+            showCentralAppointments();
+            
+            // Try to find patient emails
+            const keys = Object.keys(localStorage);
+            const patientKeys = keys.filter(k => k.startsWith('mediguide_appointments_') && k !== 'mediguide_appointments');
+            
+            if (patientKeys.length > 0) {
+                log(`Found ${patientKeys.length} patient appointment storage(s)`, 'success');
+                patientKeys.forEach(key => {
+                    const email = key.replace('mediguide_appointments_', '');
+                    log(`  - ${email}`, 'info');
+                });
+            } else {
+                log('No patient appointment storage found', 'error');
+            }
+        }
+
+        function showCentralAppointments() {
+            const container = document.getElementById('central-appointments');
+            const data = localStorage.getItem('mediguide_appointments');
+            
+            if (!data) {
+                container.innerHTML = '<div class="error">No central appointments found</div>';
+                log('❌ No central appointments in localStorage', 'error');
+                return;
+            }
+
+            const appointments = JSON.parse(data);
+            log(`✅ Found ${appointments.length} appointments in central storage`, 'success');
+            
+            if (appointments.length === 0) {
+                container.innerHTML = '<div class="error">Central storage is empty</div>';
+                return;
+            }
+
+            let html = '';
+            appointments.forEach(apt => {
+                html += `
+                    <div class="appointment-card">
+                        <strong>ID:</strong> ${apt.id}<br>
+                        <strong>Patient:</strong> ${apt.patientName} (${apt.patientEmail})<br>
+                        <strong>Doctor:</strong> ${apt.doctorName}<br>
+                        <strong>Date:</strong> ${apt.date} at ${apt.time}<br>
+                        <strong>Type:</strong> ${apt.consultationType}<br>
+                        <strong>Status:</strong> <span class="status status-${apt.status}">${apt.status}</span><br>
+                        <strong>Created:</strong> ${new Date(apt.createdAt).toLocaleString()}<br>
+                        <strong>Updated:</strong> ${new Date(apt.updatedAt).toLocaleString()}
+                    </div>
+                `;
+                log(`  📋 ${apt.id}: ${apt.patientName} - ${apt.status}`, 'info');
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function loadPatientAppointments() {
+            const email = document.getElementById('patient-email').value.trim();
+            if (!email) {
+                alert('Please enter a patient email');
+                return;
+            }
+            showPatientAppointments(email);
+        }
+
+        function showPatientAppointments(email = null) {
+            const container = document.getElementById('patient-appointments');
+            
+            if (!email) {
+                email = document.getElementById('patient-email').value.trim();
+            }
+            
+            if (!email) {
+                container.innerHTML = '<div class="error">Please enter a patient email above</div>';
+                return;
+            }
+
+            const key = `mediguide_appointments_${email}`;
+            const data = localStorage.getItem(key);
+            
+            if (!data) {
+                container.innerHTML = `<div class="error">No appointments found for ${email}</div>`;
+                log(`❌ No appointments found for ${email}`, 'error');
+                log(`   Looking for key: ${key}`, 'error');
+                return;
+            }
+
+            const appointments = JSON.parse(data);
+            log(`✅ Found ${appointments.length} appointments for ${email}`, 'success');
+            
+            if (appointments.length === 0) {
+                container.innerHTML = '<div class="error">Patient has no appointments</div>';
+                return;
+            }
+
+            let html = `<h3>Appointments for ${email}</h3>`;
+            appointments.forEach(apt => {
+                html += `
+                    <div class="appointment-card">
+                        <strong>ID:</strong> ${apt.id}<br>
+                        <strong>Doctor:</strong> ${apt.doctor.name}<br>
+                        <strong>Specialty:</strong> ${apt.doctor.specialty}<br>
+                        <strong>Date:</strong> ${apt.appointmentDate} at ${apt.appointmentTime}<br>
+                        <strong>Mode:</strong> ${apt.consultationMode}<br>
+                        <strong>Status:</strong> <span class="status status-${apt.status}">${apt.status}</span><br>
+                        <strong>Booked:</strong> ${new Date(apt.bookedAt).toLocaleString()}
+                    </div>
+                `;
+                log(`  👤 ${apt.id}: ${apt.doctor.name} - ${apt.status}`, 'info');
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function testSync() {
+            clearConsole();
+            log('🔧 Testing appointment sync...', 'info');
+            
+            // Get central appointments
+            const centralData = localStorage.getItem('mediguide_appointments');
+            if (!centralData) {
+                log('❌ No central appointments to test', 'error');
+                return;
+            }
+
+            const centralAppointments = JSON.parse(centralData);
+            log(`📦 Found ${centralAppointments.length} central appointments`, 'info');
+
+            // Check each appointment
+            centralAppointments.forEach(apt => {
+                const patientKey = `mediguide_appointments_${apt.patientEmail}`;
+                const patientData = localStorage.getItem(patientKey);
+                
+                if (!patientData) {
+                    log(`❌ Patient storage not found for ${apt.patientEmail}`, 'error');
+                    return;
+                }
+
+                const patientAppointments = JSON.parse(patientData);
+                const patientApt = patientAppointments.find(p => p.id === apt.id);
+                
+                if (!patientApt) {
+                    log(`❌ Appointment ${apt.id} not found in patient storage`, 'error');
+                    return;
+                }
+
+                // Map statuses
+                const expectedPatientStatus = apt.status === 'confirmed' ? 'approved' : 
+                                             apt.status === 'rejected' ? 'rejected' :
+                                             apt.status === 'cancelled' ? 'cancelled' :
+                                             apt.status === 'completed' ? 'completed' : 'pending';
+
+                if (patientApt.status === expectedPatientStatus) {
+                    log(`✅ ${apt.id}: Synced correctly (${apt.status} → ${patientApt.status})`, 'success');
+                } else {
+                    log(`❌ ${apt.id}: Sync mismatch! Central: ${apt.status}, Patient: ${patientApt.status}, Expected: ${expectedPatientStatus}`, 'error');
+                }
+            });
+
+            log('🔧 Sync test complete', 'info');
+        }
+
+        // Auto-load on page load
+        window.onload = function() {
+            log('🚀 Debugger loaded', 'success');
+            loadAllData();
+        };
+    </script>
+</body>
+</html>

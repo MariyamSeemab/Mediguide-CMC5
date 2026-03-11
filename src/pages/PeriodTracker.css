@@ -1,0 +1,476 @@
+.period-tracker-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%) !important;
+  padding-bottom: 4rem;
+}
+
+.period-header {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%) !important;
+  color: white !important;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.3) !important;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-3px);
+}
+
+.back-button svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2.5;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.header-content p {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.95;
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+.privacy-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+
+.privacy-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.period-tabs {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.period-tabs button {
+  padding: 0.875rem 1.75rem !important;
+  border: 2px solid #f3e8ff !important;
+  background: white !important;
+  border-radius: 12px !important;
+  cursor: pointer;
+  font-size: 0.9375rem !important;
+  font-weight: 700 !important;
+  color: #64748b !important;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.period-tabs button:hover {
+  background: #fdf2f8 !important;
+  border-color: #ec4899 !important;
+  color: #ec4899 !important;
+}
+
+.period-tabs button.active {
+  background: #ec4899 !important;
+  color: white !important;
+  border-color: #ec4899 !important;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25) !important;
+}
+
+.period-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure all buttons and inputs are clickable */
+.period-content button,
+.period-content input,
+.period-content select,
+.period-content textarea {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.glass-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 2px solid #fce7f3;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.12);
+  border-color: #fbcfe8;
+}
+
+/* Tracker Section */
+.tracker-section {
+  display: grid;
+  gap: 2rem;
+}
+
+.tracker-card h2 {
+  color: #db2777;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.tracker-form {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 700;
+  color: #db2777;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.form-group input {
+  padding: 0.875rem 1.25rem;
+  border: 2px solid #fce7f3;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+  background: white;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+  z-index: 20;
+}
+
+.helper-text {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.predictions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.prediction-card {
+  background: #fdf2f8;
+  padding: 1.75rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border: 2px solid #fce7f3;
+  transition: all 0.3s ease;
+}
+
+.prediction-card:hover {
+  border-color: #fbcfe8;
+  box-shadow: 0 4px 16px rgba(236, 72, 153, 0.1);
+  transform: translateY(-2px);
+}
+
+.prediction-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.prediction-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #db2777;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.prediction-date {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #ec4899;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+/* Symptom Tracker */
+.symptom-tracker h3 {
+  color: #db2777;
+  margin-bottom: 1.5rem;
+  font-size: 1.375rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.symptom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.symptom-btn {
+  padding: 1rem 1.25rem !important;
+  border: 2px solid #fce7f3 !important;
+  background: white !important;
+  border-radius: 12px !important;
+  cursor: pointer;
+  font-size: 0.9375rem !important;
+  font-weight: 700 !important;
+  color: #64748b !important;
+  transition: all 0.3s ease;
+}
+
+.symptom-btn:hover {
+  background: #fdf2f8 !important;
+  border-color: #ec4899 !important;
+  color: #ec4899 !important;
+}
+
+.symptom-btn.selected {
+  background: #ec4899 !important;
+  color: white !important;
+  border-color: #ec4899 !important;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25) !important;
+}
+
+/* Calendar Section */
+.calendar-card h2 {
+  color: #db2777;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.calendar-legend {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.9375rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.legend-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend-dot.period {
+  background: #ec4899 !important;
+}
+
+.legend-dot.fertile {
+  background: #a8e6cf !important;
+}
+
+.legend-dot.ovulation {
+  background: #fbbf24 !important;
+}
+
+.calendar-placeholder {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #94a3b8;
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+/* Tips Grid */
+.tips-grid,
+.nutrition-grid,
+.selfcare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-card,
+.nutrition-card,
+.selfcare-card {
+  transition: all 0.3s ease;
+  background: white;
+  border: 2px solid #fce7f3;
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+
+.tip-card:hover,
+.nutrition-card:hover,
+.selfcare-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.12);
+  border-color: #fbcfe8;
+}
+
+.tip-icon,
+.nutrition-icon,
+.selfcare-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.tip-card h3,
+.nutrition-card h3,
+.selfcare-card h3 {
+  color: #db2777;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.tip-card p,
+.nutrition-card p,
+.selfcare-card p {
+  color: #64748b;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.tip-card ul,
+.nutrition-card ul,
+.selfcare-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tip-card li,
+.nutrition-card li,
+.selfcare-card li {
+  padding: 0.625rem 0;
+  padding-left: 1.75rem;
+  position: relative;
+  color: #475569;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.tip-card li::before,
+.nutrition-card li::before,
+.selfcare-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ec4899;
+  font-weight: 800;
+  font-size: 1.125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .period-header {
+    padding: 1.5rem;
+  }
+
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-content p {
+    font-size: 0.95rem;
+  }
+
+  .period-tabs {
+    padding: 1rem;
+  }
+
+  .period-tabs button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .period-content {
+    padding: 1rem;
+  }
+
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  .tips-grid,
+  .nutrition-grid,
+  .selfcare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .predictions {
+    grid-template-columns: 1fr;
+  }
+
+  .symptom-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

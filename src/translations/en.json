@@ -1,0 +1,1930 @@
+{
+  "nav": {
+    "home": "Home",
+    "symptomChecker": "Symptom Checker",
+    "chatbot": "AI Assistant",
+    "marketplace": "Marketplace",
+    "about": "About Us",
+    "support": "Support Us",
+    "login": "Login",
+    "signup": "Sign Up",
+    "doctors": "Find Doctors",
+    "dashboard": "Dashboard"
+  },
+  "topBar": {
+    "email": "smediguide@gmail.com",
+    "phone": "104",
+    "emergency": "Emergency? Call",
+    "emergencyNumber": "108",
+    "emergencyText": "for immediate assistance"
+  },
+  "hero": {
+    "badge": "AI-Powered Healthcare Platform",
+    "title": "Your Health,\nOur Priority",
+    "subtitle": "Experience world-class healthcare with our AI-powered platform. Get instant medical guidance, connect with specialists, and manage your health journey—all in one place.",
+    "startConsultation": "Start Consultation",
+    "watchVideo": "Watch Video",
+    "stats": {
+      "available": "24/7",
+      "availableLabel": "Available",
+      "languages": "13+",
+      "languagesLabel": "Languages",
+      "satisfaction": "98%",
+      "satisfactionLabel": "Satisfaction"
+    }
+  },
+  "quickActions": {
+    "emergency": {
+      "title": "Emergency Care",
+      "description": "24/7 emergency support",
+      "link": "Access Now"
+    },
+    "findDoctor": {
+      "title": "Find a Doctor",
+      "description": "Connect with specialists",
+      "link": "Search Now"
+    },
+    "appointment": {
+      "title": "Book Appointment",
+      "description": "Schedule your visit",
+      "link": "Book Now"
+    },
+    "labResults": {
+      "title": "Lab Results",
+      "description": "View your reports",
+      "link": "View Results"
+    }
+  },
+  "impact": {
+    "title": "Making Healthcare Accessible",
+    "subtitle": "Trusted by thousands across India for quality healthcare guidance",
+    "stats": {
+      "patients": "13+",
+      "patientsLabel": "Languages Supported",
+      "doctors": "24/7",
+      "doctorsLabel": "AI Availability",
+      "satisfaction": "100%",
+      "satisfactionLabel": "Secure & Private",
+      "support": "24/7",
+      "supportLabel": "Support Available"
+    }
+  },
+  "quickAccess": {
+    "title": "Quick Access",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "googleLogin": "Continue with Google",
+    "newUser": "New to MediGuide?",
+    "createAccount": "Create account",
+    "badges": {
+      "verifiedData": "Verified Health Data",
+      "fastResponses": "Fast Responses",
+      "multilingualSupport": "Multilingual Support"
+    }
+  },
+  "features": {
+    "title": "Our Features",
+    "symptomChecker": {
+      "title": "AI Symptom Checker",
+      "description": "Understand your symptoms instantly with AI-powered analysis."
+    },
+    "chatbot": {
+      "title": "Multilingual AI Assistant",
+      "description": "Talk in English, Hindi, Tamil, Telugu, Bengali and more."
+    },
+    "medicineInfo": {
+      "title": "Medicine Information",
+      "description": "Search medicines with side effects and usage details."
+    },
+    "secure": {
+      "title": "Secure & Private",
+      "description": "Your health data stays encrypted and confidential."
+    },
+    "available": {
+      "title": "24/7 Availability",
+      "description": "Always there for you, anytime you need guidance."
+    },
+    "summary": {
+      "title": "Doctor-Ready Summary",
+      "description": "Download or share your chat history with healthcare providers."
+    }
+  },
+  "trust": {
+    "title": "Trusted by Thousands",
+    "badges": {
+      "secureAI": "Secure AI",
+      "fast": "Fast",
+      "reliable": "Reliable",
+      "multilingual": "Multilingual"
+    }
+  },
+  "footer": {
+    "about": "About",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "support": "Support",
+    "contact": "Contact Us",
+    "copyright": "© 2025 MediGuide. All Rights Reserved."
+  },
+  "symptomChecker": {
+    "title": "AI Symptom Checker",
+    "subtitle": "Choose how you'd like to describe your symptoms",
+    "voiceInput": {
+      "title": "Voice Input",
+      "description": "Speak your symptoms naturally",
+      "listening": "Listening..."
+    },
+    "textInput": {
+      "title": "Type Symptoms",
+      "description": "Write a detailed description",
+      "placeholder": "Describe your symptoms..."
+    },
+    "imageInput": {
+      "title": "Scan Image",
+      "description": "Upload a photo for analysis",
+      "analyzing": "Analyzing image...",
+      "uploadPrompt": "Upload a photo for analysis",
+      "questionPlaceholder": "Ask a question about this image (optional)...",
+      "reanalyze": "Re-analyze with question"
+    },
+    "analysis": {
+      "title": "Symptom Analysis Results",
+      "confidence": "Confidence",
+      "symptoms": "Identified Symptoms:",
+      "recommendations": "Recommendations:",
+      "disclaimer": "Disclaimer: This analysis is for informational purposes only and should not replace professional medical advice. Please consult with a healthcare provider for proper diagnosis and treatment.",
+      "analyzing": "AI is analyzing your symptoms...",
+      "checkNew": "Check New Symptoms",
+      "fever": {
+        "symptom1": "Elevated body temperature",
+        "symptom2": "Possible infection or inflammation",
+        "symptom3": "Body fighting illness",
+        "rec1": "Rest and stay hydrated",
+        "rec2": "Monitor temperature regularly",
+        "rec3": "Take fever-reducing medication if needed",
+        "rec4": "Consult doctor if fever persists beyond 3 days",
+        "rec5": "Seek immediate care if temperature exceeds 103°F (39.4°C)"
+      },
+      "headache": {
+        "symptom1": "Head pain or discomfort",
+        "symptom2": "Possible tension or stress",
+        "symptom3": "May indicate dehydration",
+        "rec1": "Rest in a quiet, dark room",
+        "rec2": "Stay hydrated with water",
+        "rec3": "Apply cold or warm compress",
+        "rec4": "Avoid screens and bright lights",
+        "rec5": "Consider over-the-counter pain relief",
+        "rec6": "Consult doctor if severe or persistent"
+      },
+      "cough": {
+        "symptom1": "Persistent coughing",
+        "symptom2": "Throat irritation",
+        "symptom3": "Possible respiratory issue",
+        "rec1": "Stay hydrated with warm fluids",
+        "rec2": "Use honey to soothe throat",
+        "rec3": "Avoid irritants like smoke",
+        "rec4": "Rest your voice",
+        "rec5": "Use humidifier if air is dry",
+        "rec6": "See doctor if cough persists beyond 2 weeks"
+      },
+      "stomach": {
+        "symptom1": "Abdominal discomfort",
+        "symptom2": "Digestive system disturbance",
+        "symptom3": "Possible gastric issue",
+        "rec1": "Eat bland, easy-to-digest foods",
+        "rec2": "Stay hydrated with clear fluids",
+        "rec3": "Avoid spicy and fatty foods",
+        "rec4": "Rest and avoid strenuous activity",
+        "rec5": "Consider over-the-counter antacids",
+        "rec6": "Seek medical attention if symptoms worsen"
+      },
+      "general": {
+        "symptom1": "General discomfort reported",
+        "symptom2": "Symptoms require evaluation",
+        "rec1": "Monitor your symptoms closely",
+        "rec2": "Rest and maintain good hydration",
+        "rec3": "Eat nutritious, balanced meals",
+        "rec4": "Avoid self-medication without consultation",
+        "rec5": "Keep a symptom diary",
+        "rec6": "Consult healthcare provider for proper evaluation"
+      }
+    },
+    "imageAnalysis": {
+      "skinRash": {
+        "symptom1": "Skin rash",
+        "symptom2": "Redness",
+        "symptom3": "Possible inflammation",
+        "rec1": "Consider consulting a dermatologist",
+        "rec2": "Apply cool compress to reduce inflammation",
+        "rec3": "Avoid scratching the affected area",
+        "rec4": "Monitor for any changes in size or color"
+      },
+      "swelling": {
+        "symptom1": "Swelling",
+        "symptom2": "Bruising",
+        "symptom3": "Possible injury",
+        "rec1": "Apply ice pack for 15-20 minutes",
+        "rec2": "Elevate the affected area if possible",
+        "rec3": "Consider over-the-counter pain relief",
+        "rec4": "Seek medical attention if pain persists"
+      },
+      "discoloration": {
+        "symptom1": "Skin discoloration",
+        "symptom2": "Possible mole or lesion",
+        "rec1": "Monitor for changes in size, shape, or color",
+        "rec2": "Schedule appointment with dermatologist",
+        "rec3": "Protect from sun exposure",
+        "rec4": "Take photos to track any changes"
+      }
+    }
+  },
+  "chatbot": {
+    "title": "MediGuide AI",
+    "subtitle": "Your healthcare assistant",
+    "status": "Online",
+    "welcome": "Hello! I'm MediGuide AI, your healthcare assistant. How can I help you today?",
+    "placeholder": "Type your health question here...",
+    "voiceHint": "Click mic for voice input",
+    "sendHint": "Press Enter to send • Click mic for voice input",
+    "listening": "Listening...",
+    "speakNow": "Speak now...",
+    "typing": "MediGuide AI is typing...",
+    "processing": "AI is processing your request...",
+    "voiceNotSupported": "Voice input is not supported in your browser. Please use Chrome or Edge.",
+    "quickActions": {
+      "title": "Quick Actions",
+      "symptomCheck": "Symptom Check",
+      "medicineInfo": "Medicine Info",
+      "healthTips": "Health Tips",
+      "findDoctor": "Find Doctor",
+      "symptomCheckMessage": "I have symptoms I'd like to check",
+      "medicineInfoMessage": "I need information about a medication",
+      "healthTipsMessage": "Can you give me general health tips?",
+      "findDoctorMessage": "I need to find a doctor near me"
+    },
+    "notice": {
+      "title": "Important Notice",
+      "text": "This AI provides general health information only. For emergencies, call 108 immediately."
+    },
+    "features": {
+      "title": "Features",
+      "multilingual": "Multilingual Support",
+      "available": "24/7 Availability",
+      "secure": "Secure & Private",
+      "summary": "Doctor-Ready Summary"
+    }
+  },
+  "about": {
+    "title": "About MediGuide",
+    "subtitle": "Revolutionizing Healthcare with AI Technology",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To make quality healthcare accessible to everyone through innovative AI technology and multilingual support.",
+      "extendedDescription": "Our AI-powered platform provides trusted medical information, symptom checking, and healthcare guidance in multiple Indian languages, helping millions make informed decisions about their health."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "A world where language and location barriers don't prevent anyone from accessing essential healthcare guidance."
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "aiAssistant": {
+        "title": "AI Health Assistant",
+        "description": "24/7 access to AI-powered health guidance in your preferred language"
+      },
+      "symptomChecker": {
+        "title": "Symptom Checker",
+        "description": "Understand your symptoms with our intelligent assessment tool"
+      },
+      "multilingualSupport": {
+        "title": "Multilingual Support",
+        "description": "Available in English, Hindi, Tamil, Telugu, and Bengali"
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "Healthcare information should be available to everyone, everywhere"
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "We provide accurate, evidence-based health information"
+      },
+      "privacy": {
+        "title": "Privacy",
+        "description": "Your health data is secure and confidential"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Leveraging AI to improve healthcare accessibility"
+      }
+    },
+    "impact": {
+      "title": "Our Impact",
+      "stats": {
+        "users": "10,000+",
+        "usersLabel": "Active Users",
+        "languages": "13+",
+        "languagesLabel": "Languages Supported",
+        "availability": "24/7",
+        "availabilityLabel": "Available Support",
+        "security": "100%",
+        "securityLabel": "Secure & Private",
+        "patients": "13+",
+        "patientsLabel": "Languages",
+        "doctors": "46+",
+        "doctorsLabel": "Medical Categories",
+        "satisfaction": "24/7",
+        "satisfactionLabel": "24/7 Available Support",
+        "support": "100%",
+        "supportLabel": "100% Secure"
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "description": "MediGuide is committed to bridging the healthcare information gap in India. We work with medical professionals and AI experts to ensure our platform provides accurate, helpful, and culturally sensitive health guidance.",
+      "disclaimer": "While we provide valuable health information, we always encourage users to consult with qualified healthcare professionals for diagnosis and treatment. MediGuide is a tool to empower, not replace, professional medical care."
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "A dedicated team of healthcare professionals, AI experts, and technology enthusiasts working together to improve healthcare accessibility."
+    },
+    "stats": {
+      "users": "50,000+ Users",
+      "languages": "13+ Languages",
+      "doctors": "500+ Doctors",
+      "satisfaction": "98% Satisfaction"
+    }
+  },
+  "support": {
+    "title": "Support Center",
+    "subtitle": "We're here to help you",
+    "hero": {
+      "title": "How Can We Help You?",
+      "subtitle": "Find answers to common questions or get in touch with our support team"
+    },
+    "quickHelp": {
+      "faqs": {
+        "title": "FAQs",
+        "description": "Find quick answers to common questions"
+      },
+      "liveChat": {
+        "title": "Live Chat",
+        "description": "Chat with our AI assistant 24/7"
+      },
+      "emailSupport": {
+        "title": "Email Support",
+        "description": "Get help via email within 24 hours"
+      }
+    },
+    "emergency": {
+      "title": "Medical Emergency?",
+      "description": "For immediate medical assistance, call 108 or visit your nearest emergency room. Do not use this form for emergencies.",
+      "number": "108"
+    },
+    "contact": {
+      "title": "Contact Information",
+      "email": "Email Support",
+      "phone": "Phone Support",
+      "emergency": "Emergency Helpline",
+      "hours": "Available 24/7"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How accurate is the AI diagnosis?",
+      "a1": "Our AI provides general guidance based on symptoms. Always consult a healthcare professional for accurate diagnosis.",
+      "q2": "Is my health data secure?",
+      "a2": "Yes, all your health data is encrypted and stored securely. We follow strict privacy protocols.",
+      "q3": "Which languages are supported?",
+      "a3": "We support 13+ Indian languages including Hindi, Tamil, Telugu, Bengali, and more.",
+      "q4": "Is the service free?",
+      "a4": "Basic AI consultation and symptom checking are free. Premium features may require subscription."
+    },
+    "contactForm": {
+      "title": "Still Need Help?",
+      "subtitle": "Fill out the form below and we'll get back to you within 24 hours",
+      "fullName": "Full Name",
+      "emailAddress": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "selectSubject": "Select a subject",
+      "subjects": {
+        "technical": "Technical Issue",
+        "account": "Account Help",
+        "feedback": "Feedback",
+        "other": "Other"
+      },
+      "sendMessage": "Send Message",
+      "required": "*"
+    },
+    "contactInfo": {
+      "email": {
+        "title": "Email",
+        "value": "smediguide@gmail.com"
+      },
+      "responseTime": {
+        "title": "Response Time",
+        "value": "Within 24 hours"
+      },
+      "location": {
+        "title": "Location",
+        "value": "India"
+      }
+    },
+    "feedback": {
+      "title": "Send Feedback",
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Thank you for your feedback!"
+    }
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "Everything You Need for Better Health",
+    "description": "Access comprehensive healthcare solutions designed with you in mind",
+    "aiSymptom": {
+      "title": "AI Symptom Analysis",
+      "description": "Describe your symptoms and get instant, accurate health insights powered by advanced AI",
+      "link": "Get Started"
+    },
+    "aiAssistant": {
+      "title": "24/7 AI Health Assistant",
+      "description": "Chat with our intelligent assistant for personalized health guidance in your language",
+      "link": "Start Chatting",
+      "badge": "Most Popular"
+    },
+    "reports": {
+      "title": "Doctor-Ready Reports",
+      "description": "Get comprehensive health summaries to share with your healthcare provider",
+      "link": "Start With It"
+    },
+    "periodHealth": {
+      "title": "Period & Women Health Self-Care",
+      "description": "Track your period, get PMS tips, nutrition advice, and self-care guidance for cramps",
+      "link": "Start Tracking"
+    },
+    "selfCareTracker": {
+      "title": "Self-Care Daily Tracker",
+      "description": "Track water intake, sleep, exercise, mood, and medication reminders in one place",
+      "link": "Start Tracking"
+    },
+    "viewAll": "View All Services"
+  },
+  "howItWorks": {
+    "eyebrow": "Simple Process",
+    "title": "Your Journey to Better Health",
+    "description": "Get started in minutes with our intuitive, step-by-step process",
+    "steps": {
+      "step1": {
+        "title": "Create Your Account",
+        "description": "Sign up in seconds with email or Google. Your data is encrypted and secure."
+      },
+      "step2": {
+        "title": "Describe Your Symptoms",
+        "description": "Use voice, text, or images to tell us what you're experiencing in your preferred language."
+      },
+      "step3": {
+        "title": "Get AI-Powered Insights",
+        "description": "Receive instant, personalized health guidance based on verified medical data."
+      },
+      "step4": {
+        "title": "Take Action",
+        "description": "Download your health summary and share it with your doctor for better care."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Patient Stories",
+    "title": "Real People, Real Results",
+    "description": "Join thousands who trust MediGuide for their healthcare needs",
+    "patients": {
+      "priya": {
+        "name": "Priya Sharma",
+        "location": "Mumbai, Maharashtra",
+        "rating": "5.0",
+        "text": "MediGuide helped me understand my symptoms in my native language. The AI chatbot is incredibly helpful and gave me peace of mind before visiting my doctor. I felt more confident discussing my health concerns."
+      },
+      "rajesh": {
+        "name": "Rajesh Kumar",
+        "location": "Chennai, Tamil Nadu",
+        "rating": "5.0",
+        "text": "As someone who speaks Tamil, I appreciate having health information in my language. The symptom checker is accurate and easy to use. It's like having a medical expert available 24/7."
+      },
+      "ananya": {
+        "name": "Ananya Patel",
+        "location": "Bangalore, Karnataka",
+        "rating": "5.0",
+        "text": "The 24/7 availability is a lifesaver. I can get health guidance anytime, and the doctor-ready summary feature helps me communicate better with my physician. Highly recommended!"
+      }
+    },
+    "verified": "Verified Patient",
+    "stats": {
+      "rating": "4.9",
+      "ratingLabel": "Average Rating",
+      "patients": "13+",
+      "patientsLabel": "Languages",
+      "satisfaction": "46+",
+      "satisfactionLabel": "Medical Categories"
+    }
+  },
+  "loginModal": {
+    "title": "Login to MediGuide",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter your email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "loginButton": "Login",
+    "loggingIn": "Logging in...",
+    "divider": "OR",
+    "googleLogin": "Continue with Google",
+    "noAccount": "Don't have an account?",
+    "signupLink": "Sign up here",
+    "demoAccounts": "Demo Accounts:",
+    "doctorDemo": "Doctor: doctor@email.com / doctor@123",
+    "adminDemo": "Admin: admin@email.com / admin@123"
+  },
+  "accessibility": {
+    "skipToMain": "Skip to main content"
+  },
+  "connectDoctor": {
+    "title": "Connect with Expert Doctors",
+    "subtitle": "Find and consult with qualified healthcare professionals",
+    "search": {
+      "placeholder": "Search by doctor name or specialty...",
+      "useLocation": "Use My Location",
+      "gettingLocation": "Getting Location...",
+      "findOnMaps": "Find on Google Maps",
+      "showNearbyOnly": "Show nearby only",
+      "locationError": "Unable to retrieve your location"
+    },
+    "specialties": {
+      "all": "All",
+      "generalPhysician": "General Physician",
+      "cardiologist": "Cardiologist",
+      "dermatologist": "Dermatologist",
+      "pediatrician": "Pediatrician",
+      "orthopedic": "Orthopedic",
+      "gynecologist": "Gynecologist",
+      "psychiatrist": "Psychiatrist",
+      "dentist": "Dentist",
+      "neurologist": "Neurologist",
+      "ophthalmologist": "Ophthalmologist",
+      "entSpecialist": "ENT Specialist"
+    },
+    "doctorCard": {
+      "experience": "experience",
+      "years": "years",
+      "reviews": "reviews",
+      "availableToday": "Available Today",
+      "availableTomorrow": "Available Tomorrow",
+      "nearby": "Nearby",
+      "consultationFee": "Consultation Fee",
+      "bookAppointment": "Book Appointment",
+      "viewProfile": "View Profile"
+    },
+    "profileModal": {
+      "title": "Doctor Profile",
+      "education": "Education",
+      "about": "About",
+      "experience": "Experience",
+      "languages": "Languages",
+      "location": "Location",
+      "consultationFee": "Consultation Fee",
+      "availableTimeSlots": "Available Time Slots",
+      "bookAppointment": "Book Appointment"
+    },
+    "bookingModal": {
+      "title": "Book Appointment",
+      "patientName": "Patient Name",
+      "patientNameRequired": "Patient Name *",
+      "phoneNumber": "Phone Number",
+      "phoneNumberRequired": "Phone Number *",
+      "appointmentDate": "Appointment Date",
+      "appointmentDateRequired": "Appointment Date *",
+      "preferredTime": "Preferred Time",
+      "preferredTimeRequired": "Preferred Time *",
+      "selectTime": "Select Time",
+      "reasonForVisit": "Reason for Visit",
+      "reasonPlaceholder": "Brief description of your health concern...",
+      "cancel": "Cancel",
+      "confirmBooking": "Confirm Booking",
+      "bookingSuccess": "Appointment booked successfully with {doctorName} on {date} at {time}"
+    },
+    "noResults": {
+      "title": "No doctors found",
+      "description": "Try adjusting your search or filters"
+    },
+    "locationErrors": {
+      "notSupported": "Geolocation is not supported by this browser.",
+      "permissionDenied": "Location access denied by user.",
+      "positionUnavailable": "Location information is unavailable.",
+      "timeout": "Location request timed out.",
+      "denied": "Location access denied. Please enter your location manually.",
+      "unavailable": "Location service unavailable.",
+      "unknown": "Unknown error getting location."
+    },
+    "languages": {
+      "english": "English",
+      "hindi": "Hindi",
+      "tamil": "Tamil",
+      "telugu": "Telugu",
+      "bengali": "Bengali",
+      "marathi": "Marathi",
+      "gujarati": "Gujarati",
+      "kannada": "Kannada",
+      "malayalam": "Malayalam",
+      "punjabi": "Punjabi",
+      "odia": "Odia",
+      "assamese": "Assamese"
+    },
+    "doctors": {
+      "rajeshKumar": {
+        "name": "Dr. Rajesh Kumar",
+        "education": "MBBS, MD - Internal Medicine",
+        "about": "Dr. Rajesh Kumar is a highly experienced General Physician with over 15 years of practice. He specializes in preventive care, chronic disease management, and comprehensive health assessments.",
+        "location": "Apollo Hospital, Delhi"
+      },
+      "priyaSharma": {
+        "name": "Dr. Priya Sharma",
+        "education": "MBBS, MD - Cardiology, DM - Interventional Cardiology",
+        "about": "Dr. Priya Sharma is a renowned cardiologist specializing in interventional cardiology and heart disease prevention. She has performed over 1000 successful cardiac procedures.",
+        "location": "Max Hospital, Mumbai"
+      },
+      "amitPatel": {
+        "name": "Dr. Amit Patel",
+        "education": "MBBS, MD - Dermatology",
+        "about": "Dr. Amit Patel is a skilled dermatologist with expertise in cosmetic dermatology, skin cancer treatment, and advanced laser procedures.",
+        "location": "Fortis Hospital, Bangalore"
+      },
+      "snehaReddy": {
+        "name": "Dr. Sneha Reddy",
+        "education": "MBBS, MD - Pediatrics",
+        "about": "Dr. Sneha Reddy is a compassionate pediatrician dedicated to providing comprehensive healthcare for children from infancy through adolescence.",
+        "location": "Rainbow Children Hospital, Hyderabad"
+      },
+      "arjunSingh": {
+        "name": "Dr. Arjun Singh",
+        "education": "MBBS, MS - Orthopedics, Fellowship in Joint Replacement",
+        "about": "Dr. Arjun Singh is a leading orthopedic surgeon specializing in joint replacement, sports injuries, and minimally invasive orthopedic procedures.",
+        "location": "AIIMS, Delhi"
+      },
+      "kavitaMenon": {
+        "name": "Dr. Kavita Menon",
+        "education": "MBBS, MD - Obstetrics & Gynecology",
+        "about": "Dr. Kavita Menon is an experienced gynecologist specializing in womens health, high-risk pregnancies, and minimally invasive gynecological procedures.",
+        "location": "Manipal Hospital, Bangalore"
+      },
+      "vikramJoshi": {
+        "name": "Dr. Vikram Joshi",
+        "education": "MBBS, MD - Psychiatry",
+        "about": "Dr. Vikram Joshi is a compassionate psychiatrist with expertise in treating anxiety, depression, bipolar disorder, and other mental health conditions.",
+        "location": "Kokilaben Hospital, Mumbai"
+      },
+      "meeraAgarwal": {
+        "name": "Dr. Meera Agarwal",
+        "education": "BDS, MDS - Oral & Maxillofacial Surgery",
+        "about": "Dr. Meera Agarwal is a skilled dentist specializing in cosmetic dentistry, oral surgery, and advanced dental implant procedures.",
+        "location": "Clove Dental, Delhi"
+      },
+      "sureshNair": {
+        "name": "Dr. Suresh Nair",
+        "education": "MBBS, MD - Neurology, DM - Neurology",
+        "about": "Dr. Suresh Nair is a highly experienced neurologist specializing in stroke management, epilepsy treatment, and neurodegenerative disorders.",
+        "location": "Apollo Hospital, Chennai"
+      },
+      "anitaRoy": {
+        "name": "Dr. Anita Roy",
+        "education": "MBBS, MS - Ophthalmology",
+        "about": "Dr. Anita Roy is a skilled ophthalmologist specializing in cataract surgery, retinal disorders, and advanced eye care treatments.",
+        "location": "Sankara Nethralaya, Chennai"
+      },
+      "rohitGupta": {
+        "name": "Dr. Rohit Gupta",
+        "education": "MBBS, MS - ENT",
+        "about": "Dr. Rohit Gupta is an experienced ENT specialist with expertise in sinus surgery, hearing disorders, and voice-related problems.",
+        "location": "BLK Hospital, Delhi"
+      },
+      "deepikaIyer": {
+        "name": "Dr. Deepika Iyer",
+        "education": "MBBS, MD - Internal Medicine",
+        "about": "Dr. Deepika Iyer is a dedicated general physician focusing on preventive healthcare, chronic disease management, and family medicine.",
+        "location": "Narayana Health, Bangalore"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "back": "Back",
+    "continue": "Continue",
+    "submit": "Submit",
+    "reset": "Reset",
+    "clear": "Clear",
+    "select": "Select",
+    "upload": "Upload",
+    "download": "Download",
+    "share": "Share",
+    "copy": "Copy",
+    "paste": "Paste",
+    "cut": "Cut",
+    "undo": "Undo",
+    "redo": "Redo",
+    "logout": "Logout",
+    "makeAppointment": "Make Appointment",
+    "hours": "hours"
+  },
+  "labTest": {
+    "header": {
+      "title": "Lab Tests & Results",
+      "subtitle": "Book lab tests and view your results online"
+    },
+    "tabs": {
+      "bookTests": "Book Tests",
+      "uploadReports": "Upload Reports",
+      "viewResults": "View Results"
+    },
+    "categories": {
+      "all": "All",
+      "bloodTests": "Blood Tests",
+      "urineTests": "Urine Tests",
+      "diabetes": "Diabetes",
+      "heartHealth": "Heart Health",
+      "liverFunction": "Liver Function",
+      "kidneyFunction": "Kidney Function",
+      "thyroid": "Thyroid",
+      "vitamins": "Vitamins",
+      "hormones": "Hormones",
+      "infectionTests": "Infection Tests"
+    },
+    "search": {
+      "placeholder": "Search lab tests...",
+      "noResults": "No tests found matching your search"
+    },
+    "selectedTests": {
+      "title": "Selected Tests",
+      "total": "Total",
+      "bookNow": "Book Now",
+      "selectAtLeastOne": "Please select at least one test to book"
+    },
+    "testCard": {
+      "popular": "Popular",
+      "category": "Category",
+      "duration": "Duration",
+      "price": "Price",
+      "preparation": "Preparation",
+      "normalRange": "Normal Range"
+    },
+    "upload": {
+      "title": "Upload Lab Reports",
+      "subtitle": "Upload your laboratory reports for AI-powered analysis and automatic integration into your medical records",
+      "uploadTitle": "Upload Your Lab Report",
+      "supportedFormats": "Supported formats: PDF, JPG, PNG, DOC (Max 10MB)",
+      "chooseFile": "Choose File",
+      "uploadAndAnalyze": "Upload & Analyze Report",
+      "uploading": "Uploading...",
+      "analyzing": "Analyzing with AI...",
+      "selectedFile": "Selected file",
+      "removeFile": "Remove file",
+      "infoCards": {
+        "secure": {
+          "title": "Secure & Private",
+          "description": "Your reports are encrypted and accessible only to you"
+        },
+        "instant": {
+          "title": "Instant Analysis",
+          "description": "AI extracts key findings and provides precautionary insights"
+        },
+        "autoIntegration": {
+          "title": "Auto-Integration",
+          "description": "Findings automatically added to your Doctor-Ready Report"
+        }
+      },
+      "uploadedReports": "Your Uploaded Reports",
+      "testsAnalyzed": "Tests Analyzed",
+      "abnormalFindings": "Abnormal Findings",
+      "precautions": "Precautions",
+      "viewAnalysis": "View Analysis",
+      "download": "Download",
+      "print": "Print",
+      "share": "Share",
+      "delete": "Delete",
+      "confirmDelete": "Are you sure you want to delete this lab report?",
+      "fileValidation": {
+        "invalidType": "Please upload a valid file (PDF, JPG, PNG, or DOC)",
+        "tooLarge": "File size must be less than 10MB",
+        "selectFile": "Please select a file and ensure you are logged in",
+        "dataNotAvailable": "Report file data not available",
+        "downloadFailed": "Failed to download report. Please try again.",
+        "allowPopups": "Please allow pop-ups to print reports"
+      },
+      "shareSuccess": "Report summary copied to clipboard!",
+      "sharePrompt": "Copy this report summary to share:",
+      "exportPdfMessage": "Please use Print and select Save as PDF"
+    },
+    "results": {
+      "title": "Your Lab Results",
+      "downloadAll": "Download All",
+      "emptyState": {
+        "title": "No Lab Reports Yet",
+        "description": "Upload your first lab report to see it here",
+        "uploadNow": "Upload Lab Report"
+      },
+      "status": {
+        "normal": "Normal",
+        "abnormal": "Needs Attention",
+        "new": "New"
+      },
+      "meta": {
+        "uploadDate": "Upload Date",
+        "uploadTime": "Upload Time",
+        "testsAnalyzed": "Tests Analyzed",
+        "abnormalFindings": "Abnormal Findings"
+      },
+      "quickSummary": "Quick Summary",
+      "viewFullReport": "View Full Report"
+    },
+    "booking": {
+      "title": "Book Lab Tests",
+      "selectedTests": "Selected Tests",
+      "totalAmount": "Total",
+      "patientName": "Patient Name",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "preferredDate": "Preferred Date",
+      "preferredTime": "Preferred Time",
+      "selectTime": "Select Time",
+      "homeCollection": "Home Collection",
+      "address": "Address",
+      "addressPlaceholder": "Enter your complete address for home collection",
+      "cancel": "Cancel",
+      "confirmBooking": "Confirm Booking",
+      "success": "Lab tests booked successfully! You will receive a confirmation call shortly.",
+      "timeSlots": {
+        "morning1": "6:00 AM - 8:00 AM",
+        "morning2": "8:00 AM - 10:00 AM",
+        "morning3": "10:00 AM - 12:00 PM",
+        "afternoon1": "2:00 PM - 4:00 PM",
+        "afternoon2": "4:00 PM - 6:00 PM"
+      }
+    },
+    "analysis": {
+      "title": "AI Lab Report Analysis",
+      "reportInfo": "Report Information",
+      "fileName": "File Name",
+      "uploadDate": "Upload Date",
+      "reportId": "Report ID",
+      "fileSize": "File Size",
+      "extractedResults": "Extracted Test Results",
+      "testName": "Test Name",
+      "value": "Value",
+      "normalRange": "Normal Range",
+      "status": "Status",
+      "abnormalFindings": "Abnormal Findings",
+      "precautionaryGuidance": "Precautionary Guidance",
+      "recommendations": "Recommendations",
+      "disclaimer": "Important: This AI analysis is for informational purposes only and does not constitute medical diagnosis. Please consult with a qualified healthcare professional for proper medical advice and treatment.",
+      "integrationNotice": "This lab report analysis has been automatically integrated into your Doctor-Ready Report and is available for your healthcare provider to review.",
+      "close": "Close"
+    },
+    "tests": {
+      "cbc": {
+        "name": "Complete Blood Count (CBC)",
+        "description": "Comprehensive blood test to check overall health and detect various disorders",
+        "preparation1": "8-12 hours fasting required",
+        "preparation2": "Avoid alcohol 24 hours before test",
+        "normalRange": "Varies by component"
+      },
+      "lipidProfile": {
+        "name": "Lipid Profile",
+        "description": "Measures cholesterol and triglyceride levels to assess heart disease risk",
+        "preparation1": "12 hours fasting required",
+        "preparation2": "No smoking before test",
+        "normalRange": "Total Cholesterol: <200 mg/dL"
+      },
+      "hba1c": {
+        "name": "HbA1c (Diabetes)",
+        "description": "Measures average blood sugar levels over the past 2-3 months",
+        "preparation1": "No fasting required",
+        "normalRange": "<5.7%"
+      },
+      "lft": {
+        "name": "Liver Function Test (LFT)",
+        "description": "Evaluates liver health and function through various enzyme levels",
+        "preparation1": "8-12 hours fasting required",
+        "normalRange": "ALT: 7-56 U/L, AST: 10-40 U/L"
+      },
+      "kft": {
+        "name": "Kidney Function Test (KFT)",
+        "description": "Assesses kidney function through creatinine and urea levels",
+        "preparation1": "No special preparation required",
+        "normalRange": "Creatinine: 0.6-1.2 mg/dL"
+      },
+      "thyroid": {
+        "name": "Thyroid Profile (T3, T4, TSH)",
+        "description": "Complete thyroid function assessment",
+        "preparation1": "No fasting required",
+        "preparation2": "Take medications as usual",
+        "normalRange": "TSH: 0.4-4.0 mIU/L"
+      },
+      "vitaminD": {
+        "name": "Vitamin D Test",
+        "description": "Measures vitamin D levels in blood",
+        "preparation1": "No special preparation required",
+        "normalRange": "30-100 ng/mL"
+      },
+      "urineRoutine": {
+        "name": "Urine Routine & Microscopy",
+        "description": "Basic urine analysis for infections and kidney function",
+        "preparation1": "Collect first morning urine sample",
+        "normalRange": "No abnormal findings"
+      }
+    }
+  },
+  "emergency": {
+    "header": {
+      "title": "Emergency Ambulance Service",
+      "subtitle": "Immediate medical assistance when every second counts"
+    },
+    "quickCall": {
+      "title": "Need Immediate Help?",
+      "subtitle": "Call emergency services directly",
+      "button": "Call"
+    },
+    "form": {
+      "title": "Request Ambulance",
+      "subtitle": "Fill in the details below to request an ambulance",
+      "pickupLocation": "Pickup Location",
+      "pickupLocationPlaceholder": "Enter full address with landmarks",
+      "pickupLocationHint": "Be as specific as possible for faster response",
+      "patientName": "Patient Name",
+      "patientNamePlaceholder": "Full name of the patient",
+      "contactNumber": "Contact Number",
+      "contactNumberPlaceholder": "10-digit mobile number",
+      "contactNumberHint": "We'll call this number for updates",
+      "emergencyType": "Emergency Type (Optional)",
+      "emergencyTypeHint": "Helps us prepare appropriate medical equipment",
+      "emergencyTypes": {
+        "select": "Select Emergency Type",
+        "cardiac": "Cardiac Emergency",
+        "accident": "Accident / Trauma",
+        "breathing": "Breathing Difficulty",
+        "stroke": "Stroke / Neurological",
+        "severePain": "Severe Pain",
+        "bleeding": "Severe Bleeding",
+        "unconscious": "Unconscious Patient",
+        "other": "Other Emergency"
+      },
+      "requesting": "Requesting Ambulance...",
+      "requestButton": "Request Ambulance Now",
+      "validation": {
+        "fillRequired": "Please fill in all required fields"
+      }
+    },
+    "location": {
+      "useGPS": "Use GPS",
+      "enterManually": "Enter Manually",
+      "enterAddress": "Enter your address",
+      "refreshLocation": "Refresh location",
+      "searchAddress": "Search address",
+      "manualHint": "Type address and press search or Enter",
+      "yourLocation": "Your Location",
+      "pickupPoint": "Pickup Point",
+      "ambulance": "Ambulance",
+      "onTheWay": "On the way",
+      "liveTracking": "Live Ambulance Tracking",
+      "you": "You",
+      "notSupported": "Geolocation is not supported",
+      "error": "Unable to get location",
+      "searchError": "Error searching address"
+    },
+    "confirmation": {
+      "title": "Ambulance Request Confirmed",
+      "subtitle": "Help is on the way",
+      "requestId": "Request ID",
+      "status": "Status",
+      "dispatching": "Dispatching Ambulance",
+      "estimatedArrival": "Estimated Arrival",
+      "minutes": "minutes",
+      "message": "An ambulance has been dispatched to your location. Please keep your phone accessible. Our team will contact you shortly.",
+      "callEmergency": "Call Emergency",
+      "returnHome": "Return to Home"
+    },
+    "info": {
+      "whatToExpect": {
+        "title": "What to Expect",
+        "point1": "Ambulance typically arrives within 8-15 minutes",
+        "point2": "Trained paramedics with emergency equipment",
+        "point3": "Direct transport to nearest appropriate hospital",
+        "point4": "You'll receive a confirmation call shortly"
+      },
+      "beforeArrival": {
+        "title": "Before Ambulance Arrives",
+        "point1": "Keep patient calm and comfortable",
+        "point2": "Do not move patient unless necessary",
+        "point3": "Have medical documents ready if available",
+        "point4": "Ensure clear access to pickup location"
+      }
+    }
+  },
+  "marketplace": {
+    "search": "Search medicines...",
+    "hero": {
+      "title": "Buy Trusted Medicines & Healthcare Essentials",
+      "subtitle": "Your one-stop shop for all healthcare needs"
+    },
+    "categories": {
+      "title": "Shop by Category",
+      "mensCare": "Men's Care",
+      "womensCare": "Women's Care",
+      "babyCare": "Baby Care",
+      "generalMedicine": "General Medicine",
+      "personalCare": "Personal Care",
+      "healthDevices": "Health Devices",
+      "medicines": "Medicines",
+      "medicinesDesc": "Prescription & OTC drugs",
+      "devices": "Medical Devices",
+      "devicesDesc": "Thermometers, BP monitors & more",
+      "wellness": "Wellness",
+      "wellnessDesc": "Vitamins & supplements",
+      "personal": "Personal Care",
+      "personalDesc": "Hygiene & skincare products"
+    },
+    "features": {
+      "title": "Why Shop With Us?",
+      "verified": "Verified Products",
+      "verifiedDesc": "All products are quality checked",
+      "delivery": "Fast Delivery",
+      "deliveryDesc": "Get medicines delivered to your door",
+      "support": "Expert Support",
+      "supportDesc": "Pharmacist consultation available"
+    },
+    "cta": {
+      "title": "Coming Soon!",
+      "description": "We are working hard to bring you the best healthcare marketplace experience. Stay tuned!",
+      "notify": "Notify Me",
+      "notifyMessage": "Thank you! We will notify you when the marketplace launches."
+    },
+    "eyebrow": "Shop with Confidence",
+    "title": "Healthcare Marketplace",
+    "description": "Buy trusted medicines and healthcare essentials online",
+    "ctaButton": "Visit Healthcare Store"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptyDesc": "Add some products to get started",
+    "continueShopping": "Continue Shopping",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax (5%)",
+    "total": "Total",
+    "proceedToCheckout": "Proceed to Checkout"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "deliveryAddress": "Delivery Address",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "address": "Address",
+    "city": "City",
+    "state": "State",
+    "pincode": "Pincode",
+    "paymentMethod": "Payment Method",
+    "cod": "Cash on Delivery",
+    "codDesc": "Pay when you receive",
+    "card": "Credit/Debit Card",
+    "cardDesc": "Secure payment",
+    "upi": "UPI Payment",
+    "upiDesc": "Pay via UPI apps",
+    "placeOrder": "Place Order",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax (5%)",
+    "total": "Total"
+  },
+  "category": {
+    "filter": {
+      "sortBy": "Sort By",
+      "popularity": "Popularity",
+      "priceLowToHigh": "Price: Low to High",
+      "priceHighToLow": "Price: High to Low",
+      "rating": "Rating",
+      "priceRange": "Price Range",
+      "min": "Min",
+      "max": "Max",
+      "brand": "Brand",
+      "andAbove": "& above"
+    },
+    "productsFound": "Products Found",
+    "noProducts": "No products found matching your filters",
+    "clearFilters": "Clear Filters",
+    "addToCart": "Add to Cart",
+    "viewDetails": "View Details",
+    "addedToCart": "Added to cart",
+    "mensCare": {
+      "title": "Men's Care",
+      "description": "Healthcare products designed specifically for men"
+    },
+    "womensCare": {
+      "title": "Women's Care",
+      "description": "Healthcare products designed specifically for women"
+    },
+    "babyCare": {
+      "title": "Baby Care",
+      "description": "Safe and gentle products for your little ones"
+    },
+    "generalMedicine": {
+      "title": "General Medicine",
+      "description": "Essential medicines for common ailments"
+    },
+    "personalCare": {
+      "title": "Personal Care",
+      "description": "Personal hygiene and wellness products"
+    },
+    "healthDevices": {
+      "title": "Health Devices",
+      "description": "Medical devices for home healthcare"
+    }
+  },
+  "product": {
+    "back": "Back",
+    "inclusiveTax": "Inclusive of all taxes",
+    "quantity": "Quantity",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "authentic": "100% Authentic",
+    "fastDelivery": "Fast Delivery",
+    "easyReturns": "Easy Returns",
+    "description": "Description",
+    "benefits": "Benefits",
+    "usage": "Usage",
+    "warnings": "Warnings",
+    "reviews": "Reviews",
+    "notFound": "Product not found",
+    "backToMarketplace": "Back to Marketplace",
+    "addedToCart": "Added to cart"
+  },
+  "periodTracker": {
+    "title": "Period & Women Health",
+    "subtitle": "Track your cycle, understand your body",
+    "tabs": {
+      "aicompanion": "AI Companion",
+      "tracker": "Period Tracker",
+      "calendar": "Calendar",
+      "analytics": "Analytics",
+      "pms": "PMS Tips",
+      "nutrition": "Nutrition",
+      "selfcare": "Self-Care",
+      "aiCompanion": "AI Companion"
+    },
+    "aiCompanion": {
+      "askAI": {
+        "title": "Ask AI About Period Health",
+        "intro": "Get instant answers to your period health questions",
+        "welcome": "Ask me anything about periods and women's health!",
+        "placeholder": "Ask your question here...",
+        "send": "Send",
+        "sampleQuestions": {
+          "q1": "Why do I get cramps?",
+          "q2": "Why is my period late?",
+          "q3": "What foods help during periods?",
+          "q4": "What is PMS?"
+        }
+      },
+      "smartRelief": {
+        "title": "Smart Pain Relief Assistant",
+        "subtitle": "Click on any symptom to get personalized relief recommendations",
+        "reliefFor": "Relief Solutions for",
+        "doThese": "Do These:",
+        "medications": "Safe Medications:",
+        "dontDo": "Don't Do These:"
+      },
+      "selfCare": {
+        "title": "Self-Care Guidance",
+        "subtitle": "Quick and practical self-care tips",
+        "breathing": {
+          "title": "Breathing Exercise",
+          "desc": "Breathe in 4 sec → Hold 4 sec → Out 4 sec",
+          "tryNow": "Try Now"
+        },
+        "heatTherapy": {
+          "title": "Heat Therapy",
+          "desc": "Apply heating pad to lower abdomen for 15-20 minutes"
+        },
+        "yoga": {
+          "title": "Light Yoga",
+          "desc": "Try Child's Pose or Cat-Cow Stretch for relief"
+        },
+        "sleep": {
+          "title": "Quality Sleep",
+          "desc": "Aim for 7-9 hours in a cool, dark room"
+        },
+        "bath": {
+          "title": "Warm Bath",
+          "desc": "Soak in warm water with Epsom salt for relaxation"
+        },
+        "walk": {
+          "title": "Gentle Walk",
+          "desc": "20-30 minute walk helps reduce cramps"
+        },
+        "tea": {
+          "title": "Herbal Tea",
+          "desc": "Chamomile or ginger tea helps soothe cramps and nausea"
+        },
+        "journaling": {
+          "title": "Journaling",
+          "desc": "Write down your feelings to manage mood swings"
+        }
+      },
+      "painRelief": {
+        "title": "Smart Pain Relief Assistant",
+        "subtitle": "Click on any symptom to get personalized relief recommendations"
+      }
+    },
+    "tracker": {
+      "title": "Track Your Period",
+      "lastPeriod": "Last Period Start Date",
+      "cycleLength": "Average Cycle Length",
+      "periodDuration": "Period Duration",
+      "days": "days",
+      "nextPeriod": "Next Period Expected",
+      "ovulation": "Ovulation Day",
+      "symptoms": "Track Your Symptoms",
+      "dailyTracking": "Daily Tracking",
+      "moodToday": "How are you feeling today?",
+      "waterIntake": "Water Intake",
+      "glasses": "glasses",
+      "flowIntensity": "Flow Intensity",
+      "notes": "Notes",
+      "notesPlaceholder": "Add any notes about your day..."
+    },
+    "symptoms": {
+      "cramps": "Cramps",
+      "headache": "Headache",
+      "bloating": "Bloating",
+      "moodSwings": "Mood Swings",
+      "fatigue": "Fatigue",
+      "backPain": "Back Pain",
+      "acne": "Acne",
+      "cravings": "Cravings"
+    },
+    "moods": {
+      "happy": "Happy",
+      "neutral": "Neutral",
+      "sad": "Sad",
+      "anxious": "Anxious",
+      "angry": "Angry"
+    },
+    "flow": {
+      "light": "Light",
+      "medium": "Medium",
+      "heavy": "Heavy"
+    },
+    "calendar": {
+      "title": "Period Calendar",
+      "periodDays": "Period Days",
+      "fertileDays": "Fertile Window",
+      "ovulationDay": "Ovulation Day",
+      "hasLog": "Has Log",
+      "comingSoon": "Interactive calendar coming soon!",
+      "legend": {
+        "periodDays": "Period Days",
+        "fertileWindow": "Fertile Window",
+        "ovulationDay": "Ovulation Day",
+        "loggedData": "Logged Data"
+      },
+      "weekdays": {
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat"
+      },
+      "clickToLog": "Click any day to log your mood, symptoms, and notes for that date",
+      "setDateFirst": "Set Your Last Period Date First",
+      "setDateDesc": "To see period predictions and color-coded days on the calendar, please go to the \"Period Tracker\" tab and set your last period start date.",
+      "goToTracker": "Go to Period Tracker"
+    },
+    "analytics": {
+      "overview": "Cycle Overview",
+      "avgCycle": "Average Cycle",
+      "periodLength": "Period Length",
+      "logsRecorded": "Days Logged",
+      "hydration": "Hydration Tracking",
+      "avgWater": "Average Water Intake",
+      "waterGoal": "Goal: 8-10 glasses per day",
+      "moodPatterns": "Mood Patterns",
+      "commonSymptoms": "Common Symptoms",
+      "exportData": "Export Your Data",
+      "exportDesc": "Download all your tracking data as JSON file",
+      "download": "Download Data",
+      "title": "Analytics",
+      "howItWorks": "How Analytics Works",
+      "step1": {
+        "title": "Set Your Cycle Info",
+        "desc": "Go to \"Period Tracker\" and set your last period date"
+      },
+      "step2": {
+        "title": "Log Daily Data",
+        "desc": "Track mood, symptoms, water intake daily"
+      },
+      "step3": {
+        "title": "See Insights",
+        "desc": "After 7+ days, you'll see patterns and predictions"
+      },
+      "noData": {
+        "title": "No Data Yet",
+        "desc": "Start logging your daily mood, symptoms, and water intake to see personalized insights!",
+        "button": "Go to Period Tracker"
+      },
+      "emergencyAlert": {
+        "title": "Health Alert - Medical Attention May Be Required",
+        "detected": "We've detected concerning symptoms:",
+        "action": "Recommended Action:",
+        "consult": "Please consult a gynecologist for proper evaluation.",
+        "findDoctor": "Find a Doctor Near You"
+      },
+      "cycleOverview": "Cycle Overview",
+      "currentPhase": "Current Cycle Phase",
+      "symptomPatterns": "Symptom Patterns & Insights",
+      "moodTrends": "Mood Trends"
+    },
+    "pms": {
+      "painRelief": {
+        "title": "Pain Relief",
+        "tip1": "Take over-the-counter pain relievers like ibuprofen",
+        "tip2": "Apply heating pad to lower abdomen",
+        "tip3": "Try gentle stretching exercises",
+        "tip4": "Stay hydrated with warm fluids"
+      },
+      "moodManagement": {
+        "title": "Mood Management",
+        "tip1": "Practice deep breathing exercises",
+        "tip2": "Get regular physical activity",
+        "tip3": "Maintain consistent sleep schedule",
+        "tip4": "Talk to friends or family for support"
+      },
+      "bloating": {
+        "title": "Reduce Bloating",
+        "tip1": "Limit salt intake",
+        "tip2": "Avoid carbonated drinks",
+        "tip3": "Eat smaller, frequent meals",
+        "tip4": "Try herbal teas like peppermint"
+      },
+      "fatigue": {
+        "title": "Combat Fatigue",
+        "tip1": "Get 7-9 hours of quality sleep",
+        "tip2": "Take short power naps if needed",
+        "tip3": "Eat iron-rich foods",
+        "tip4": "Avoid excessive caffeine"
+      }
+    },
+    "nutrition": {
+      "title": "Smart Nutrition Guidance",
+      "subtitle": "Foods that help during your period",
+      "ironRich": {
+        "title": "Iron-Rich Foods",
+        "description": "Replenish iron lost during menstruation",
+        "food1": "Spinach and leafy greens",
+        "food2": "Red meat and poultry",
+        "food3": "Lentils and beans",
+        "food4": "Dark chocolate"
+      },
+      "magnesium": {
+        "title": "Magnesium Sources",
+        "description": "Helps reduce cramps and improve mood",
+        "food1": "Almonds and cashews",
+        "food2": "Avocados",
+        "food3": "Bananas",
+        "food4": "Whole grains"
+      },
+      "omega3": {
+        "title": "Omega-3 Fatty Acids",
+        "description": "Reduces inflammation and period pain",
+        "food1": "Salmon and fatty fish",
+        "food2": "Walnuts",
+        "food3": "Chia seeds",
+        "food4": "Flaxseeds"
+      },
+      "hydration": {
+        "title": "Stay Hydrated",
+        "description": "Proper hydration reduces bloating and headaches",
+        "tip1": "Drink 8-10 glasses of water daily",
+        "tip2": "Try herbal teas (ginger, chamomile)",
+        "tip3": "Eat water-rich fruits (watermelon, cucumber)",
+        "tip4": "Avoid excessive caffeine and alcohol"
+      },
+      "avoid": {
+        "title": "Foods to Avoid",
+        "description": "These can worsen period symptoms",
+        "food1": "Excessive caffeine and energy drinks",
+        "food2": "Salty and processed foods",
+        "food3": "Sugary snacks and desserts"
+      }
+    },
+    "selfcare": {
+      "heatTherapy": {
+        "title": "Heat Therapy",
+        "description": "Warmth helps relax muscles and reduce cramps",
+        "tip1": "Use heating pad on lower abdomen",
+        "tip2": "Take warm baths with Epsom salt",
+        "tip3": "Try hot water bottle on back"
+      },
+      "yoga": {
+        "title": "Gentle Yoga",
+        "description": "Specific poses can ease period discomfort",
+        "pose1": "Child's Pose - relieves back pain",
+        "pose2": "Cat-Cow Stretch - eases cramps",
+        "pose3": "Reclining Twist - reduces bloating",
+        "pose4": "Legs-Up-The-Wall - improves circulation"
+      },
+      "relaxation": {
+        "title": "Relaxation Techniques",
+        "description": "Reduce stress and manage PMS symptoms",
+        "tip1": "Practice meditation for 10-15 minutes",
+        "tip2": "Listen to calming music",
+        "tip3": "Try aromatherapy with lavender oil",
+        "tip4": "Take warm baths before bed"
+      },
+      "massage": {
+        "title": "Self-Massage",
+        "description": "Gentle massage can relieve tension and pain",
+        "tip1": "Massage lower abdomen in circular motions",
+        "tip2": "Apply gentle pressure to lower back",
+        "tip3": "Use essential oils for added relief",
+        "tip4": "Massage feet and ankles to reduce swelling"
+      },
+      "sleep": {
+        "title": "Quality Sleep",
+        "description": "Good sleep helps manage hormonal changes",
+        "tip1": "Maintain consistent sleep schedule",
+        "tip2": "Create cool, dark sleeping environment",
+        "tip3": "Avoid screens 1 hour before bed",
+        "tip4": "Try relaxation exercises before sleep"
+      },
+      "exercise": {
+        "title": "Light Exercise",
+        "description": "Movement releases endorphins and reduces pain",
+        "tip1": "Take 20-30 minute walks",
+        "tip2": "Try swimming or water aerobics",
+        "tip3": "Do gentle stretching routines",
+        "tip4": "Avoid high-intensity workouts during heavy flow"
+      }
+    },
+    "reliefSolutions": {
+      "cramps": {
+        "homeRemedies": [
+          "Apply heating pad to lower abdomen",
+          "Take warm bath with Epsom salt",
+          "Gentle abdominal massage",
+          "Stay hydrated"
+        ],
+        "medicines": [
+          "Ibuprofen (400mg every 6-8 hours)",
+          "Naproxen (220mg every 8-12 hours)",
+          "Acetaminophen (500mg every 6 hours)"
+        ],
+        "exercises": [
+          "Child's Pose",
+          "Cat-Cow Stretch",
+          "Pelvic tilts",
+          "Gentle walking"
+        ],
+        "warning": "If pain is unbearable or doesn't improve with medication, consult a doctor",
+        "dontDo": [
+          "Don't consume excessive caffeine or alcohol",
+          "Avoid intense physical activity if pain is severe"
+        ]
+      },
+      "headache": {
+        "homeRemedies": [
+          "Rest in dark, quiet room",
+          "Cold compress on forehead",
+          "Stay hydrated",
+          "Peppermint oil on temples"
+        ],
+        "medicines": [
+          "Ibuprofen (400mg)",
+          "Acetaminophen (500mg)",
+          "Aspirin (325mg)"
+        ],
+        "exercises": [
+          "Neck stretches",
+          "Deep breathing",
+          "Light walking",
+          "Shoulder rolls"
+        ],
+        "warning": "Seek medical help if headache is severe or accompanied by vision changes",
+        "dontDo": [
+          "Don't skip meals or get dehydrated",
+          "Avoid bright screens and loud noises"
+        ]
+      },
+      "bloating": {
+        "homeRemedies": [
+          "Drink peppermint tea",
+          "Avoid salty foods",
+          "Eat smaller meals",
+          "Light abdominal massage"
+        ],
+        "medicines": [
+          "Simethicone (Gas-X)",
+          "Probiotics",
+          "Magnesium supplements"
+        ],
+        "exercises": [
+          "Walking",
+          "Yoga twists",
+          "Knee-to-chest pose",
+          "Light cardio"
+        ],
+        "warning": "If bloating is severe or persistent, consult a healthcare provider",
+        "dontDo": [
+          "Don't eat salty or processed foods",
+          "Avoid carbonated drinks"
+        ]
+      },
+      "backPain": {
+        "homeRemedies": [
+          "Apply heat or ice pack",
+          "Maintain good posture",
+          "Use supportive pillow",
+          "Warm compress"
+        ],
+        "medicines": [
+          "Ibuprofen (400mg)",
+          "Naproxen (220mg)",
+          "Topical pain relief cream"
+        ],
+        "exercises": [
+          "Cat-Cow Stretch",
+          "Child's Pose",
+          "Pelvic tilts",
+          "Gentle back stretches"
+        ],
+        "warning": "Consult doctor if pain radiates down legs or is accompanied by numbness",
+        "dontDo": [
+          "Don't sit or stand for too long",
+          "Avoid heavy lifting"
+        ]
+      },
+      "fatigue": {
+        "homeRemedies": [
+          "Get 7-9 hours sleep",
+          "Eat iron-rich foods",
+          "Stay hydrated",
+          "Take short naps"
+        ],
+        "medicines": [
+          "Iron supplements (if deficient)",
+          "Vitamin B12",
+          "Multivitamin"
+        ],
+        "exercises": [
+          "Light walking",
+          "Gentle yoga",
+          "Stretching",
+          "Avoid intense workouts"
+        ],
+        "warning": "Persistent fatigue may indicate anemia - get blood work done",
+        "dontDo": [
+          "Don't skip sleep or stay up late",
+          "Avoid excessive sugar and junk food"
+        ]
+      },
+      "moodSwings": {
+        "homeRemedies": [
+          "Practice deep breathing",
+          "Get regular exercise",
+          "Maintain sleep schedule",
+          "Talk to loved ones"
+        ],
+        "medicines": [
+          "Magnesium supplements",
+          "Vitamin B6",
+          "Evening primrose oil"
+        ],
+        "exercises": [
+          "Yoga",
+          "Walking",
+          "Dancing",
+          "Swimming"
+        ],
+        "warning": "If mood changes are severe or affecting daily life, seek professional help",
+        "dontDo": [
+          "Don't isolate yourself completely",
+          "Avoid making major decisions during this time"
+        ]
+      }
+    },
+    "privacyMode": {
+      "enabled": "Health Tracker",
+      "subtitle": "Your personal health companion"
+    },
+    "smartRelief": {
+      "title": "Smart Pain Relief Assistant",
+      "subtitle": "Click on any symptom to get personalized relief recommendations",
+      "reliefFor": "Relief Solutions for",
+      "doThese": "Do These:",
+      "medications": "Safe Medications:",
+      "dontDo": "Don't Do These:"
+    },
+    "modal": {
+      "dayDetail": {
+        "title": "Log Your Day"
+      },
+      "meditation": {
+        "title": "Guided Breathing Exercise",
+        "breatheIn": "Breathe in for 4 seconds...",
+        "hold": "Hold for 4 seconds...",
+        "breatheOut": "Breathe out for 4 seconds...",
+        "repeat": "Repeat 5 times",
+        "message1": "You're doing great. Take your time and focus on your breath.",
+        "message2": "Remember: It's okay to feel what you're feeling. This too shall pass."
+      },
+      "periodPrep": {
+        "title": "Period Preparation Reminder",
+        "message": "Your period is expected in a few days. Here's your preparation checklist:",
+        "checklist": {
+          "item1": "Stock up on sanitary products",
+          "item2": "Prepare pain relief options (heating pad, medications)",
+          "item3": "Stay well-hydrated",
+          "item4": "Plan balanced, nutritious meals",
+          "item5": "Ensure adequate rest and sleep",
+          "item6": "Prepare comfortable clothes"
+        },
+        "button": "Got it, thanks!"
+      }
+    },
+    "messages": {
+      "logSaved": "Today's log saved successfully!",
+      "setDateForPredictions": "Set your last period date in the \"Period Tracker\" tab to see cycle predictions"
+    },
+    "buttons": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "saveTodayLog": "Save Today's Log",
+      "tryNow": "Try Now"
+    },
+    "phases": {
+      "menstrual": "Menstrual Phase",
+      "follicular": "Follicular Phase",
+      "ovulation": "Ovulation Phase",
+      "luteal": "Luteal Phase",
+      "unknown": "Unknown Phase"
+    },
+    "phaseTips": {
+      "menstrual1": "Low-energy activities recommended",
+      "menstrual2": "Focus on rest and gentle movement",
+      "follicular1": "High productivity phase",
+      "follicular2": "Great time for intense workouts and new projects",
+      "ovulation1": "Peak energy phase",
+      "ovulation2": "Perfect for social activities and challenging tasks",
+      "luteal1": "Rest and recovery phase",
+      "luteal2": "Focus on stress reduction and balanced nutrition"
+    },
+    "insights": {
+      "cramps": "Cramps most frequently occur on Day 1-2 of your cycle.",
+      "lowEnergy": "You tend to feel low energy before your period.",
+      "hydration": "Your hydration levels are often low. Aim for 8-10 glasses daily.",
+      "fatigue": "You frequently experience fatigue. Consider iron-rich foods.",
+      "headache": "Headaches are common in your cycle. Stay hydrated and rest."
+    },
+    "waterGoal": "Goal: 8-10 glasses per day",
+    "waterHelp": "Staying hydrated reduces bloating and helps with cramps",
+    "logged": "Logged",
+    "daysLabel": "days"
+  },
+  "selfCare": {
+    "title": "Self-Care Daily Tracker",
+    "subtitle": "Track your daily health and wellness",
+    "tabs": {
+      "tracker": "Daily Tracker",
+      "tips": "Health Tips",
+      "firstAid": "First Aid",
+      "remedies": "Home Remedies",
+      "exercises": "Exercises"
+    },
+    "tracker": {
+      "howFeeling": "How are you feeling today?",
+      "waterIntake": "Water Intake Tracker",
+      "goal": "Goal",
+      "glasses": "glasses",
+      "steps": "Daily Steps",
+      "stepsUnit": "steps",
+      "complete": "complete",
+      "sleep": "Sleep Tracker",
+      "sleepGoal": "Recommended: 7-8 hours",
+      "hours": "hours",
+      "quickChecks": "Quick Health Checks",
+      "check1": "Did you sleep 7+ hours?",
+      "check2": "Did you drink enough water?",
+      "check3": "Did you exercise today?",
+      "check4": "Did you eat fruits/vegetables?",
+      "notes": "Daily Notes",
+      "notesPlaceholder": "How was your day? Any health observations?",
+      "saveLog": "Save Today's Log"
+    },
+    "moods": {
+      "calm": "Calm",
+      "okay": "Okay",
+      "stressed": "Stressed",
+      "veryStressed": "Very Stressed"
+    },
+    "eyeTimer": {
+      "title": "Eye Relaxation Timer",
+      "rule": "20-20-20 Rule: Every 20 minutes, look 20 feet away for 20 seconds",
+      "seconds": "seconds",
+      "start": "Start Timer",
+      "stop": "Stop Timer",
+      "complete": "Time's up! Look 20 feet away and relax your eyes."
+    },
+    "tips": {
+      "dailyTip": "Health Tip of the Day",
+      "tip1": "Drink 2-3 liters of water daily to stay hydrated and healthy",
+      "tip2": "Walk at least 30 minutes daily for cardiovascular health",
+      "tip3": "Sleep 7-8 hours every night for proper rest and recovery",
+      "tip4": "Eat a balanced diet with fruits, vegetables, and whole grains",
+      "tip5": "Practice meditation or deep breathing for 10 minutes daily",
+      "tip6": "Get 15-20 minutes of sunlight exposure daily for Vitamin D",
+      "tip7": "Limit screen time, especially before bedtime",
+      "tip8": "Eat an apple a day to boost immunity",
+      "tip9": "Keep your mind active with puzzles, reading, or learning"
+    },
+    "firstAid": {
+      "title": "Quick First-Aid Guide",
+      "emergency": "Emergency Number",
+      "readMore": "Click to read more →",
+      "warning": "If symptoms are severe or don't improve, seek immediate medical attention. Call 108 for emergencies.",
+      "cuts": {
+        "title": "Cuts and Bleeding",
+        "step1": "1. Wash your hands thoroughly",
+        "step2": "2. Clean the wound with clean water",
+        "step3": "3. Apply pressure with clean cloth to stop bleeding",
+        "step4": "4. Apply antiseptic and cover with bandage"
+      },
+      "burns": {
+        "title": "Burns",
+        "step1": "1. Cool the burn under running water for 10-20 minutes",
+        "step2": "2. Remove jewelry or tight clothing near the burn",
+        "step3": "3. Cover with sterile, non-stick bandage",
+        "step4": "4. Do NOT apply ice, butter, or ointments"
+      },
+      "sprains": {
+        "title": "Sprains",
+        "step1": "1. Rest the injured area immediately",
+        "step2": "2. Apply ice pack for 15-20 minutes",
+        "step3": "3. Compress with elastic bandage",
+        "step4": "4. Elevate the injured limb above heart level"
+      },
+      "nosebleed": {
+        "title": "Nosebleed",
+        "step1": "1. Sit upright and lean slightly forward",
+        "step2": "2. Pinch the soft part of nose for 10 minutes",
+        "step3": "3. Breathe through your mouth",
+        "step4": "4. Apply cold compress on nose bridge"
+      },
+      "choking": {
+        "title": "Choking",
+        "step1": "1. Encourage coughing if person can breathe",
+        "step2": "2. Give 5 back blows between shoulder blades",
+        "step3": "3. Perform 5 abdominal thrusts (Heimlich maneuver)",
+        "step4": "4. Call 108 if object doesn't come out"
+      },
+      "heartAttack": {
+        "title": "Heart Attack",
+        "step1": "1. Call 108 immediately",
+        "step2": "2. Help person sit down and stay calm",
+        "step3": "3. Loosen tight clothing",
+        "step4": "4. If trained, give aspirin (300mg) to chew"
+      }
+    },
+    "remedies": {
+      "title": "Traditional Home Remedies",
+      "subtitle": "Safe and effective remedies commonly used in India",
+      "ingredients": "Ingredients",
+      "method": "Method",
+      "usage": "Usage",
+      "caution": "These are traditional remedies. If symptoms persist or worsen, consult a doctor.",
+      "soreThroat": {
+        "title": "Sore Throat",
+        "preview": "Ginger tea with honey",
+        "ingredients": "Fresh ginger, honey, warm water",
+        "method": "Boil ginger slices in water for 5 minutes. Add honey when warm.",
+        "usage": "Drink 2-3 times daily"
+      },
+      "cold": {
+        "title": "Cold and Congestion",
+        "preview": "Steam inhalation",
+        "ingredients": "Hot water, eucalyptus oil (optional)",
+        "method": "Boil water, add 2-3 drops eucalyptus oil. Inhale steam with towel over head.",
+        "usage": "2-3 times daily for 10 minutes"
+      },
+      "cough": {
+        "title": "Cough",
+        "preview": "Turmeric milk",
+        "ingredients": "Milk, turmeric powder, honey",
+        "method": "Heat milk, add 1/2 tsp turmeric and honey.",
+        "usage": "Drink before bedtime"
+      },
+      "headache": {
+        "title": "Headache",
+        "preview": "Cold compress",
+        "ingredients": "Ice pack or cold cloth",
+        "method": "Apply cold compress to forehead and temples.",
+        "usage": "15-20 minutes, repeat as needed"
+      },
+      "acidity": {
+        "title": "Acidity",
+        "preview": "Coconut water",
+        "ingredients": "Fresh coconut water",
+        "method": "Drink fresh coconut water.",
+        "usage": "1-2 glasses daily"
+      },
+      "indigestion": {
+        "title": "Indigestion",
+        "preview": "Lemon water",
+        "ingredients": "Lemon, warm water, honey",
+        "method": "Mix lemon juice in warm water, add honey.",
+        "usage": "Drink after meals"
+      }
+    },
+    "exercises": {
+      "title": "Daily Exercises & Wellness",
+      "subtitle": "Simple exercises you can do at home",
+      "tryNow": "Try Now",
+      "breathing": {
+        "title": "Breathing Exercise",
+        "desc": "4-4-4-4 breathing technique for relaxation",
+        "step1": "Breathe in slowly through nose for 4 seconds",
+        "step2": "Hold your breath for 4 seconds",
+        "step3": "Breathe out slowly through mouth for 4 seconds",
+        "step4": "Wait for 4 seconds, then repeat 5 times"
+      },
+      "yoga": {
+        "title": "Simple Yoga Poses",
+        "desc": "Easy yoga poses for daily practice",
+        "pose1": {
+          "name": "Mountain Pose (Tadasana)",
+          "desc": "Stand tall, feet together, arms at sides. Great for posture."
+        },
+        "pose2": {
+          "name": "Child's Pose (Balasana)",
+          "desc": "Kneel, sit on heels, stretch arms forward. Relaxes back and shoulders."
+        },
+        "pose3": {
+          "name": "Cat-Cow Stretch",
+          "desc": "On hands and knees, alternate arching and rounding back. Good for spine."
+        },
+        "pose4": {
+          "name": "Tree Pose (Vrikshasana)",
+          "desc": "Stand on one leg, other foot on inner thigh. Improves balance."
+        }
+      },
+      "stretching": {
+        "title": "Morning Stretching",
+        "desc": "5-minute stretching routine to start your day"
+      },
+      "walking": {
+        "title": "Walking Exercise",
+        "desc": "30-minute brisk walk daily for overall health"
+      },
+      "meditation": {
+        "title": "Meditation",
+        "desc": "10-minute guided meditation for mental peace"
+      },
+      "neckExercise": {
+        "title": "Neck Exercises",
+        "desc": "Gentle neck rotations and stretches for desk workers"
+      }
+    },
+    "messages": {
+      "logSaved": "Today's log saved successfully!"
+    }
+  }
+}
