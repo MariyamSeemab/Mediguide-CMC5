@@ -1255,27 +1255,43 @@ Copyright (c) 2024 MediGuide AI Team
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/M-Mahek-03.png" width="100px;" alt="Mahek Mukadam"/><br />
-      <sub><b>Mahek Mukadam</b></sub><br />
+      <a href="https://github.com/M-Mahek-03">
+        <img src="https://github.com/M-Mahek-03.png?size=200" width="100px" alt="Mahek Mukadam"/>
+      </a>
+      <br />
+      <sub><b>Mahek Mukadam</b></sub>
+      <br />
       <a href="https://github.com/M-Mahek-03">GitHub</a>
     </td>
 
 ```
 <td align="center">
-  <img src="https://github.com/MariyamSeemab.png" width="100px;" alt="Mariyam Usmani"/><br />
-  <sub><b>Mariyam Usmani</b></sub><br />
+  <a href="https://github.com/MariyamSeemab">
+    <img src="https://github.com/MariyamSeemab.png?size=200" width="100px" alt="Mariyam Usmani"/>
+  </a>
+  <br />
+  <sub><b>Mariyam Usmani</b></sub>
+  <br />
   <a href="https://github.com/MariyamSeemab">GitHub</a>
 </td>
 
 <td align="center">
-  <img src="https://github.com/nadeem221751.png" width="100px;" alt="Nadeem Shaikh"/><br />
-  <sub><b>Nadeem Shaikh</b></sub><br />
+  <a href="https://github.com/nadeem221751">
+    <img src="https://github.com/nadeem221751.png?size=200" width="100px" alt="Nadeem Shaikh"/>
+  </a>
+  <br />
+  <sub><b>Nadeem Shaikh</b></sub>
+  <br />
   <a href="https://github.com/nadeem221751">GitHub</a>
 </td>
 
 <td align="center">
-  <img src="https://github.com/Electrogreek.png" width="100px;" alt="Nehal Shaikh"/><br />
-  <sub><b>Nehal Shaikh</b></sub><br />
+  <a href="https://github.com/Electrogreek">
+    <img src="https://github.com/Electrogreek.png?size=200" width="100px" alt="Nehal Shaikh"/>
+  </a>
+  <br />
+  <sub><b>Nehal Shaikh</b></sub>
+  <br />
   <a href="https://github.com/Electrogreek">GitHub</a>
 </td>
 ```
