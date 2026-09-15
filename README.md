@@ -1252,52 +1252,38 @@ Copyright (c) 2024 MediGuide AI Team
 
 ### Project Maintainers
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/M-Mahek-03">
-        <img src="https://github.com/M-Mahek-03.png?size=200" width="100px" alt="Mahek Mukadam"/>
-      </a>
-      <br />
-      <sub><b>Mahek Mukadam</b></sub>
-      <br />
-      <a href="https://github.com/M-Mahek-03">GitHub</a>
-    </td>
+## 👥 Team
 
-```
-<td align="center">
-  <a href="https://github.com/MariyamSeemab">
-    <img src="https://github.com/MariyamSeemab.png?size=200" width="100px" alt="Mariyam Usmani"/>
-  </a>
-  <br />
-  <sub><b>Mariyam Usmani</b></sub>
-  <br />
-  <a href="https://github.com/MariyamSeemab">GitHub</a>
-</td>
+### Mahek Mukadam
 
-<td align="center">
-  <a href="https://github.com/nadeem221751">
-    <img src="https://github.com/nadeem221751.png?size=200" width="100px" alt="Nadeem Shaikh"/>
-  </a>
-  <br />
-  <sub><b>Nadeem Shaikh</b></sub>
-  <br />
-  <a href="https://github.com/nadeem221751">GitHub</a>
-</td>
+[Mahek Mukadam](https://github.com/M-Mahek-03)
+[![Mahek Mukadam](https://github.com/M-Mahek-03.png?size=200)](https://github.com/M-Mahek-03)
+[GitHub](https://github.com/M-Mahek-03)
 
-<td align="center">
-  <a href="https://github.com/Electrogreek">
-    <img src="https://github.com/Electrogreek.png?size=200" width="100px" alt="Nehal Shaikh"/>
-  </a>
-  <br />
-  <sub><b>Nehal Shaikh</b></sub>
-  <br />
-  <a href="https://github.com/Electrogreek">GitHub</a>
-</td>
-```
+---
 
-  </tr>
-</table>
+### Mariyam Usmani
+
+[Mariyam Usmani](https://github.com/MariyamSeemab)
+[![Mariyam Usmani](https://github.com/MariyamSeemab.png?size=200)](https://github.com/MariyamSeemab)
+[GitHub](https://github.com/MariyamSeemab)
+
+---
+
+### Nadeem Shaikh
+
+[Nadeem Shaikh](https://github.com/nadeem221751)
+[![Nadeem Shaikh](https://github.com/nadeem221751.png?size=200)](https://github.com/nadeem221751)
+[GitHub](https://github.com/nadeem221751)
+
+---
+
+### Nehal Shaikh
+
+[Nehal Shaikh](https://github.com/Electrogreek)
+[![Nehal Shaikh](https://github.com/Electrogreek.png?size=200)](https://github.com/Electrogreek)
+[GitHub](https://github.com/Electrogreek)
+
 
 **Together, we're building the future of accessible healthcare in India! 🇮🇳**
 
