@@ -1,35 +1,21 @@
 <div align="center">
 
-<img src="https://img.icons8.com/fluency/96/000000/medical-heart.png" alt="MediGuide AI Logo" width="120"/>
-
 # 🏥 MediGuide AI
 
 ### Your Intelligent Healthcare Companion
 
-<p>
-  <strong>AI-powered healthcare guidance with multilingual support, doctor consultations, digital prescriptions, and emergency services.</strong>
-</p>
+**AI-powered healthcare guidance with multilingual support, doctor consultations, digital prescriptions, and emergency services.**
 
-<p>
-  <a href="#-features">✨ Features</a> •
-  <a href="#-getting-started">🚀 Quick Start</a> •
-  <a href="#-architecture">📊 Architecture</a> •
-  <a href="#-team">👥 Team</a> •
-  <a href="#-contributing">🤝 Contributing</a>
-</p>
+[✨ Features](#-features) • [🚀 Quick Start](#-getting-started) • [📊 Architecture](#-architecture) • [👥 Team](#-team) • [🤝 Contributing](#-contributing)
 
-<p>
-  <img src="https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React"/>
-  <img src="https://img.shields.io/badge/TypeScript-5.6.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/Vite-6.0.1-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
-  <img src="https://img.shields.io/badge/Firebase-12.9.0-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" alt="Firebase"/>
-  <img src="https://img.shields.io/badge/Whereby-Video-FF5A5F?style=for-the-badge" alt="Whereby"/>
-</p>
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6.0.1-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-12.9.0-FFCA28?style=for-the-badge&logo=firebase&logoColor=white)
+![Whereby](https://img.shields.io/badge/Whereby-Video-FF5A5F?style=for-the-badge)
 
-<p>
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"/>
-  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome"/>
-</p>
+![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)
 
 </div>
 
@@ -37,286 +23,167 @@
 
 ## 📋 Table of Contents
 
-* [🌟 Why MediGuide AI?](#-why-mediguide-ai)
-* [✨ Features](#-features)
-* [🎯 Key Highlights](#-key-highlights)
-* [🛠️ Tech Stack](#️-tech-stack)
-* [🚀 Getting Started](#-getting-started)
-* [📱 Screenshots](#-screenshots)
-* [🌍 Language Support](#-language-support)
-* [🏗️ Project Structure](#️-project-structure)
-* [🔧 Configuration](#-configuration)
-* [🎤 Voice Emotion Detection](#-voice-emotion-detection)
-* [📊 Architecture](#-architecture)
-* [🎨 UI/UX Design](#-uiux-design)
-* [🧪 Testing](#-testing)
-* [📦 Deployment](#-deployment)
-* [🔒 Security](#-security)
-* [📈 Roadmap](#-roadmap)
-* [🤝 Contributing](#-contributing)
-* [📄 License](#-license)
-* [👥 Team](#-team)
-* [🙏 Acknowledgments](#-acknowledgments)
-* [📞 Support](#-support)
+- [🌟 Why MediGuide AI?](#-why-mediguide-ai)
+- [✨ Features](#-features)
+- [🎯 Key Highlights](#-key-highlights)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🚀 Getting Started](#-getting-started)
+- [📱 Screenshots](#-screenshots)
+- [🌍 Language Support](#-language-support)
+- [🏗️ Project Structure](#️-project-structure)
+- [🔧 Configuration](#-configuration)
+- [🎤 Voice Emotion Detection](#-voice-emotion-detection)
+- [📊 Architecture](#-architecture)
+- [🎨 UI/UX Design](#-uiux-design)
+- [🧪 Testing](#-testing)
+- [📦 Deployment](#-deployment)
+- [🔒 Security](#-security)
+- [📈 Roadmap](#-roadmap)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [👥 Team](#-team)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📞 Support](#-support)
 
 ---
 
-# 🌟 Why MediGuide AI?
+## 🌟 Why MediGuide AI?
 
 Healthcare accessibility can be challenging because of geographical limitations, language barriers, long waiting times, and limited access to immediate medical guidance.
 
-**MediGuide AI** aims to provide a centralized digital healthcare experience through AI-powered assistance, multilingual support, doctor consultations, digital prescriptions, and emergency services.
+**MediGuide AI** provides a centralized digital healthcare experience through AI-powered assistance, multilingual support, doctor consultations, digital prescriptions, and emergency services.
 
 ### 🎯 The Challenge
 
-| Challenge            | Description                                                               |
-| -------------------- | ------------------------------------------------------------------------- |
-| 🏥 Limited Access    | Many people have limited access to immediate healthcare guidance.         |
-| 🌍 Language Barriers | Healthcare information may not always be available in regional languages. |
-| ⏱️ Long Wait Times   | Patients may have to wait for basic consultations or information.         |
+| Challenge | Description |
+|---|---|
+| 🏥 Limited Access | Many people have limited access to immediate healthcare guidance. |
+| 🌍 Language Barriers | Healthcare information isn't always available in regional languages. |
+| ⏱️ Long Wait Times | Patients often wait for even basic consultations or information. |
 
 ### 💡 Our Solution
 
 MediGuide AI provides:
 
-* 🤖 AI-powered healthcare guidance
-* 🌍 Support for 13 Indian languages
-* 🔍 Symptom checking
-* 🎤 Voice-based input and analysis
-* 📸 Image-based symptom input
-* 👨‍⚕️ Doctor consultations
-* 🎥 Real-time video consultations
-* 💊 Digital prescriptions
-* 🔐 QR-based prescription verification
-* 🚑 Emergency ambulance services
-* 💬 Doctor-patient communication
-* 💳 Online payment support
+- 🤖 AI-powered healthcare guidance
+- 🌍 Support for 13 Indian languages
+- 🔍 Symptom checking (text, voice, image)
+- 🎤 Voice-based input and emotion analysis
+- 👨‍⚕️ Doctor consultations & appointment booking
+- 🎥 Real-time video consultations
+- 💊 Digital prescriptions with QR verification
+- 🚑 Emergency ambulance services
+- 💬 Doctor-patient communication
+- 💳 Online payment support
 
-> **"Making quality healthcare more accessible to people across India, in their own language."**
+> *"Making quality healthcare more accessible to people across India, in their own language."*
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-## 🤖 AI-Powered Medical Chatbot
+### 🤖 AI-Powered Medical Chatbot
+- Natural-language conversations with medical context
+- Multilingual healthcare interaction
+- Category-based medical guidance
+- Emergency symptom detection
 
-* 🧠 Natural-language conversations
-* 🌍 Multilingual healthcare interaction
-* 🏥 Medical category-based guidance
-* 💭 Conversation context
-* 🚨 Emergency symptom detection
-* 📊 Health-related insights
+### 🔍 Advanced Symptom Checker
+**Input methods:** Text · Voice · Image
+**Analysis:** Urgency classification · Emotion classification · Voice-quality analysis · Medical keyword detection
 
----
+### 🎥 Video Consultation System
+- Real-time video consultations via Whereby
+- Appointment-based secure access
+- Call duration tracking & in-call chat
+- Full consultation history
 
-## 🔍 Advanced Symptom Checker
+### 💊 Digital Prescription System
+- Digital prescription creation with PDF generation
+- QR-code verification
+- Unique prescription IDs — format: `RX-YYYY-NNNNNN`
+- Doctor authentication & digital signature
 
-### Input Methods
+### 🚑 Emergency Ambulance System
+- Location-based ambulance tracking
+- Route assistance and emergency booking
+- Ambulance mission dashboard with live status
 
-* ⌨️ Text-based symptom description
-* 🎤 Voice input
-* 📸 Image upload
-* 🎵 Voice analysis
+### 👨‍⚕️ Doctor Dashboard
+- Appointment & prescription management
+- Patient communication and analytics
+- Video consultation access
 
-### Analysis
+### 💳 Payment Support
+- UPI payment support with verification
+- Consultation fee and payment history tracking
 
-* 🎯 Urgency classification
-* 🎭 Emotion classification
-* 📊 Voice-quality analysis
-* 🔍 Medical keyword detection
-* ⚡ Fast AI-assisted health insights
-
----
-
-## 🎥 Video Consultation System
-
-* 📹 Video consultations using Whereby
-* 🔒 Appointment-based access
-* ⏱️ Call duration tracking
-* 💬 In-call messaging
-* 📱 Responsive interface
-* 📊 Consultation history
-
----
-
-## 💊 Digital Prescription System
-
-* 📝 Digital prescription creation
-* 📄 PDF generation
-* 🔐 QR-code verification
-* 🆔 Unique prescription IDs
-* ✍️ Doctor authentication
-* 🔍 Prescription verification
-
-Example prescription ID:
-
-```text
-RX-YYYY-NNNNNN
-```
+### 🌍 Multilingual Support
+- Real-time language switching with native scripts
+- Voice input across all 13 supported languages
 
 ---
 
-## 🚑 Emergency Ambulance System
+## 🎯 Key Highlights
 
-* 📍 Location-based ambulance tracking
-* 🗺️ Route assistance
-* ⚡ Emergency booking
-* 📊 Ambulance mission dashboard
-* 🔔 Emergency notifications
-* 💰 Mission tracking
-
----
-
-## 👨‍⚕️ Doctor Dashboard
-
-* 📅 Appointment management
-* 💬 Patient communication
-* 📝 Prescription management
-* 📊 Patient analytics
-* 🎥 Video consultation
-* 📱 Doctor profile management
+| Feature | Description |
+|---|---|
+| 🌍 Multilingual | 13 Indian languages |
+| 🤖 AI-Powered | AI-assisted healthcare guidance |
+| 🎤 Voice Analysis | Voice feature and emotion analysis |
+| 🔍 Symptom Checker | Text, voice, and image-based inputs |
+| 🎥 Video Calls | Real-time doctor consultations |
+| 💊 Digital Rx | Digital prescriptions with PDF and QR verification |
+| 💬 Real-time Chat | Doctor-patient communication |
+| 🔒 Authentication | Firebase authentication |
+| 📱 Responsive | Desktop, tablet, and mobile support |
+| ⚡ Fast | Vite-powered frontend |
 
 ---
 
-## 💳 Payment Support
+## 🛠️ Tech Stack
 
-* 📱 UPI payment support
-* 💳 Consultation fee tracking
-* ✅ Payment verification
-* 📊 Payment history
+**Frontend:** React 18.3.1 · TypeScript 5.6.3 · Vite 6.0.1 · React Router DOM 6.28.0 · CSS Modules
 
----
+**Backend & Database:** Firebase (Authentication, Firestore, Cloud Functions, Hosting)
 
-## 🌍 Multilingual Support
+**Video & Communication:** Whereby API · WebRTC
 
-* 🔄 Language switching
-* 🎤 Voice input
-* 📝 Native scripts
-* 🌐 Localized healthcare content
+**Documents & Verification:** jsPDF · QRCode.js
+
+**Audio & Voice:** Web Speech API · Meyda (audio feature extraction) · File API · LocalStorage API
+
+**Development Tools:** ESLint · Prettier · Jest · React Testing Library · TypeScript
 
 ---
 
-# 🎯 Key Highlights
+## 🚀 Getting Started
 
-| Feature            | Description                                        |
-| ------------------ | -------------------------------------------------- |
-| 🌍 Multilingual    | 13 Indian languages                                |
-| 🤖 AI-Powered      | AI-assisted healthcare guidance                    |
-| 🎤 Voice Analysis  | Voice feature and emotion analysis                 |
-| 🔍 Symptom Checker | Text, voice, and image-based inputs                |
-| 🎥 Video Calls     | Real-time doctor consultations                     |
-| 💊 Digital Rx      | Digital prescriptions with PDF and QR verification |
-| 💬 Real-time Chat  | Doctor-patient communication                       |
-| 🔒 Authentication  | Firebase authentication                            |
-| 📱 Responsive      | Desktop, tablet, and mobile support                |
-| ⚡ Fast             | Vite-powered frontend                              |
-| 🎨 Modern UI       | Responsive and interactive interface               |
-| 📊 Analytics       | Healthcare and consultation insights               |
+### Prerequisites
+- Node.js v18 or higher
+- npm or Yarn
+- Git
+- Firebase account
+- Whereby account (for video consultations)
 
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-
-| Technology              | Purpose                 |
-| ----------------------- | ----------------------- |
-| React 18.3.1            | UI development          |
-| TypeScript 5.6.3        | Type safety             |
-| Vite 6.0.1              | Frontend tooling        |
-| React Router DOM 6.28.0 | Client-side routing     |
-| CSS Modules             | Component-level styling |
-
-## Backend & Database
-
-| Technology              | Purpose              |
-| ----------------------- | -------------------- |
-| Firebase                | Backend-as-a-Service |
-| Firebase Authentication | User authentication  |
-| Firestore               | NoSQL database       |
-| Cloud Functions         | Serverless backend   |
-| Firebase Hosting        | Application hosting  |
-
-## Video & Communication
-
-| Technology  | Purpose                 |
-| ----------- | ----------------------- |
-| Whereby API | Video consultations     |
-| WebRTC      | Real-time communication |
-
-## Documents & Verification
-
-| Technology | Purpose                     |
-| ---------- | --------------------------- |
-| jsPDF      | Prescription PDF generation |
-| QRCode.js  | QR-code generation          |
-
-## Audio & Voice
-
-| Technology       | Purpose                  |
-| ---------------- | ------------------------ |
-| Web Speech API   | Speech recognition       |
-| Meyda            | Audio feature extraction |
-| File API         | Image/file processing    |
-| LocalStorage API | Client-side persistence  |
-
-## Development Tools
-
-* ESLint
-* Prettier
-* Jest
-* React Testing Library
-* TypeScript
-
----
-
-# 🚀 Getting Started
-
-## Prerequisites
-
-Before running MediGuide AI locally, install:
-
-* Node.js v18 or higher
-* npm or Yarn
-* Git
-* Firebase account
-* Whereby account for video consultation functionality
-
----
-
-## 1. Clone the Repository
-
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/M-Mahek-03/CMC-5.git
-cd CMC-5
+git clone https://github.com/MariyamSeemab/Mediguide-CMC5.git
+cd Mediguide-CMC5
 ```
 
----
-
-## 2. Install Dependencies
-
+### 2. Install Dependencies
 ```bash
 npm install
-```
-
-Or:
-
-```bash
+# or
 yarn install
 ```
 
----
-
-## 3. Configure Environment Variables
-
-Create your environment file:
-
+### 3. Configure Environment Variables
 ```bash
 cp .env.example .env
 ```
-
-Add the required Firebase and Whereby configuration:
-
+Add your Firebase and Whereby credentials:
 ```env
 VITE_FIREBASE_API_KEY=your_api_key_here
 VITE_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
@@ -327,64 +194,31 @@ VITE_FIREBASE_APP_ID=your_app_id
 
 VITE_WHEREBY_API_KEY=your_whereby_api_key
 ```
+> ⚠️ Never commit real API keys or private credentials to GitHub.
 
-> ⚠️ **Never commit real API keys or private credentials to GitHub.**
-
----
-
-## 4. Start the Development Server
-
+### 4. Start the Development Server
 ```bash
 npm run dev
 ```
+Open `http://localhost:5173`
 
-Or:
-
-```bash
-yarn dev
-```
-
-Open the application:
-
-```text
-http://localhost:5173
-```
-
----
-
-## 5. Build for Production
-
+### 5. Build for Production
 ```bash
 npm run build
 ```
+Output is generated in `dist/`.
 
-The production build will be generated in:
-
-```text
-dist/
-```
-
----
-
-## 6. Preview the Production Build
-
+### 6. Preview the Production Build
 ```bash
 npm run preview
 ```
 
 ---
 
-# 📱 Screenshots
+## 📱 Screenshots
 
-Store screenshots inside:
-
-```text
-docs/screenshots/
+Screenshots live in `docs/screenshots/`:
 ```
-
-Recommended structure:
-
-```text
 docs/
 └── screenshots/
     ├── homepage.png
@@ -394,62 +228,46 @@ docs/
     └── patient-dashboard.png
 ```
 
-## 🏠 Homepage
+| Homepage | AI Chatbot |
+|---|---|
+| ![Homepage](docs/screenshots/homepage.png) | ![Chatbot](docs/screenshots/chatbot.png) |
 
-![MediGuide AI Homepage](docs/screenshots/homepage.png)
+| Symptom Checker | Doctor Dashboard |
+|---|---|
+| ![Symptom Checker](docs/screenshots/symptom-checker.png) | ![Doctor Dashboard](docs/screenshots/doctor-dashboard.png) |
 
-## 💬 AI Chatbot
-
-![AI Chatbot](docs/screenshots/chatbot.png)
-
-## 🔍 Symptom Checker
-
-![Symptom Checker](docs/screenshots/symptom-checker.png)
-
-## 👨‍⚕️ Doctor Dashboard
-
-![Doctor Dashboard](docs/screenshots/doctor-dashboard.png)
-
-## 📊 Patient Dashboard
-
-![Patient Dashboard](docs/screenshots/patient-dashboard.png)
-
-> If a screenshot is not available in the repository, remove its image reference until the file is added.
+> If a screenshot isn't yet in the repo, remove its reference until the file is added.
 
 ---
 
-# 🌍 Language Support
+## 🌍 Language Support
 
-MediGuide AI supports the following 13 languages:
-
-| Language  | Native Name | Code | Status     |
-| --------- | ----------- | ---- | ---------- |
-| English   | English     | `en` | ✅ Complete |
-| Hindi     | हिंदी       | `hi` | ✅ Complete |
-| Tamil     | தமிழ்       | `ta` | ✅ Complete |
-| Telugu    | తెలుగు      | `te` | ✅ Complete |
-| Bengali   | বাংলা       | `bn` | ✅ Complete |
-| Marathi   | मराठी       | `mr` | ✅ Complete |
-| Gujarati  | ગુજરાતી     | `gu` | ✅ Complete |
-| Kannada   | ಕನ್ನಡ       | `kn` | ✅ Complete |
-| Malayalam | മലയാളം      | `ml` | ✅ Complete |
-| Punjabi   | ਪੰਜਾਬੀ      | `pa` | ✅ Complete |
-| Odia      | ଓଡ଼ିଆ       | `or` | ✅ Complete |
-| Assamese  | অসমীয়া     | `as` | ✅ Complete |
-| Urdu      | اردو        | `ur` | ✅ Complete |
+| Language | Native Name | Code | Status |
+|---|---|---|---|
+| English | English | `en` | ✅ Complete |
+| Hindi | हिंदी | `hi` | ✅ Complete |
+| Tamil | தமிழ் | `ta` | ✅ Complete |
+| Telugu | తెలుగు | `te` | ✅ Complete |
+| Bengali | বাংলা | `bn` | ✅ Complete |
+| Marathi | मराठी | `mr` | ✅ Complete |
+| Gujarati | ગુજરાતી | `gu` | ✅ Complete |
+| Kannada | ಕನ್ನಡ | `kn` | ✅ Complete |
+| Malayalam | മലയാളം | `ml` | ✅ Complete |
+| Punjabi | ਪੰਜਾਬੀ | `pa` | ✅ Complete |
+| Odia | ଓଡ଼ିଆ | `or` | ✅ Complete |
+| Assamese | অসমীয়া | `as` | ✅ Complete |
+| Urdu | اردو | `ur` | ✅ Complete |
 
 ---
 
-# 🏗️ Project Structure
+## 🏗️ Project Structure
 
-```text
-CMC-5/
+```
+Mediguide-CMC5/
 │
-├── public/
-│   └── Static assets
+├── public/                  # Static assets
 │
 ├── src/
-│   │
 │   ├── components/
 │   │   ├── BrowserNavigation.tsx
 │   │   ├── DoctorPatientChat.tsx
@@ -507,6 +325,9 @@ CMC-5/
 │   ├── main.tsx
 │   └── index.css
 │
+├── Ambulance/                # Ambulance dashboard module
+├── Disease detector 2/       # Disease detection module
+├── docs/                     # Documentation & screenshots
 ├── .env.example
 ├── .gitignore
 ├── package.json
@@ -517,51 +338,29 @@ CMC-5/
 
 ---
 
-# 🔧 Configuration
+## 🔧 Configuration
 
-## Firebase Setup
+### Firebase Setup
+1. Create a Firebase project.
+2. Enable Authentication (Email/Password, Google if needed).
+3. Create a Firestore database.
+4. Enable Firebase Storage / Hosting if needed.
+5. Add your Firebase config to `.env`.
 
-Create a Firebase project and configure:
-
-1. Firebase Authentication
-2. Email/Password authentication
-3. Google authentication if required
-4. Firestore
-5. Firebase Storage if required
-6. Firebase Hosting if deploying through Firebase
-
-Add the Firebase configuration to `.env`.
-
----
-
-## Whereby Setup
-
-For video consultations:
-
+### Whereby Setup (Video Consultations)
 1. Create a Whereby account.
-2. Configure the required API credentials.
-3. Add the credentials to `.env`.
-4. Start the application.
+2. Get your API credentials from the dashboard.
+3. Add them to `.env` as `VITE_WHEREBY_API_KEY`.
 
----
-
-## Firestore Collections
-
-The application uses collections such as:
-
-```text
+### Firestore Collections
+```
 appointments
 doctorReports
 labReports
 ```
 
----
-
-## LocalStorage
-
-The application may use LocalStorage for client-side data such as:
-
-```text
+### LocalStorage Keys
+```
 preferredLanguage
 mediguide_users
 mediguide_appointments
@@ -573,222 +372,71 @@ mediguide_prescriptions
 mediguide_video_rooms
 mediguide_call_logs
 ```
-
-> ⚠️ LocalStorage should not be treated as a secure database for sensitive medical information.
+> ⚠️ LocalStorage should not be treated as a secure store for sensitive medical information.
 
 ---
 
-# 🎤 Voice Emotion Detection
+## 🎤 Voice Emotion Detection
 
 MediGuide AI includes browser-based voice analysis designed to identify voice patterns that may indicate distress or urgency.
 
-## How It Works
+**How it works:** Voice Input → Microphone Permission → Audio Capture → Meyda Feature Extraction → Voice Feature Analysis → Medical Keyword Detection → Emotion Classification → Urgency Classification → Healthcare Guidance
 
-```mermaid
-flowchart TD
-    A[User Voice Input] --> B[Microphone Permission]
-    B --> C[Audio Capture]
-    C --> D[Meyda Audio Feature Extraction]
-    D --> E[Voice Feature Analysis]
-    E --> F[Medical Keyword Detection]
-    F --> G[Emotion Classification]
-    G --> H[Urgency Classification]
-    H --> I[Healthcare Guidance]
-```
+### Audio Features Analyzed
+Volume/RMS · Zero-crossing rate · Energy · Peak analysis · Variance · Dynamic range · Speech rate · Spectral flux
 
-## Audio Features
+### Emotion Classification
 
-The application can analyze features such as:
+| Emotion | Indicators | Urgency |
+|---|---|---|
+| Critical | Critical keywords + strong distress | 🔴 Critical |
+| In Pain | Pain indicators + voice strain | 🟠 High |
+| Distressed | Unstable voice + fast speech | 🟠 High |
+| Anxious | Fast speech + anxiety indicators | 🟡 Medium |
+| Weak/Tired | Low volume + fatigue indicators | 🟡 Medium |
+| Calm | Stable voice characteristics | 🟢 Low |
 
-* Volume / RMS
-* Zero-crossing rate
-* Energy
-* Peak analysis
-* Variance
-* Dynamic range
-* Speech rate
-* Spectral flux
+> **Important:** Voice analysis is a supportive feature only and is not a medical diagnosis.
 
-## Medical Keyword Categories
-
-Medical keywords can be grouped into:
-
-* 🚨 Critical symptoms
-* ⚠️ Severity indicators
-* 🩹 Pain indicators
-* 😟 Anxiety indicators
-* 😴 Weakness and fatigue indicators
-
-## Emotion Classification
-
-| Emotion    | Possible Indicators                            | Urgency     |
-| ---------- | ---------------------------------------------- | ----------- |
-| Critical   | Critical keywords + strong distress indicators | 🔴 Critical |
-| In Pain    | Pain indicators + voice strain                 | 🟠 High     |
-| Distressed | Unstable voice + fast speech                   | 🟠 High     |
-| Anxious    | Fast speech + anxiety indicators               | 🟡 Medium   |
-| Weak/Tired | Low volume + fatigue indicators                | 🟡 Medium   |
-| Calm       | Stable voice characteristics                   | 🟢 Low      |
-
-## Voice Quality Analysis
-
-The system can provide indicators such as:
-
-* ✅ Normal voice patterns
-* ⚠️ Elevated voice level
-* ⚠️ Signs of distress
-* ⚠️ Voice strain
-* ⚠️ Elevated pitch
-* ⚠️ Low voice volume
-* ⚠️ Possible fatigue
-* 🚨 Possible urgent condition
-
-> **Important:** Voice analysis is a supportive feature and should not be treated as a medical diagnosis.
-
-## Privacy
-
-Where the implementation supports client-side processing:
-
-* 🎤 Microphone access requires user permission.
-* 🔒 Audio should not be stored unnecessarily.
-* 💻 Processing can be performed in the browser.
-* 🔐 Sensitive healthcare data should be handled securely.
+### Privacy
+- 🎤 Microphone access requires explicit user permission
+- 🔒 Audio is not stored unnecessarily
+- 💻 Processing happens client-side where implemented
+- 🔐 Sensitive healthcare data should always be handled securely
 
 ---
 
-# 📊 Architecture
+## 📊 Architecture
 
-## System Architecture
-
-```mermaid
-flowchart TB
-
-    U[👤 User]
-
-    UI[🖥️ React + TypeScript + Vite]
-
-    AUTH[🔐 Firebase Authentication]
-
-    STATE[⚙️ React Context + Local State]
-
-    SERVICES[🧩 Application Services]
-
-    AI[🤖 AI / Symptom Analysis]
-
-    VOICE[🎤 Voice Analysis]
-
-    VIDEO[🎥 Whereby Video Consultation]
-
-    DB[(🔥 Firebase Firestore)]
-
-    STORAGE[(📦 Firebase Storage)]
-
-    EMERGENCY[🚑 Emergency Services]
-
-    U --> UI
-
-    UI --> AUTH
-    UI --> STATE
-    UI --> SERVICES
-
-    SERVICES --> AI
-    SERVICES --> VOICE
-    SERVICES --> VIDEO
-    SERVICES --> DB
-    SERVICES --> STORAGE
-    SERVICES --> EMERGENCY
 ```
+User → React UI (TypeScript + Vite)
+         │
+         ├── Firebase Authentication
+         ├── React Context + Local State
+         └── Application Services
+                  │
+                  ├── AI / Symptom Analysis
+                  ├── Voice Analysis (Meyda)
+                  ├── Whereby Video Consultation
+                  ├── Firebase Firestore
+                  ├── Firebase Storage
+                  └── Emergency Services
+```
+
+### Appointment Flow
+Patient selects a doctor and time → Appointment Service creates the record in Firestore → Doctor dashboard fetches and displays it in real time.
+
+### Video Consultation Flow
+Either party opens the appointment → app creates/joins a Whereby room scoped to that appointment → both parties connect for video, audio, and chat.
 
 ---
 
-## Application Flow
+## 🎨 UI/UX Design
 
-```mermaid
-flowchart LR
+**Design principles:** User-first · Accessible · Responsive · Fast · Visually consistent
 
-    A[User] --> B[React UI]
-
-    B --> C{User Action}
-
-    C -->|Login / Register| D[Firebase Authentication]
-    C -->|Symptoms| E[Symptom Checker]
-    C -->|Book Appointment| F[Appointment Service]
-    C -->|Video Consultation| G[Whereby]
-    C -->|Prescription| H[Prescription Service]
-    C -->|Emergency| I[Emergency Service]
-
-    E --> J[Healthcare Guidance]
-    F --> K[(Firestore)]
-    H --> K
-    I --> K
+**Color palette**
 ```
-
----
-
-## Appointment Flow
-
-```mermaid
-sequenceDiagram
-
-    participant P as Patient
-    participant UI as React UI
-    participant A as Appointment Service
-    participant DB as Firestore
-    participant D as Doctor
-
-    P->>UI: Select Doctor
-    P->>UI: Select Date & Time
-    UI->>A: Create Appointment
-    A->>DB: Save Appointment
-    DB-->>A: Appointment Created
-    A-->>UI: Confirmation
-    UI-->>P: Show Appointment
-
-    D->>UI: Open Dashboard
-    UI->>DB: Fetch Appointments
-    DB-->>UI: Appointment Data
-    UI-->>D: Display Appointment
-```
-
----
-
-## Video Consultation Flow
-
-```mermaid
-sequenceDiagram
-
-    participant P as Patient
-    participant UI as MediGuide UI
-    participant W as Whereby
-    participant D as Doctor
-
-    P->>UI: Open Appointment
-    UI->>W: Create / Join Room
-    W-->>UI: Video Room
-    UI-->>P: Join Consultation
-
-    D->>UI: Open Appointment
-    UI->>W: Join Room
-    W-->>D: Video Room
-
-    P<<->>D: Video / Audio / Chat
-```
-
----
-
-# 🎨 UI/UX Design
-
-## Design Principles
-
-* 👤 **User First** — Simple and intuitive interface
-* ♿ **Accessibility** — Designed with accessibility in mind
-* 📱 **Responsive** — Desktop, tablet, and mobile support
-* ⚡ **Performance** — Fast development and production builds
-* 🎨 **Consistency** — Consistent healthcare-oriented visual language
-
-## Color Palette
-
-```css
 Primary:   #00D9FF
 Secondary: #4A90E2
 Success:   #50C878
@@ -796,9 +444,8 @@ Warning:   #FFB84D
 Error:     #FF6B6B
 ```
 
-## Typography
-
-```text
+**Typography**
+```
 Headings: Inter / System UI
 Body:     System UI
 Code:     Fira Code / Consolas / Monaco
@@ -806,213 +453,110 @@ Code:     Fira Code / Consolas / Monaco
 
 ---
 
-# 🧪 Testing
-
-## Run Tests
+## 🧪 Testing
 
 ```bash
-npm test
+npm test                 # Run all tests
+npm run test:watch       # Watch mode
+npm run test:coverage    # Coverage report
 ```
 
-Watch mode:
+| Tool | Purpose |
+|---|---|
+| Jest | Unit testing |
+| React Testing Library | Component testing |
+| TypeScript | Type checking |
+| ESLint | Code quality |
+| Prettier | Code formatting |
+| Cypress | End-to-end testing (planned) |
 
-```bash
-npm run test:watch
-```
-
-Coverage:
-
-```bash
-npm run test:coverage
-```
-
-## Testing Stack
-
-| Tool                  | Purpose            |
-| --------------------- | ------------------ |
-| Jest                  | Unit testing       |
-| React Testing Library | Component testing  |
-| TypeScript            | Type checking      |
-| ESLint                | Code quality       |
-| Prettier              | Code formatting    |
-| Cypress               | End-to-end testing |
-
-> Update coverage percentages in this README only when they are generated from the current codebase.
-
-## Video Consultation Testing
-
-To test video consultations:
-
-1. Open the application in two browser sessions.
-2. Log in as a doctor in one session.
-3. Log in as a patient in the other.
-4. Create or open an appointment.
-5. Start the consultation from the doctor dashboard.
-6. Join the consultation as the patient.
-7. Test video, audio, chat, and other enabled features.
+### Testing Video Consultation
+1. Open the app in two browser sessions.
+2. Log in as a doctor in one, a patient in the other.
+3. Create or open an appointment.
+4. Start the consultation from the doctor dashboard and join as the patient.
+5. Test video, audio, and chat.
 
 ---
 
-# 📦 Deployment
+## 📦 Deployment
 
-## Firebase Hosting
-
+**Firebase Hosting**
 ```bash
 npm install -g firebase-tools
-
 firebase login
-
 firebase init hosting
-
 npm run build
-
 firebase deploy
 ```
 
-## Vercel
+**Vercel** — deploy directly after configuring environment variables.
 
-The application can also be deployed using Vercel after configuring the required environment variables.
+**Netlify** — deploy the generated `dist/` folder.
 
-## Netlify
-
-The production `dist` folder can be deployed to Netlify.
-
-> Make sure all required environment variables are configured in the deployment platform before deploying.
+> Make sure all required environment variables are configured on the deployment platform before deploying.
 
 ---
 
-# 🔒 Security
+## 🔒 Security
 
-Security considerations include:
+- 🔐 Firebase Authentication
+- 👥 Role-based access (Patient / Doctor / Admin)
+- 🛡️ Protected routes
+- 🔑 Environment-based configuration
+- 📄 Prescription verification via QR
+- 🎥 Appointment-based video room access
 
-* 🔐 Firebase Authentication
-* 👥 Role-based access
-* 🛡️ Protected routes
-* 🔑 Environment-based configuration
-* 📄 Prescription verification
-* 🎥 Appointment-based video access
-* 🚫 Avoiding hard-coded secrets
-
-## Security Recommendations
-
-Never commit:
-
-```text
-.env
-API keys
-private credentials
-service-account JSON files
-database credentials
-```
-
-Use environment variables for sensitive configuration.
+**Never commit:** `.env` files, API keys, private credentials, service-account JSON files, database credentials. Use environment variables for all sensitive configuration.
 
 ---
 
-# 📈 Roadmap
+## 📈 Roadmap
 
-## ✅ Completed
+**✅ Completed**
+- AI healthcare chatbot, symptom checker (text/voice/image), voice emotion & urgency detection, 13 Indian languages, doctor booking, health reports, emergency services
+- Video consultations, digital prescriptions with PDF & QR verification, doctor-patient chat, appointment sync, doctor dashboard, ambulance dashboard, UPI payment support
 
-* [x] AI healthcare chatbot
-* [x] Symptom checker
-* [x] Text-based symptom input
-* [x] Voice input
-* [x] Image-based input
-* [x] Voice analysis
-* [x] Medical keyword detection
-* [x] Urgency classification
-* [x] 13 Indian languages
-* [x] Doctor consultation booking
-* [x] Health reports
-* [x] Emergency services
-
-## ✅ Additional Features
-
-* [x] Video consultations
-* [x] Digital prescriptions
-* [x] Prescription PDF generation
-* [x] QR-code verification
-* [x] Doctor-patient chat
-* [x] Appointment synchronization
-* [x] Doctor dashboard
-* [x] Patient video consultation
-* [x] Ambulance dashboard
-* [x] UPI payment support
-
-## 🚧 Planned
-
-* [ ] Advanced AI integration
-* [ ] Payment gateway integration
-* [ ] SMS notifications
-* [ ] Email notifications
-* [ ] Advanced analytics
-* [ ] Mobile application
-* [ ] Pharmacy integration
-* [ ] Health insurance integration
-* [ ] Wearable-device integration
-* [ ] Multi-factor authentication
+**🚧 Planned**
+- Advanced AI integration
+- Payment gateway integration (Razorpay/Stripe)
+- SMS/Email notifications
+- Advanced analytics dashboard
+- Mobile app (React Native)
+- Pharmacy & health insurance integration
+- Wearable device integration
+- Multi-factor authentication
 
 ---
 
-# 🤝 Contributing
+## 🤝 Contributing
 
-Contributions are welcome.
+Contributions are welcome!
 
-## Ways to Contribute
-
-* 🐛 Report bugs
-* 💡 Suggest features
-* 📝 Improve documentation
-* 🌍 Add translations
-* 🎨 Improve UI/UX
-* 🧪 Add tests
-* ⚡ Improve performance
-
-## Contribution Workflow
+**Ways to contribute:** report bugs · suggest features · improve documentation · add translations · improve UI/UX · add tests · improve performance
 
 ```bash
-# Fork the repository
-
-# Clone your fork
-git clone https://github.com/M-Mahek-03/CMC-5.git
-
-# Move into the project
-cd CMC-5
-
-# Create a feature branch
+# Fork the repository, then:
+git clone https://github.com/MariyamSeemab/Mediguide-CMC5.git
+cd Mediguide-CMC5
 git checkout -b feature/AmazingFeature
 
-# Make your changes
-
-# Commit your changes
+# Make your changes, then:
 git add .
 git commit -m "Add AmazingFeature"
-
-# Push your branch
 git push origin feature/AmazingFeature
 ```
-
 Then open a Pull Request.
 
-## Contributors
+---
 
-<a href="https://github.com/M-Mahek-03/CMC-5/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=M-Mahek-03/CMC-5" alt="Contributors"/>
-</a>
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](https://github.com/MariyamSeemab/Mediguide-CMC5/blob/main/LICENSE) file for details.
 
 ---
 
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
-See the [LICENSE](LICENSE) file for details.
-
----
-
-# 👥 Team
-
-<div align="center">
+## 👥 Team
 
 ### Project Maintainers
 
@@ -1021,102 +565,71 @@ See the [LICENSE](LICENSE) file for details.
     <td align="center">
       <a href="https://github.com/M-Mahek-03">
         <img src="https://github.com/M-Mahek-03.png?size=200" width="100" alt="Mahek Mukadam"/>
-        <br />
-        <sub><b>Mahek Mukadam</b></sub>
+        <br /><sub><b>Mahek Mukadam</b></sub>
       </a>
-      <br />
-      GitHub
+      <br />GitHub
     </td>
-
-```
-<td align="center">
-  <a href="https://github.com/MariyamSeemab">
-    <img src="https://github.com/MariyamSeemab.png?size=200" width="100" alt="Mariyam Usmani"/>
-    <br />
-    <sub><b>Mariyam Usmani</b></sub>
-  </a>
-  <br />
-  GitHub
-</td>
-
-<td align="center">
-  <a href="https://github.com/nadeem221751">
-    <img src="https://github.com/nadeem221751.png?size=200" width="100" alt="Nadeem Shaikh"/>
-    <br />
-    <sub><b>Nadeem Shaikh</b></sub>
-  </a>
-  <br />
-  GitHub
-</td>
-
-<td align="center">
-  <a href="https://github.com/Electrogreek">
-    <img src="https://github.com/Electrogreek.png?size=200" width="100" alt="Nehal Shaikh"/>
-    <br />
-    <sub><b>Nehal Shaikh</b></sub>
-  </a>
-  <br />
-  GitHub
-</td>
-```
-
+    <td align="center">
+      <a href="https://github.com/MariyamSeemab">
+        <img src="https://github.com/MariyamSeemab.png?size=200" width="100" alt="Mariyam Usmani"/>
+        <br /><sub><b>Mariyam Usmani</b></sub>
+      </a>
+      <br />GitHub
+    </td>
+    <td align="center">
+      <a href="https://github.com/nadeem221751">
+        <img src="https://github.com/nadeem221751.png?size=200" width="100" alt="Nadeem Shaikh"/>
+        <br /><sub><b>Nadeem Shaikh</b></sub>
+      </a>
+      <br />GitHub
+    </td>
+    <td align="center">
+      <a href="https://github.com/Electrogreek">
+        <img src="https://github.com/Electrogreek.png?size=200" width="100" alt="Nehal Shaikh"/>
+        <br /><sub><b>Nehal Shaikh</b></sub>
+      </a>
+      <br />GitHub
+    </td>
   </tr>
 </table>
 
 **Together, we're building the future of accessible healthcare in India! 🇮🇳**
 
-</div>
-
 ---
 
-# 🙏 Acknowledgments
+## 🙏 Acknowledgments
 
 Special thanks to:
 
-* 💙 Open Source Community
-* 🔥 Firebase Team
-* ⚛️ React Team
-* ⚡ Vite Team
-* 🎥 Whereby Team
-* 📄 jsPDF Team
-* 🎤 Meyda Audio Library
-* 🏥 Healthcare professionals
-* 🇮🇳 Indian developer community
-* 👥 All project contributors
+- 💙 Open Source Community
+- 🔥 Firebase Team
+- ⚛️ React Team
+- ⚡ Vite Team
+- 🎥 Whereby Team
+- 📄 jsPDF Team
+- 🎤 Meyda Audio Library
+- 🏥 Healthcare professionals
+- 🇮🇳 Indian developer community
+- 👥 All project contributors
 
 ---
 
-# 📞 Support
+## 📞 Support
 
-If you have questions or encounter an issue:
+If you have questions or run into an issue:
 
-* 🐛 Open a GitHub Issue
-* 💡 Submit a feature request
-* 💬 Start a discussion
-* 📧 Contact: `mnmukadam04@gmail.com`
-
----
-
-# 🌟 Support the Project
-
-If you find MediGuide AI useful:
-
-* ⭐ Star the repository
-* 🍴 Fork the repository
-* 🐛 Report bugs
-* 💡 Suggest improvements
-* 🤝 Contribute to the project
+- 🐛 [Open a GitHub Issue](https://github.com/MariyamSeemab/Mediguide-CMC5/issues)
+- 💬 Start a Discussion
+- 📧 Contact: `mariyamm.seemab@gmail.com`
 
 ---
 
 <div align="center">
 
-## 🇮🇳 Made with ❤️ for Better Healthcare Accessibility in India
+### 🇮🇳 Made with ❤️ for Better Healthcare Accessibility in India
 
-**MediGuide AI**
+**MediGuide AI** — Built with React • TypeScript • Firebase • Vite • Whereby
 
-Built with React • TypeScript • Firebase • Vite • Whereby
-
-⭐ **If you like this project, consider giving it a star!** ⭐
+⭐ **If you find this project useful, consider giving it a star!** ⭐
 
 </div>
